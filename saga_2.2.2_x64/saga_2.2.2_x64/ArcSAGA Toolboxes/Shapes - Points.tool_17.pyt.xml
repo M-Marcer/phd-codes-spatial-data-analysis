@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_17" displayname="Aggregate Point Observations">
+    <parameters>
+      <param name="REFERENCE" displayname="Reference Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Reference Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="REFERENCE_ID" displayname="ID" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;ID&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OBSERVATIONS" displayname="Observations" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Observations&lt;/p&gt;&lt;p&gt;Table (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="X" displayname="X" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;X&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Y" displayname="Y" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Y&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TRACK" displayname="Track" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Track&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DATE" displayname="Date" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Date&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TIME" displayname="Time" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Time&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;expected to be the second of day&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PARAMETER" displayname="Parameter" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Parameter&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AGGREGATED" displayname="Aggregated" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Aggregated&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TIME_SPAN" displayname="Time Span Aggregation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Time Span Aggregation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] ignore&lt;/p&gt;&lt;p&gt;[1] floating&lt;/p&gt;&lt;p&gt;[2] fixed&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIX_TIME" displayname="Fixed Time Span (minutes)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Fixed Time Span (minutes)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 20.000000&lt;/p&gt;&lt;p&gt;ignored if set to zero&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OFF_TIME" displayname="Fixed Time Span Offset (minutes)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Fixed Time Span Offset (minutes)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: -10.000000&lt;/p&gt;&lt;p&gt;offset in minutes relative to 00:00 (midnight)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EPS_TIME" displayname="Maximum Time Span (Seconds)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Time Span (Seconds)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 60.000000&lt;/p&gt;&lt;p&gt;ignored if set to zero&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EPS_SPACE" displayname="Maximum Distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Distance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;&lt;p&gt;given as map units or meters if polar coordinates switch is on; ignored if set to zero&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VERBOSE" displayname="Verbose" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Verbose&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POLAR" displayname="Polar Coordinates" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Polar Coordinates&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Aggregate Point Observations</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_7" displayname="Daily to Hourly PET">
+    <parameters>
+      <param name="DAYS" displayname="Daily Data" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Daily Data&lt;/p&gt;&lt;p&gt;Table (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="JD" displayname="Julian Day" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Julian Day&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ET" displayname="Evapotranspiration" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Evapotranspiration&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="P" displayname="Precipitation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Precipitation&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HOURS" displayname="Hourly Data" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Hourly Data&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LAT" displayname="Latitude" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Latitude&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: -90.000000&lt;/p&gt;&lt;p&gt;Maximum: 90.000000&lt;/p&gt;&lt;p&gt;Default: 53.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Daily to Hourly PET</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

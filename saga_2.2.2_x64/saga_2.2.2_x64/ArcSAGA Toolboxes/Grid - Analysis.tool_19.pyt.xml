@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_19" displayname="Diversity of Categories">
+    <parameters>
+      <param name="CATEGORIES" displayname="Categories" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Categories&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIVERSITY" displayname="Number of Categories" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Categories&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;number of different categories (unique values) within search area&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIZE_MEAN" displayname="Average Size" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Average Size&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;average size of the area covered by each category that occurs within search area&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIZE_SKEW" displayname="Skewness" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Skewness&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;skewness of the area size per category distribution&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONNECTIVITY" displayname="Connectivity" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Connectivity&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEARCH_MODE" displayname="Search Mode" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Search Mode&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Square&lt;/p&gt;&lt;p&gt;[1] Circle&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEARCH_RADIUS" displayname="Search Distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Search Distance&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 3&lt;/p&gt;&lt;p&gt;Search distance given as number cells.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NB_CASE" displayname="Connectivity Neighbourhood" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Connectivity Neighbourhood&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Rook's case&lt;/p&gt;&lt;p&gt;[1] Queen's case&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DW_WEIGHTING" displayname="Weighting Function" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Weighting Function&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] no distance weighting&lt;/p&gt;&lt;p&gt;[1] inverse distance to a power&lt;/p&gt;&lt;p&gt;[2] exponential&lt;/p&gt;&lt;p&gt;[3] gaussian weighting&lt;/p&gt;&lt;p&gt;Default: 3&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DW_IDW_POWER" displayname="Inverse Distance Weighting Power" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Inverse Distance Weighting Power&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DW_IDW_OFFSET" displayname="Inverse Distance Offset" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Inverse Distance Offset&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Calculates weights for distance plus one, avoiding division by zero for zero distances&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DW_BANDWIDTH" displayname="Gaussian and Exponential Weighting Bandwidth" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Gaussian and Exponential Weighting Bandwidth&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.700000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Diversity of Categories</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

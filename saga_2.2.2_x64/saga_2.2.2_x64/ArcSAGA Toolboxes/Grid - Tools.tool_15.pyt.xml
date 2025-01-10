@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_15" displayname="Reclassify Grid Values">
+    <parameters>
+      <param name="INPUT" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Grid to reclassify&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="Reclassified Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Reclassified Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Reclassified grid.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] single&lt;/p&gt;&lt;p&gt;[1] range&lt;/p&gt;&lt;p&gt;[2] simple table&lt;/p&gt;&lt;p&gt;[3] user supplied table&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Select the desired method: 1. a single value or a range defined by a single value is reclassified, 2. a range of values is reclassified, 3. the lookup table is used to reclassify the grid.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OLD" displayname="old value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;old value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Value to reclassify.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NEW" displayname="new value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;new value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;New value.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SOPERATOR" displayname="operator" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;operator&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] =&lt;/p&gt;&lt;p&gt;[1] &lt;&lt;/p&gt;&lt;p&gt;[2] &lt;=&lt;/p&gt;&lt;p&gt;[3] &gt;=&lt;/p&gt;&lt;p&gt;[4] &gt;&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Select the desired operator (&lt;;.;=; &gt;;.); it is possible to define a range above or below the old value.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MIN" displayname="minimum value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;minimum value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Minimum value of the range to be reclassified.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAX" displayname="maximum value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;maximum value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;&lt;p&gt;Maximum value of the range to be reclassified.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RNEW" displayname="new value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;new value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 5.000000&lt;/p&gt;&lt;p&gt;new value&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ROPERATOR" displayname="operator" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;operator&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] &lt;=&lt;/p&gt;&lt;p&gt;[1] &lt;&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Select operator: eg. min &lt; value &lt; max.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RETAB" displayname="Lookup Table" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Lookup Table&lt;/p&gt;&lt;p&gt;Static table&lt;/p&gt;&lt;p&gt;3 Fields:&lt;/p&gt;&lt;p&gt;- 1. [8 byte floating point number] minimum&lt;/p&gt;&lt;p&gt;- 2. [8 byte floating point number] maximum&lt;/p&gt;&lt;p&gt;- 3. [8 byte floating point number] new&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Lookup table used in method \"table\"&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TOPERATOR" displayname="operator" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;operator&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] min &lt;= value &lt; max&lt;/p&gt;&lt;p&gt;[1] min &lt;= value &lt;= max&lt;/p&gt;&lt;p&gt;[2] min &lt; value &lt;= max&lt;/p&gt;&lt;p&gt;[3] min &lt; value &lt; max&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Select the desired operator (min &lt; value &lt; max; min . value &lt; max; min .value . max; min &lt; value . max).&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RETAB_2" displayname="Lookup Table" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Lookup Table&lt;/p&gt;&lt;p&gt;Table (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Lookup table used in method \"user supplied table\"&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="F_MIN" displayname="minimum value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;minimum value&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="F_MAX" displayname="maximum value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;maximum value&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="F_CODE" displayname="new value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;new value&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NODATAOPT" displayname="no data values" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;no data values&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Use this option to reclassify No-Data values independently of the method settings.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NODATA" displayname="new value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;new value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;new value&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OTHEROPT" displayname="other values" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;other values&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Use this option to reclassify all other values that are not specified in the options above.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OTHERS" displayname="new value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;new value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;new value&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT_NODATA_CHOICE" displayname="Assign ..." type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Assign ...&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] NoData value of input grid&lt;/p&gt;&lt;p&gt;[1] user defined NoData value&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Choose how to handle the NoData value of the output grid.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT_NODATA_VALUE" displayname="NoData Value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;NoData Value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: -99999.000000&lt;/p&gt;&lt;p&gt;User defined NoData value for output grid.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Reclassify Grid Values</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2005 by Volker Wichmann</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

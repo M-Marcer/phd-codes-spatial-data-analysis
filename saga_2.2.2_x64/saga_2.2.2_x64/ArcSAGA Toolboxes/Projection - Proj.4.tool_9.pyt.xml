@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_9" displayname="[deprecated] Proj.4 (Command Line Arguments, List of Shapes Layers)">
+    <parameters>
+      <param name="SOURCE_PROJ" displayname="Source Projection Parameters" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Source Projection Parameters&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: +proj=tmerc +datum=potsdam +lon_0=9 +x_0=3500000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TARGET_PROJ" displayname="Target Projection Parameters" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Target Projection Parameters&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: +proj=tmerc +datum=potsdam +lon_0=12 +x_0=4500000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SOURCE" displayname="Source" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Source&lt;/p&gt;&lt;p&gt;Shapes list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TARGET" displayname="Target" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Target&lt;/p&gt;&lt;p&gt;Shapes list (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>[deprecated] Proj.4 (Command Line Arguments, List of Shapes Layers)</resTitle>
+    </idCitation>
+    <idCredit>O. Conrad (c) 2004-8</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

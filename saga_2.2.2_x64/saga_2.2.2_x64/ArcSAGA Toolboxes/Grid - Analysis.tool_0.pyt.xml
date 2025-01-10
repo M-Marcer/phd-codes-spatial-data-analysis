@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Accumulated Cost (Isotropic)">
+    <parameters>
+      <param name="COST" displayname="Cost Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Cost Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POINTS" displayname="Destination Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Destination Points&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ACCCOST" displayname="Accumulated Cost" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Accumulated Cost&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLOSESTPT" displayname="Closest Point" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Closest Point&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLD" displayname="Threshold for different route" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Threshold for different route&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Accumulated Cost (Isotropic)</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2004 by Victor Olaya</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

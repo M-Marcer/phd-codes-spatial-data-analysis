@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Sieve and Clump">
+    <parameters>
+      <param name="CLASSES" displayname="Classes" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Classes&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILTERED" displayname="Sieve and Clump" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Sieve and Clump&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIEVE" displayname="Sieving Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sieving Threshold&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EXPAND" displayname="Maximum Expansion Distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Expansion Distance&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 4&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Sieve and Clump</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2014</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

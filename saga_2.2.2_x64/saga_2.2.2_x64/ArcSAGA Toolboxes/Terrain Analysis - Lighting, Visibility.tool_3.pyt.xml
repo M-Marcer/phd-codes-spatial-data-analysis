@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_3" displayname="Sky View Factor">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VISIBLE" displayname="Visible Sky" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Visible Sky&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;The unobstructed hemisphere given as percentage.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SVF" displayname="Sky View Factor" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Sky View Factor&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIMPLE" displayname="Sky View Factor (Simplified)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sky View Factor (Simplified)&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TERRAIN" displayname="Terrain View Factor" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Terrain View Factor&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DISTANCE" displayname="View Distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;View Distance&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RADIUS" displayname="Maximum Search Radius" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Search Radius&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 10000.000000&lt;/p&gt;&lt;p&gt;This value is ignored if set to zero.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] multi scale&lt;/p&gt;&lt;p&gt;[1] sectors&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DLEVEL" displayname="Multi Scale Factor" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Multi Scale Factor&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 1.250000&lt;/p&gt;&lt;p&gt;Default: 3.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NDIRS" displayname="Number of Sectors" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Sectors&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 3&lt;/p&gt;&lt;p&gt;Default: 8&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Sky View Factor</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2008</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

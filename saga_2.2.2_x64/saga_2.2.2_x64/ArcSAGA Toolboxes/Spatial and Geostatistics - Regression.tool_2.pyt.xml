@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Polynomial Regression">
+    <parameters>
+      <param name="POINTS" displayname="Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ATTRIBUTE" displayname="Attribute" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Attribute&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESIDUALS" displayname="Residuals" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Residuals&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POLYNOM" displayname="Polynom" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Polynom&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] simple planar surface&lt;/p&gt;&lt;p&gt;[1] bi-linear saddle&lt;/p&gt;&lt;p&gt;[2] quadratic surface&lt;/p&gt;&lt;p&gt;[3] cubic surface&lt;/p&gt;&lt;p&gt;[4] user defined&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="XORDER" displayname="Maximum X Order" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum X Order&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 4&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YORDER" displayname="Maximum Y Order" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Y Order&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 4&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TORDER" displayname="Maximum Total Order" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Total Order&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Default: 4&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TARGET_USER_SIZE" displayname="Cellsize" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cellsize&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TARGET_OUT_GRID" displayname="Target Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Target Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Polynomial Regression</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

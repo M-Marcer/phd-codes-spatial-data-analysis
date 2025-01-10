@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_1" displayname="Gaussian Filter">
+    <parameters>
+      <param name="INPUT" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="Filtered Grid" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Filtered Grid&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIGMA" displayname="Standard Deviation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Standard Deviation&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000100&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MODE" displayname="Search Mode" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Search Mode&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Square&lt;/p&gt;&lt;p&gt;[1] Circle&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RADIUS" displayname="Search Radius" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Search Radius&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Gaussian Filter</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2003 by Andre Ringeler</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

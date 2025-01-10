@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_6" displayname="Colour Normalized Spectral Sharpening">
+    <parameters>
+      <param name="GRIDS" displayname="Original Channels" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Original Channels&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PAN" displayname="Panchromatic Channel" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Panchromatic Channel&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHARPEN" displayname="Sharpened Channels" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Sharpened Channels&lt;/p&gt;&lt;p&gt;Grid list (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESAMPLING" displayname="Resampling" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Resampling&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] nearest neighbour&lt;/p&gt;&lt;p&gt;[1] bilinear&lt;/p&gt;&lt;p&gt;[2] cubic convolution&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Colour Normalized Spectral Sharpening</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

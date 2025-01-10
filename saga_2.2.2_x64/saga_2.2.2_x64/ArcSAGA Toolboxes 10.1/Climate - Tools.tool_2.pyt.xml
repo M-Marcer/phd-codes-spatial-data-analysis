@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Earth's Orbital Parameters">
+    <parameters>
+      <param name="ORBPAR" displayname="Earth's Orbital Parameters" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Earth's Orbital Parameters&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="START" displayname="Start [ka]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Start [ka]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: -200.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STOP" displayname="Stop [ka]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Stop [ka]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 2.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STEP" displayname="Step [ka]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Step [ka]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.001000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Earth's Orbital Parameters</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2012</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

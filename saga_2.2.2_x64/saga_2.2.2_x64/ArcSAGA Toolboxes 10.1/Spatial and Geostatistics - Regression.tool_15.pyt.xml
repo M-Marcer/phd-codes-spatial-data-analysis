@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_15" displayname="Zonal Multiple Regression Analysis (Points and Predictor Grids)">
+    <parameters>
+      <param name="PREDICTORS" displayname="Predictors" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Predictors&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ZONES" displayname="Zones" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Zones&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POINTS" displayname="Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ATTRIBUTE" displayname="Dependent Variable" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Dependent Variable&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESIDUALS" displayname="Residuals" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Residuals&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="REGRESSION" displayname="Regression" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Regression&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INTERPOL" displayname="Grid Interpolation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Grid Interpolation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Nearest Neighbor&lt;/p&gt;&lt;p&gt;[1] Bilinear Interpolation&lt;/p&gt;&lt;p&gt;[2] Inverse Distance Interpolation&lt;/p&gt;&lt;p&gt;[3] Bicubic Spline Interpolation&lt;/p&gt;&lt;p&gt;[4] B-Spline Interpolation&lt;/p&gt;&lt;p&gt;Default: 4&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COORD_X" displayname="Include X Coordinate" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Include X Coordinate&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COORD_Y" displayname="Include Y Coordinate" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Include Y Coordinate&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INTERCEPT" displayname="Intercept" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Intercept&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] include all&lt;/p&gt;&lt;p&gt;[1] forward&lt;/p&gt;&lt;p&gt;[2] backward&lt;/p&gt;&lt;p&gt;[3] stepwise&lt;/p&gt;&lt;p&gt;Default: 3&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="P_VALUE" displayname="Significance Level" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Significance Level&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 5.000000&lt;/p&gt;&lt;p&gt;Significance level (aka p-value) as threshold for automated predictor selection, given as percentage&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Zonal Multiple Regression Analysis (Points and Predictor Grids)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad, P.Gandelli (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

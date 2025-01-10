@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Grid Statistics for Polygons">
+    <parameters>
+      <param name="GRIDS" displayname="Grids" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grids&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POLYGONS" displayname="Polygons" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Polygons&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] standard&lt;/p&gt;&lt;p&gt;[1] shape wise, supports overlapping polygons&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NAMING" displayname="Field Naming" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Field Naming&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] grid number&lt;/p&gt;&lt;p&gt;[1] grid name&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="Statistics" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Statistics&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COUNT" displayname="Number of Cells" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Cells&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RANGE" displayname="Range" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Range&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SUM" displayname="Sum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sum&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MEAN" displayname="Mean" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Mean&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VAR" displayname="Variance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Variance&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STDDEV" displayname="Standard Deviation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Standard Deviation&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="QUANTILE" displayname="Quantile" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Quantile&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Maximum: 50&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Calculate distribution quantiles. Value specifies interval (median=50, quartiles=25, deciles=10, ...). Set to zero to omit quantile calculation.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Grid Statistics for Polygons</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2003, Quantile Calculation (c) 2007 by Johan Van de Wauw</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

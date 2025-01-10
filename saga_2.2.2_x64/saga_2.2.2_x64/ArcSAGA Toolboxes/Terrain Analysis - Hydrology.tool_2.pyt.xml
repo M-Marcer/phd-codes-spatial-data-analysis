@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Flow Accumulation (Flow Tracing)">
+    <parameters>
+      <param name="ELEVATION" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SINKROUTE" displayname="Sink Routes" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Sink Routes&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WEIGHT" displayname="Weight" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Weight&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CAREA" displayname="Flow Accumulation" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Accumulation&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VAL_INPUT" displayname="Input for Mean over Catchment Calculation" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Input for Mean over Catchment Calculation&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VAL_MEAN" displayname="Mean over Catchment" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Mean over Catchment&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MATERIAL" displayname="Material" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Material&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TARGET" displayname="Accumulation Target" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Accumulation Target&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ACCU_TOT" displayname="Total accumulated Material" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Total accumulated Material&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ACCU_LEFT" displayname="Accumulated Material from Left Side" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Accumulated Material from Left Side&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ACCU_RIGHT" displayname="Accumulated Material from Right Side" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Accumulated Material from Right Side&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STEP" displayname="Step" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Step&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CAREA_UNIT" displayname="Flow Accumulation Unit" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Accumulation Unit&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] number of cells&lt;/p&gt;&lt;p&gt;[1] cell area&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Rho 8&lt;/p&gt;&lt;p&gt;[1] Kinematic Routing Algorithm&lt;/p&gt;&lt;p&gt;[2] DEMON&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MINDQV" displayname="DEMON - Min. DQV" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;DEMON - Min. DQV&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;DEMON - Minium Drainage Quota Volume (DQV) for traced flow tubes&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CORRECT" displayname="Flow Correction" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Correction&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Flow Accumulation (Flow Tracing)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2001</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

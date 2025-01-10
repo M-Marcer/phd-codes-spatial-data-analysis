@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_13" displayname="Land Surface Temperature">
+    <parameters>
+      <param name="DEM" displayname="Elevation [m]" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation [m]&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SWR" displayname="Short Wave Radiation [kW/m2]" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Short Wave Radiation [kW/m2]&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LAI" displayname="Leaf Area Index" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Leaf Area Index&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LST" displayname="Land Surface Temperature [Deg.Celsius]" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Land Surface Temperature [Deg.Celsius]&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Z_REFERENCE" displayname="Elevation at Reference Station [m]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Elevation at Reference Station [m]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_REFERENCE" displayname="Temperature at Reference Station [Deg.Celsius]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Temperature at Reference Station [Deg.Celsius]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_GRADIENT" displayname="Temperature Gradient [Deg.Celsius/km]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Temperature Gradient [Deg.Celsius/km]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 6.500000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_FACTOR" displayname="C Factor" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;C Factor&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Land Surface Temperature</resTitle>
+    </idCitation>
+    <idCredit>(c) 2008 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

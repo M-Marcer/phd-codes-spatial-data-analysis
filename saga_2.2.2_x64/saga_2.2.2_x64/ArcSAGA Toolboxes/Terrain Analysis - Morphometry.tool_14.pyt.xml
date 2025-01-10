@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_14" displayname="Relative Heights and Slope Positions">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HO" displayname="Slope Height" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Slope Height&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HU" displayname="Valley Depth" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Valley Depth&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NH" displayname="Normalized Height" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Normalized Height&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SH" displayname="Standardized Height" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Standardized Height&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MS" displayname="Mid-Slope Positon" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Mid-Slope Positon&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="W" displayname="w" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;w&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.500000&lt;/p&gt;&lt;p&gt;The parameter weights the influence of catchment size on relative elevation (inversely proportional).&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T" displayname="t" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;t&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;&lt;p&gt;The parameter controls the amount by which a maximum in the neighbourhood of a cell is taken over into the cell (considering the local slope between the cells). The smaller 't' and/or the smaller the slope, the more of the maximum value is taken over into the cell. This results in a greater generalization/smoothing of the result. The greater 't' and/or the higher the slope, the less is taken over into the cell and the result will show a more irregular pattern caused by small changes in elevation between the cells.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="E" displayname="e" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;e&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 2.000000&lt;/p&gt;&lt;p&gt;The parameter controls the position of relative height maxima as a function of slope.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Relative Heights and Slope Positions</resTitle>
+    </idCitation>
+    <idCredit>J.Boehner, O.Conrad (c) 2008</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

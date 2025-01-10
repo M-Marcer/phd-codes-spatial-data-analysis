@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_7" displayname="Global Moran's I for Grids">
+    <parameters>
+      <param name="GRID" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="Result" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Result&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONTIGUITY" displayname="Case of contiguity" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Case of contiguity&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Rook&lt;/p&gt;&lt;p&gt;[1] Queen&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Choose case: Rook's case contiguity compares only cell wich share an edge. Queen's case contiguity compares also cells which share just corners.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIALOG" displayname="Show Result in Dialog" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Show Result in Dialog&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Global Moran's I for Grids</resTitle>
+    </idCitation>
+    <idCredit>Jan Papmeier (c) 2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

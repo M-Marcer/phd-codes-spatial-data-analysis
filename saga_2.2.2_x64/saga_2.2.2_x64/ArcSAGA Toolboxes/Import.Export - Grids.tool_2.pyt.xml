@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Export Surfer Grid">
+    <parameters>
+      <param name="GRID" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE" displayname="File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FORMAT" displayname="Format" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Format&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] binary&lt;/p&gt;&lt;p&gt;[1] ASCII&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NODATA" displayname="Use Surfer's No-Data Value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Use Surfer's No-Data Value&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Export Surfer Grid</resTitle>
+    </idCitation>
+    <idCredit>(c) 2001 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

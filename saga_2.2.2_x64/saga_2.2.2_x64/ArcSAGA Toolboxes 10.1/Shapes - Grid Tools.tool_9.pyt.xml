@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_9" displayname="Local Minima and Maxima">
+    <parameters>
+      <param name="GRID" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MINIMA" displayname="Minima" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Minima&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAXIMA" displayname="Maxima" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Maxima&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Local Minima and Maxima</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2009</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

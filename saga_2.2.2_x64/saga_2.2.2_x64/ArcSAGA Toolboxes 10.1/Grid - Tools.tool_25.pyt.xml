@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_25" displayname="Close Gaps with Spline">
+    <parameters>
+      <param name="GRID" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MASK" displayname="Mask" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Mask&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAXGAPCELLS" displayname="Only Process Gaps with Less Cells" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Only Process Gaps with Less Cells&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;is ignored if set to zero&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLOSED" displayname="Closed Gaps Grid" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Closed Gaps Grid&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAXPOINTS" displayname="Maximum Points" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Points&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 2&lt;/p&gt;&lt;p&gt;Default: 1000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LOCALPOINTS" displayname="Number of Points for Local Interpolation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Points for Local Interpolation&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 2&lt;/p&gt;&lt;p&gt;Default: 20&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EXTENDED" displayname="Extended Neighourhood" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Extended Neighourhood&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NEIGHBOURS" displayname="Neighbourhood" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Neighbourhood&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Neumann&lt;/p&gt;&lt;p&gt;[1] Moore&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RADIUS" displayname="Radius (Cells)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Radius (Cells)&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RELAXATION" displayname="Relaxation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Relaxation&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Close Gaps with Spline</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

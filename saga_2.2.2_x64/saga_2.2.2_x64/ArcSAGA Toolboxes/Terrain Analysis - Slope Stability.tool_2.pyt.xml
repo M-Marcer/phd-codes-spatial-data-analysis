@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="SHALSTAB">
+    <parameters>
+      <param name="A" displayname="Slope grid (rad)" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Slope grid (rad)&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;A slope angle grid (in radíans)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="B" displayname="Catchment area grid (m2)" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Catchment area grid (m2)&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;A catchment area grid (in square meters)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Cmin" displayname="Min Density grid (g/cm3)" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Min Density grid (g/cm3)&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing minimum material density (in g/cm3)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Cmax" displayname="Max Density grid (g/cm3)" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Max Density grid (g/cm3)&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing maximum material density (in g/cm3)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Dmin" displayname="Min Hydraulic conductivity grid (m/hr) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Min Hydraulic conductivity grid (m/hr) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing minimum material hydraulic conductivity (in m/hr)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Dmax" displayname="Max Hydraulic conductivity grid (m/hr) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Max Hydraulic conductivity grid (m/hr) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing maximum material hydraulic conductivity (in m/hr)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Emin" displayname="Min Thickness grid (m)" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Min Thickness grid (m)&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing minimum material thickness (in m)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Emax" displayname="Max Thickness grid (m)" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Max Thickness grid (m)&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing maximum material thickness (in m)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Fmin" displayname="Min Friction angle grid (degree) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Min Friction angle grid (degree) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing minimum material friction angle (in degrees)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Fmax" displayname="Max Friction angle grid (degree) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Max Friction angle grid (degree) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing maximum material friction angle (in degrees)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Jmin" displayname="Min Bulk cohesion grid (MPa) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Min Bulk cohesion grid (MPa) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing minimum bulk cohesion&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Jmax" displayname="Max Bulk cohesion grid (MPa) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Max Bulk cohesion grid (MPa) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing maximum bulk cohesion&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fCmin" displayname="Global minimum density (g/cm3)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global minimum density (g/cm3)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.600000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fCmax" displayname="Global maximum density (g/cm3)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global maximum density (g/cm3)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.600000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fDmin" displayname="Global minimum conductivity (m/hr)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global minimum conductivity (m/hr)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 2.700000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fDmax" displayname="Global maximum conductivity (m/hr)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global maximum conductivity (m/hr)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 2.700000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fEmin" displayname="Global minimum thickness (m)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global minimum thickness (m)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fEmax" displayname="Global maximum thickness (m)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global maximum thickness (m)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fFmin" displayname="Global minimum friction angle (degree)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global minimum friction angle (degree)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 33.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fFmax" displayname="Global maximum friction angle (degree)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global maximum friction angle (degree)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 33.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fJmin" displayname="Global minimum bulk cohesion (MPa)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global minimum bulk cohesion (MPa)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fJmax" displayname="Global maximum bulk cohesion (MPa)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global maximum bulk cohesion (MPa)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fK" displayname="Parameter sampling runs" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Parameter sampling runs&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Number of sampling cycles&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="G" displayname="CR values" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;CR values&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Resulting critical recharge (m/day) grid&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="H" displayname="CR classes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;CR classes&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Classified critical recharge (-) grid&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>SHALSTAB</resTitle>
+    </idCitation>
+    <idCredit>A. G&uuml;nther (c) 2012</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

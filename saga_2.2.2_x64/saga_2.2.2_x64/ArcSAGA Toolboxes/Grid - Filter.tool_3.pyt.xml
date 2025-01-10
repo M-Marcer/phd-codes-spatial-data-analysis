@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_3" displayname="Multi Direction Lee Filter">
+    <parameters>
+      <param name="INPUT" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="Filtered Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Filtered Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STDDEV" displayname="Minimum Standard Deviation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Standard Deviation&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIR" displayname="Direction of Minimum Standard Deviation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Direction of Minimum Standard Deviation&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NOISE_ABS" displayname="Estimated Noise (absolute)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Estimated Noise (absolute)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Estimated noise in units of input data&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NOISE_REL" displayname="Estimated Noise (relative)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Estimated Noise (relative)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Estimated noise relative to mean standard deviation&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WEIGHTED" displayname="Weighted" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Weighted&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] noise variance given as absolute value&lt;/p&gt;&lt;p&gt;[1] noise variance given relative to mean standard deviation&lt;/p&gt;&lt;p&gt;[2] original calculation (Ringeler)&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Multi Direction Lee Filter</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2003 by Andre Ringeler</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

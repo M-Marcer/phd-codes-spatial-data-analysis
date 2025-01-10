@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Shapes to Grid">
+    <parameters>
+      <param name="INPUT" displayname="Shapes" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Shapes&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD" displayname="Attribute" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Attribute&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Output Values" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Output Values&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] data / no-data&lt;/p&gt;&lt;p&gt;[1] index number&lt;/p&gt;&lt;p&gt;[2] attribute&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MULTIPLE" displayname="Method for Multiple Values" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method for Multiple Values&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] first&lt;/p&gt;&lt;p&gt;[1] last&lt;/p&gt;&lt;p&gt;[2] minimum&lt;/p&gt;&lt;p&gt;[3] maximum&lt;/p&gt;&lt;p&gt;[4] mean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LINE_TYPE" displayname="Lines" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Lines&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] thin&lt;/p&gt;&lt;p&gt;[1] thick&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POLY_TYPE" displayname="Polygon" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Polygon&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] node&lt;/p&gt;&lt;p&gt;[1] cell&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRID_TYPE" displayname="Preferred Target Grid Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Preferred Target Grid Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Integer (1 byte)&lt;/p&gt;&lt;p&gt;[1] Integer (2 byte)&lt;/p&gt;&lt;p&gt;[2] Integer (4 byte)&lt;/p&gt;&lt;p&gt;[3] Floating Point (4 byte)&lt;/p&gt;&lt;p&gt;[4] Floating Point (8 byte)&lt;/p&gt;&lt;p&gt;Default: 3&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TARGET_USER_SIZE" displayname="Cellsize" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cellsize&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRID" displayname="Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COUNT" displayname="Number of Values" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Values&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Shapes to Grid</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2003</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

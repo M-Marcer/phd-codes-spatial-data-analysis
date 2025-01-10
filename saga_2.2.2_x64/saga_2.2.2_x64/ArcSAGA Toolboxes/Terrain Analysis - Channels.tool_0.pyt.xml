@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Channel Network">
+    <parameters>
+      <param name="ELEVATION" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;A grid that contains elevation data.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SINKROUTE" displayname="Flow Direction" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Flow Direction&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;An optional grid that provides information about flow directions. &lt;/p&gt;&lt;p&gt;Values between 1 to 8 force the flow of a cell to be given to one its adjacent neighbor cells (1-&gt;NE, 2-&gt;E, 3-&gt;SE, 4-&gt;S, 5-&gt;SW, 6-&gt;W, 7-&gt;NW, 8-&gt;N). In case of other values the algorithm will use its own routing scheme. &lt;/p&gt;&lt;p&gt;This option is in particular useful to supply the algorithm with routes that lead the flow through closed depression. &lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CHNLNTWRK" displayname="Channel Network" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Channel Network&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;If a cell is part of a channel its value equals the channel order. Otherwise the cell is marked as no-data.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CHNLROUTE" displayname="Channel Direction" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Channel Direction&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;If a cell is part of a channel then its value shows the flow direction of the channel (1-&gt;NE, 2-&gt;E, 3-&gt;SE, 4-&gt;S, 5-&gt;SW, 6-&gt;W, 7-&gt;NW, 8-&gt;N). Otherwise the cell is marked as no-data.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHAPES" displayname="Channel Network" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Channel Network&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;&lt;p&gt;This shapes layer will contain the resulting channel network in vector format (lines).&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INIT_GRID" displayname="Initiation Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Initiation Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Dependent on the chosen 'Initiation Type' and 'Initiation Threshold' the values of this grid control where a channel is initiated.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INIT_METHOD" displayname="Initiation Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Initiation Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Less than&lt;/p&gt;&lt;p&gt;[1] Equals&lt;/p&gt;&lt;p&gt;[2] Greater than&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;&lt;p&gt;Options:&lt;/p&gt;&lt;p&gt; - Less than&lt;/p&gt;&lt;p&gt; - Equals&lt;/p&gt;&lt;p&gt; - Greater than&lt;/p&gt;&lt;p&gt;Controls under which condition a channel is initiated.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INIT_VALUE" displayname="Initiation Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Initiation Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Dependent on the chosen 'Initiation Grid' and 'Initiation Type' this value controls under which condition a channel is initiated.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIV_GRID" displayname="Divergence" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Divergence&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Tracing: Convergence&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIV_CELLS" displayname="Tracing: Max. Divergence" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Tracing: Max. Divergence&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 5&lt;/p&gt;&lt;p&gt;Tracing: Stop after x cells with divergent flow&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TRACE_WEIGHT" displayname="Tracing: Weight" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Tracing: Weight&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Tracing: Weight&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MINLEN" displayname="Min. Segment Length" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Min. Segment Length&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 10&lt;/p&gt;&lt;p&gt;Minimum Segment Length (Cells)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Channel Network</resTitle>
+    </idCitation>
+    <idCredit>(c) 2001 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

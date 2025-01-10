@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_9" displayname="Downslope Distance Gradient">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRADIENT" displayname="Gradient" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Gradient&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIFFERENCE" displayname="Gradient Difference" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Gradient Difference&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Difference to local gradient.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DISTANCE" displayname="Vertical Distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Vertical Distance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Output" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Output&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] distance&lt;/p&gt;&lt;p&gt;[1] gradient (tangens)&lt;/p&gt;&lt;p&gt;[2] gradient (degree)&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Downslope Distance Gradient</resTitle>
+    </idCitation>
+    <idCredit>(c) 2006 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_1" displayname="Relief Segmentation">
+    <parameters>
+      <param name="ELEVATION" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OBJECTS" displayname="Objects" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Objects&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TPI_RADIUS_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;&lt;p&gt;position index radius in map units&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TPI_RADIUS_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1000.000000&lt;/p&gt;&lt;p&gt;position index radius in map units&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BAND_WIDTH" displayname="Band Width" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Band Width&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 2.000000&lt;/p&gt;&lt;p&gt;increase band width to get less seed points&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NCLUSTER" displayname="Number of Clusters" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Clusters&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 10&lt;/p&gt;&lt;p&gt;number of clusters&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Relief Segmentation</resTitle>
+    </idCitation>
+    <idCredit>unknown</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

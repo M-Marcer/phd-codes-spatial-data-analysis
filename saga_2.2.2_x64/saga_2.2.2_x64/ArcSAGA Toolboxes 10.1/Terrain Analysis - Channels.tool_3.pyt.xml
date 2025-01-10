@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_3" displayname="Vertical Distance to Channel Network">
+    <parameters>
+      <param name="ELEVATION" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;A grid that contains elevation data.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CHANNELS" displayname="Channel Network" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Channel Network&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;A grid providing information about the channel network. It is assumed that no-data cells are not part of the channel network. Vice versa all others cells are recognised as channel network members.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DISTANCE" displayname="Vertical Distance to Channel Network" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Vertical Distance to Channel Network&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;The resulting grid gives the altitude above the channel network in the same units as the elevation data.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BASELEVEL" displayname="Channel Network Base Level" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Channel Network Base Level&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;This optional grid output contains the interpolated channel network base level elevations.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLD" displayname="Tension Threshold [Percentage of Cell Size]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Tension Threshold [Percentage of Cell Size]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NOUNDERGROUND" displayname="Keep Base Level below Surface" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Keep Base Level below Surface&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Vertical Distance to Channel Network</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2002</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

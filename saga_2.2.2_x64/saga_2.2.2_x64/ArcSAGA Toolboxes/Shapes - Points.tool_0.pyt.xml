@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Convert Table to Points">
+    <parameters>
+      <param name="POINTS" displayname="Points" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TABLE" displayname="Table" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Table&lt;/p&gt;&lt;p&gt;Table (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="X" displayname="X" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;X&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Y" displayname="Y" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Y&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Z" displayname="Z" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Z&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Convert Table to Points</resTitle>
+    </idCitation>
+    <idCredit>Victor Olaya (c) 2004</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_3" displayname="Point Distances">
+    <parameters>
+      <param name="POINTS" displayname="Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ID_POINTS" displayname="Identifier" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Identifier&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NEAR" displayname="Near Points" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Near Points&lt;/p&gt;&lt;p&gt;Shapes (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ID_NEAR" displayname="Identifier" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Identifier&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DISTANCES" displayname="Distances" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Distances&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FORMAT" displayname="Output Format" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Output Format&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] complete input times near points matrix&lt;/p&gt;&lt;p&gt;[1] each pair with a single record&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAX_DIST" displayname="Maximum Distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Distance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;ignored if set to zero (consider all pairs)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Point Distances</resTitle>
+    </idCitation>
+    <idCredit>V.Olaya (c) 2004, O.Conrad (c) 2014</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

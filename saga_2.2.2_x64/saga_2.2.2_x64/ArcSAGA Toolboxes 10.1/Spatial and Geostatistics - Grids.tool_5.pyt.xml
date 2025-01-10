@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_5" displayname="Zonal Grid Statistics">
+    <parameters>
+      <param name="ZONES" displayname="Zone Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Zone Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Grid defining the zones to analyse. This grid also acts as a mask. Coding: NoData / categorial values.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CATLIST" displayname="Categorical Grids" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Categorical Grids&lt;/p&gt;&lt;p&gt;Grid list (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Grids used to delineate the UCUs. Coding: NoData / categorical values.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STATLIST" displayname="Grids to analyse" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Grids to analyse&lt;/p&gt;&lt;p&gt;Grid list (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Grids with continuous data, statistics are calculated for each grid. Coding: NoData / continuous values.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ASPECT" displayname="Aspect" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Aspect&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Aspect grid, in radians.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTTAB" displayname="Zonal Statistics" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Zonal Statistics&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;&lt;p&gt;Summary table.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHORTNAMES" displayname="Short Field Names" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Short Field Names&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Zonal Grid Statistics</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2005 by Volker Wichmann</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

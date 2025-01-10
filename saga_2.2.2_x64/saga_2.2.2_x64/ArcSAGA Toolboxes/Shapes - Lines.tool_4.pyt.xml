@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Line Simplification">
+    <parameters>
+      <param name="LINES" displayname="Lines" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Lines&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;&lt;p&gt;Line or polygon shapefile to simplify.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Simplified Lines" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Simplified Lines&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;If not set points will be removed from the input data set.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TOLERANCE" displayname="Tolerance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Tolerance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Maximum deviation allowed between original and simplified curve [map units].&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Line Simplification</resTitle>
+    </idCitation>
+    <idCredit>O. Conrad (c) 2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

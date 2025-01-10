@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_15" displayname="Split Shapes Layer Randomly">
+    <parameters>
+      <param name="SHAPES" displayname="Shapes" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Shapes&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD" displayname="Categories" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Categories&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="A" displayname="Group A" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Group A&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="B" displayname="Group B" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Group B&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PERCENT" displayname="Relation B / A" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Relation B / A&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 25.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EXACT" displayname="Exact" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Exact&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Split Shapes Layer Randomly</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2008</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

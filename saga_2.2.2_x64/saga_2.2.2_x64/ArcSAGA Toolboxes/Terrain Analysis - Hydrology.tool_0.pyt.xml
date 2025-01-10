@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Flow Accumulation (Top-Down)">
+    <parameters>
+      <param name="ELEVATION" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SINKROUTE" displayname="Sink Routes" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Sink Routes&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WEIGHT" displayname="Weight" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Weight&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CAREA" displayname="Flow Accumulation" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Accumulation&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VAL_INPUT" displayname="Input for Mean over Catchment Calculation" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Input for Mean over Catchment Calculation&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VAL_MEAN" displayname="Mean over Catchment" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Mean over Catchment&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MATERIAL" displayname="Material" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Material&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TARGET" displayname="Accumulation Target" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Accumulation Target&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ACCU_TOT" displayname="Total accumulated Material" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Total accumulated Material&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ACCU_LEFT" displayname="Accumulated Material from Left Side" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Accumulated Material from Left Side&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ACCU_RIGHT" displayname="Accumulated Material from Right Side" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Accumulated Material from Right Side&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STEP" displayname="Step" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Step&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CAREA_UNIT" displayname="Flow Accumulation Unit" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Accumulation Unit&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] number of cells&lt;/p&gt;&lt;p&gt;[1] cell area&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FLOWLEN" displayname="Flow Path Length" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Path Length&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LINEAR_VAL" displayname="Linear Flow Threshold Grid" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Linear Flow Threshold Grid&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;optional grid providing values to be compared with linear flow threshold instead of flow accumulation&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LINEAR_DIR" displayname="Channel Direction" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Channel Direction&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;use this for (linear) flow routing, if the value is a valid direction (0-7 = N, NE, E, SE, S, SW, W, NW)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Deterministic 8&lt;/p&gt;&lt;p&gt;[1] Rho 8&lt;/p&gt;&lt;p&gt;[2] Braunschweiger Reliefmodell&lt;/p&gt;&lt;p&gt;[3] Deterministic Infinity&lt;/p&gt;&lt;p&gt;[4] Multiple Flow Direction&lt;/p&gt;&lt;p&gt;[5] Multiple Triangular Flow Directon&lt;/p&gt;&lt;p&gt;[6] Multiple Maximum Downslope Gradient Based Flow Directon&lt;/p&gt;&lt;p&gt;Default: 4&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LINEAR_DO" displayname="Thresholded Linear Flow" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Thresholded Linear Flow&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;apply linear flow routing (D8) to all cells, having a flow accumulation greater than the specified threshold&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LINEAR_MIN" displayname="Linear Flow Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Linear Flow Threshold&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 500&lt;/p&gt;&lt;p&gt;flow accumulation threshold (cells) for linear flow routing&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONVERGENCE" displayname="Convergence" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Convergence&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.100000&lt;/p&gt;&lt;p&gt;Convergence factor for Multiple Flow Direction Algorithm (Freeman 1991).&lt;/p&gt;&lt;p&gt;Applies also to the Multiple Triangular Flow Directon Algorithm.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WEIGHT_GT_0" displayname="Suppress Negative Flow Accumulation Values" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Suppress Negative Flow Accumulation Values&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;keep accumulated weights above zero; useful e.g. when accumulating measures of water balance.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Flow Accumulation (Top-Down)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2001-2014, T.Grabs portions (c) 2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

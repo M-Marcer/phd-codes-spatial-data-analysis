@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_5" displayname="Geometric Figures">
+    <parameters>
+      <param name="RESULT" displayname="Result" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Result&lt;/p&gt;&lt;p&gt;Grid list (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CELL_COUNT" displayname="Cell Count" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cell Count&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 2&lt;/p&gt;&lt;p&gt;Default: 100&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CELL_SIZE" displayname="Cell Size" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cell Size&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIGURE" displayname="Figure" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Figure&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Cone (up)&lt;/p&gt;&lt;p&gt;[1] Cone (down)&lt;/p&gt;&lt;p&gt;[2] Plane&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PLANE" displayname="Direction of Plane [Degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Direction of Plane [Degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 22.500000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Geometric Figures</resTitle>
+    </idCitation>
+    <idCredit>(c) 2001 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

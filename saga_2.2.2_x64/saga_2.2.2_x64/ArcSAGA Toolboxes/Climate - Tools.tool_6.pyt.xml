@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_6" displayname="PET (after Hargreaves, Table)">
+    <parameters>
+      <param name="TABLE" displayname="Data" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Data&lt;/p&gt;&lt;p&gt;Table (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="JD" displayname="Julian Day" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Julian Day&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T" displayname="Mean Temperature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Mean Temperature&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_MIN" displayname="Minimum Temperature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Temperature&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_MAX" displayname="Maximum Temperature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Temperature&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LAT" displayname="Latitude" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Latitude&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: -90.000000&lt;/p&gt;&lt;p&gt;Maximum: 90.000000&lt;/p&gt;&lt;p&gt;Default: 53.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>PET (after Hargreaves, Table)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

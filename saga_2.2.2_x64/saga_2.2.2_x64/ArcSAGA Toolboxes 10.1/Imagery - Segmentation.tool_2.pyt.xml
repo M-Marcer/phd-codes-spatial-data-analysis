@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Seed Generation">
+    <parameters>
+      <param name="FEATURES" displayname="Features" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Features&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VARIANCE" displayname="Variance" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Variance&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEED_GRID" displayname="Seeds Grid" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Seeds Grid&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEED_POINTS" displayname="Seed Points" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Seed Points&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEED_TYPE" displayname="Seed Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Seed Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] minima of variance&lt;/p&gt;&lt;p&gt;[1] maxima of variance&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] band width smoothing&lt;/p&gt;&lt;p&gt;[1] band width search&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BAND_WIDTH" displayname="Bandwidth (Cells)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Bandwidth (Cells)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NORMALIZE" displayname="Normalize Features" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Normalize Features&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DW_WEIGHTING" displayname="Weighting Function" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Weighting Function&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] no distance weighting&lt;/p&gt;&lt;p&gt;[1] inverse distance to a power&lt;/p&gt;&lt;p&gt;[2] exponential&lt;/p&gt;&lt;p&gt;[3] gaussian weighting&lt;/p&gt;&lt;p&gt;Default: 3&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DW_IDW_POWER" displayname="Inverse Distance Weighting Power" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Inverse Distance Weighting Power&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DW_IDW_OFFSET" displayname="Inverse Distance Offset" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Inverse Distance Offset&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Calculates weights for distance plus one, avoiding division by zero for zero distances&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DW_BANDWIDTH" displayname="Gaussian and Exponential Weighting Bandwidth" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Gaussian and Exponential Weighting Bandwidth&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 5.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Seed Generation</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

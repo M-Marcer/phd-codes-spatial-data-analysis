@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_20" displayname="Geographic Distances">
+    <parameters>
+      <param name="PLANAR" displayname="Segments" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Segments&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ORTHODROME" displayname="Great Elliptic" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Great Elliptic&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LOXODROME" displayname="Loxodrome" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Loxodrome&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EPSILON" displayname="Epsilon" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Epsilon&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;&lt;p&gt;defines the maximum resolution [km] for the re-projected distance segments&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Geographic Distances</resTitle>
+    </idCitation>
+    <idCredit>O. Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

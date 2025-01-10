@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Polygon Dissolve">
+    <parameters>
+      <param name="POLYGONS" displayname="Polygons" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Polygons&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD_1" displayname="1. Attribute" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;1. Attribute&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD_2" displayname="2. Attribute" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;2. Attribute&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD_3" displayname="3. Attribute" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;3. Attribute&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DISSOLVED" displayname="Dissolved Polygons" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Dissolved Polygons&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BND_KEEP" displayname="Keep Boundaries" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Keep Boundaries&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STAT_FIELDS" displayname="Statistics" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Statistics&lt;/p&gt;&lt;p&gt;Table fields&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STAT_SUM" displayname="Sum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sum&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STAT_AVG" displayname="Mean" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Mean&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STAT_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STAT_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STAT_RNG" displayname="Range" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Range&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STAT_DEV" displayname="Deviation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Deviation&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STAT_VAR" displayname="Variance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Variance&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STAT_LST" displayname="Listing" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Listing&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STAT_NUM" displayname="Count" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Count&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STAT_NAMING" displayname="Field Naming" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Field Naming&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] variable type + original name&lt;/p&gt;&lt;p&gt;[1] original name + variable type&lt;/p&gt;&lt;p&gt;[2] original name&lt;/p&gt;&lt;p&gt;[3] variable type&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Polygon Dissolve</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2008</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_8" displayname="Clip Points with Polygons">
+    <parameters>
+      <param name="POINTS" displayname="Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POLYGONS" displayname="Polygons" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Polygons&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD" displayname="Add Attribute to Clipped Points" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Add Attribute to Clipped Points&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLIPS" displayname="Clipped Points" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Clipped Points&lt;/p&gt;&lt;p&gt;Shapes list (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Clipping Options" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Clipping Options&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] one layer for all points&lt;/p&gt;&lt;p&gt;[1] separate layer for each polygon&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Clip Points with Polygons</resTitle>
+    </idCitation>
+    <idCredit>(c) 2008 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

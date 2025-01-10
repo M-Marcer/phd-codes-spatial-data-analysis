@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="WEDGEFAIL">
+    <parameters>
+      <param name="DEM" displayname="DEM" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;DEM&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;A DEM&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C" displayname="Dip/Plunge direction grid (degree) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Dip/Plunge direction grid (degree) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A dip- or plunge direction grid (in degrees)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="D" displayname="Dip/Plunge grid (degree) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Dip/Plunge grid (degree) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A dip- or plunge grid (in degrees)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Emin" displayname="Min friction angle grid (degree) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Min friction angle grid (degree) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A minimum discontinuity friction angle grid (in degrees)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Emax" displayname="Max friction angle grid (degree) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Max friction angle grid (degree) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A maximum discontinuity friction angle grid (in degrees)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fC" displayname="Global dip/plunge direction (degree)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global dip/plunge direction (degree)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fD" displayname="Global dip/plunge (degree)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global dip/plunge (degree)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 35.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fEmin" displayname="Min global friction angle (degree)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Min global friction angle (degree)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 35.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fEmax" displayname="Max global friction angle (degree)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Max global friction angle (degree)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 35.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ff" displayname="Cone radius (degree)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cone radius (degree)&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Radius of optional cone variance (in degrees)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="F" displayname="Failures" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Failures&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Resulting failure cells (-) grid&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fI" displayname="Parameter sampling runs" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Parameter sampling runs&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Number of sampling cycles&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Mode" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Mode&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Slide&lt;/p&gt;&lt;p&gt;[1] Topple&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Set failure mode&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>WEDGEFAIL</resTitle>
+    </idCitation>
+    <idCredit>A. G&uuml;nther (c) 2012</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

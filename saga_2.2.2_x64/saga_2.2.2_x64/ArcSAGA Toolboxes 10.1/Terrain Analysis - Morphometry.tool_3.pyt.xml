@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_3" displayname="Surface Specific Points">
+    <parameters>
+      <param name="ELEVATION" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="Result" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Result&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Mark Highest Neighbour&lt;/p&gt;&lt;p&gt;[1] Opposite Neighbours&lt;/p&gt;&lt;p&gt;[2] Flow Direction&lt;/p&gt;&lt;p&gt;[3] Flow Direction (up and down)&lt;/p&gt;&lt;p&gt;[4] Peucker & Douglas&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Algorithm for the detection of Surface Specific Points&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLD" displayname="Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 2.000000&lt;/p&gt;&lt;p&gt;Threshold for Peucker & Douglas Algorithm&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Surface Specific Points</resTitle>
+    </idCitation>
+    <idCredit>(c) 2001 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

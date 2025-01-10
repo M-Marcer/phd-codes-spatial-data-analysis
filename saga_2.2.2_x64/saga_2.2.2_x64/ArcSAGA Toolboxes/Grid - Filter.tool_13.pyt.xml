@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_13" displayname="Binary Erosion-Reconstruction">
+    <parameters>
+      <param name="INPUT_GRID" displayname="Input Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Input Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Grid to be filtered&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT_GRID" displayname="Output Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Output Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Reconstruction result&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RADIUS" displayname="Filter Size (Radius)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Filter Size (Radius)&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 3&lt;/p&gt;&lt;p&gt;Filter size (radius in grid cells)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Binary Erosion-Reconstruction</resTitle>
+    </idCitation>
+    <idCredit>HfT Stuttgart (c) 2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_24" displayname="Land Use Scenario Generator">
+    <parameters>
+      <param name="FIELDS" displayname="Fields" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Fields&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD_ID" displayname="Field Identifier" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Field Identifier&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SCENARIO" displayname="Land Use Scenario" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Land Use Scenario&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Output of..." type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Output of...&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Identifier&lt;/p&gt;&lt;p&gt;[1] Name&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STATISTICS" displayname="Crop Statistics" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Crop Statistics&lt;/p&gt;&lt;p&gt;Table (input)&lt;/p&gt;&lt;p&gt;The first column specifies a crop type id. The second column provides a human readible name for the crop type (e.g. 'potatoes') .The third column must be an integer value, though this value is not yet used by this module. The following columns provide the yearly amount of each crop type [%] for a sequence of years. &lt;/p&gt;</dialogReference>
+      </param>
+      <param name="KNOWN_CROPS" displayname="Known Crops" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Known Crops&lt;/p&gt;&lt;p&gt;Table (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;The first column specifies the field id as given by the 'Fields' layer. The following columns specify the crop type for each field and year and refer to the crop type identifiers used in the crop statistics table. The sequence of years must be identical with that of the crop statistics table.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Land Use Scenario Generator</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

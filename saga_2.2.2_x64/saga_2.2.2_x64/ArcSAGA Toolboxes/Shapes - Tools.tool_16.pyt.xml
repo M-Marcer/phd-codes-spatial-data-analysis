@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_16" displayname="Split Table/Shapes by Attribute">
+    <parameters>
+      <param name="TABLE" displayname="Table / Shapes" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Table / Shapes&lt;/p&gt;&lt;p&gt;Table (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD" displayname="Attribute" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Attribute&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CUTS" displayname="Cuts" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cuts&lt;/p&gt;&lt;p&gt;Table list (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Split Table/Shapes by Attribute</resTitle>
+    </idCitation>
+    <idCredit>O. Conrad (c) 2008</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

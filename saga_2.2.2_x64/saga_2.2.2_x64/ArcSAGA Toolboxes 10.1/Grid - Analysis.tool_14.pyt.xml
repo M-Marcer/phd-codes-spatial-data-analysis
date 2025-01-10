@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_14" displayname="Fragmentation (Alternative)">
+    <parameters>
+      <param name="CLASSES" displayname="Classification" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Classification&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DENSITY" displayname="Density [Percent]" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Density [Percent]&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Density Index (Pf).&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONNECTIVITY" displayname="Connectivity [Percent]" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Connectivity [Percent]&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Connectivity Index (Pff).&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FRAGMENTATION" displayname="Fragmentation" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Fragmentation&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Fragmentation Index&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FRAGSTATS" displayname="Summary" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Summary&lt;/p&gt;&lt;p&gt;Table (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLASS" displayname="Class Identifier" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Class Identifier&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NEIGHBORHOOD_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 3.000000&lt;/p&gt;&lt;p&gt;Moving window size = 1 + 2 * Neighborhood.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NEIGHBORHOOD_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 3.000000&lt;/p&gt;&lt;p&gt;Moving window size = 1 + 2 * Neighborhood.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AGGREGATION" displayname="Level Aggregation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Level Aggregation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] average&lt;/p&gt;&lt;p&gt;[1] multiplicative&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BORDER" displayname="Add Border" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Add Border&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WEIGHT" displayname="Connectivity Weighting" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Connectivity Weighting&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.100000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DENSITY_MIN" displayname="Minimum Density [Percent]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Density [Percent]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DENSITY_INT" displayname="Minimum Density for Interior Forest [Percent]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Density for Interior Forest [Percent]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 99.000000&lt;/p&gt;&lt;p&gt;if less than 100, it is distinguished between interior and core forest&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LEVEL_GROW" displayname="Search Distance Increment" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Search Distance Increment&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DENSITY_MEAN" displayname="Density from Neighbourhood" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Density from Neighbourhood&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Fragmentation (Alternative)</resTitle>
+    </idCitation>
+    <idCredit>(c) 2008 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

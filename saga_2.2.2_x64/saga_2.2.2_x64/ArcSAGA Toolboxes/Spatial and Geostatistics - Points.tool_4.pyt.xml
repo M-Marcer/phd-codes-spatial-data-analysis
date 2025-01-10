@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Spatial Point Pattern Analysis">
+    <parameters>
+      <param name="POINTS" displayname="Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CENTRE" displayname="Mean Centre" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Mean Centre&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STDDIST" displayname="Standard Distance" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Standard Distance&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STEP" displayname="Vertex Distance [Degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Vertex Distance [Degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.100000&lt;/p&gt;&lt;p&gt;Maximum: 20.000000&lt;/p&gt;&lt;p&gt;Default: 5.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BBOX" displayname="Bounding Box" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Bounding Box&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Spatial Point Pattern Analysis</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

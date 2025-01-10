@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Select by Attributes... (Numerical Expression)">
+    <parameters>
+      <param name="SHAPES" displayname="Shapes" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Shapes&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD" displayname="Attribute" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Attribute&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;attribute to be searched; if not set all attributes will be searched&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EXPRESSION" displayname="Expression" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Expression&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: a &gt; 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] new selection&lt;/p&gt;&lt;p&gt;[1] add to current selection&lt;/p&gt;&lt;p&gt;[2] select from current selection&lt;/p&gt;&lt;p&gt;[3] remove from current selection&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Select by Attributes... (Numerical Expression)</resTitle>
+    </idCitation>
+    <idCredit>V.Olaya (c) 2004, O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

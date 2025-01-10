@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_12" displayname="Convex Hull">
+    <parameters>
+      <param name="SHAPES" displayname="Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HULLS" displayname="Convex Hull" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Convex Hull&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BOXES" displayname="Minimum Bounding Box" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Bounding Box&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POLYPOINTS" displayname="Hull Construction" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Hull Construction&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] one hull for all shapes&lt;/p&gt;&lt;p&gt;[1] one hull per shape&lt;/p&gt;&lt;p&gt;[2] one hull per shape part&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;This option does not apply to simple point layers.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Convex Hull</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_3" displayname="Fill Sinks (Planchon/Darboux, 2001)">
+    <parameters>
+      <param name="DEM" displayname="DEM" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;DEM&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;digital elevation model [m]&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="Filled DEM" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Filled DEM&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;processed DEM&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MINSLOPE" displayname="Minimum Slope [Degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Slope [Degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.010000&lt;/p&gt;&lt;p&gt;minimum slope angle preserved from one cell to the next, zero results in flat areas [Degree]&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Fill Sinks (Planchon/Darboux, 2001)</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2003 by Volker Wichmann</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

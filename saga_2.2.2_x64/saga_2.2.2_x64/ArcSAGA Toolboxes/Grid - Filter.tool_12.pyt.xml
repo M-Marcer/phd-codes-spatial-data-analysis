@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_12" displayname="Geodesic Morphological Reconstruction">
+    <parameters>
+      <param name="INPUT_GRID" displayname="Input Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Input Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Input for the morphological reconstruction&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OBJECT_GRID" displayname="Object Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Object Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Binary object mask&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIFFERENCE_GRID" displayname="Difference Input - Reconstruction" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Difference Input - Reconstruction&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Difference Input - Reconstruction&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHIFT_VALUE" displayname="Shift value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shift value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 5.000000&lt;/p&gt;&lt;p&gt;Shift value&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BORDER_YES_NO" displayname="Preserve 1px border Yes/No" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Preserve 1px border Yes/No&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Preserve 1px border Yes/No&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BIN_YES_NO" displayname="Create a binary mask Yes/No" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Create a binary mask Yes/No&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Create a binary mask Yes/No&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLD" displayname="Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Threshold&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Geodesic Morphological Reconstruction</resTitle>
+    </idCitation>
+    <idCredit>HfT Stuttgart (c) 2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Convert Lines to Polygons">
+    <parameters>
+      <param name="POLYGONS" displayname="Polygons" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Polygons&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LINES" displayname="Lines" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Lines&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SINGLE" displayname="Create Single Multipart Polygon" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Create Single Multipart Polygon&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MERGE" displayname="Merge Line Parts to One Polygon" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Merge Line Parts to One Polygon&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Convert Lines to Polygons</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2005</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

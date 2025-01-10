@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_6" displayname="Flow Path Length">
+    <parameters>
+      <param name="ELEVATION" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEED" displayname="Seeds" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Seeds&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LENGTH" displayname="Flow Path Length" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Path Length&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEEDS_ONLY" displayname="Seeds Only" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Seeds Only&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Use only seed cells as starting points.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Flow Routing Algorithm" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Routing Algorithm&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Deterministic 8 (D8)&lt;/p&gt;&lt;p&gt;[1] Multiple Flow Direction (FD8)&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONVERGENCE" displayname="Convergence (FD8)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Convergence (FD8)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.100000&lt;/p&gt;&lt;p&gt;Convergence factor for the 'Multiple Flow Direction' algorithm (after Freeman 1991)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Flow Path Length</resTitle>
+    </idCitation>
+    <idCredit>(c) 2005 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

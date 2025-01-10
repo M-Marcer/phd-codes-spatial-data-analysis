@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_16" displayname="Import, Clip and Resample Grids">
+    <parameters>
+      <param name="FILES" displayname="Image Files" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Image Files&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRIDS" displayname="Grids" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Grids&lt;/p&gt;&lt;p&gt;Grid list (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLIP" displayname="Region of Interest" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Region of Interest&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CELLSIZE" displayname="Target Cell Size" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Target Cell Size&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Import, Clip and Resample Grids</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

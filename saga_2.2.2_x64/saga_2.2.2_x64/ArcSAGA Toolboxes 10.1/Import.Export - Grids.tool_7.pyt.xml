@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_7" displayname="Import USGS SRTM Grid">
+    <parameters>
+      <param name="GRIDS" displayname="Grids" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Grids&lt;/p&gt;&lt;p&gt;Grid list (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE" displayname="Files" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Files&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESOLUTION" displayname="Resolution" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Resolution&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] 1 arc-second&lt;/p&gt;&lt;p&gt;[1] 3 arc-second&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Import USGS SRTM Grid</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2004</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Analytical Hillshading">
+    <parameters>
+      <param name="ELEVATION" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHADE" displayname="Analytical Hillshading" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Analytical Hillshading&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;The angle between the surface and the incoming light beams, measured in radians.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Shading Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shading Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Standard&lt;/p&gt;&lt;p&gt;[1] Standard (max. 90Degree)&lt;/p&gt;&lt;p&gt;[2] Combined Shading&lt;/p&gt;&lt;p&gt;[3] Ray Tracing&lt;/p&gt;&lt;p&gt;[4] Ambient Occlusion&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AZIMUTH" displayname="Azimuth [Degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Azimuth [Degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 315.000000&lt;/p&gt;&lt;p&gt;Direction of the light source, measured in degree clockwise from the north direction.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DECLINATION" displayname="Height [Degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Height [Degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 45.000000&lt;/p&gt;&lt;p&gt;Height of the light source, measured in degree above the horizon.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EXAGGERATION" displayname="Exaggeration" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Exaggeration&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 4.000000&lt;/p&gt;&lt;p&gt;The terrain exaggeration factor allows to increase the shading contrasts in flat areas.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHADOW" displayname="Shadow" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shadow&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] slim&lt;/p&gt;&lt;p&gt;[1] fat&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Choose 'slim' to trace grid node's shadow, 'fat' to trace the whole cell's shadow. The first is slightly faster but might show some artifacts.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NDIRS" displayname="Number of Directions" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Directions&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 2&lt;/p&gt;&lt;p&gt;Default: 8&lt;/p&gt;&lt;p&gt;Number of sample directions for ambient occlusion. Divides azimuth range (270 to 0 to 90 degree) into sectors. Declination (0 to 90 degree) is divided in (Number of Directions / 4) sectors.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RADIUS" displayname="Search Radius" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Search Radius&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.001000&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;&lt;p&gt;Radius used to trace for shadows (ambient occlusion) [map units].&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Analytical Hillshading</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad, V.Wichmann (c) 2003-2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

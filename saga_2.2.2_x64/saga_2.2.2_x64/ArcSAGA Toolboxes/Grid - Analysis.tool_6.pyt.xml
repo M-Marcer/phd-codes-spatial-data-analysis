@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_6" displayname="Pattern Analysis">
+    <parameters>
+      <param name="INPUT" displayname="Input Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Input Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RELATIVE" displayname="Relative Richness" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Relative Richness&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIVERSITY" displayname="Diversity" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Diversity&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DOMINANCE" displayname="Dominance" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Dominance&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FRAGMENTATION" displayname="Fragmentation" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Fragmentation&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NDC" displayname="Number of Different Classes" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Different Classes&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CVN" displayname="Center Versus Neighbours" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Center Versus Neighbours&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WINSIZE" displayname="Size of Analysis Window" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Size of Analysis Window&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] 3 X 3&lt;/p&gt;&lt;p&gt;[1] 5 X 5&lt;/p&gt;&lt;p&gt;[2] 7 X 7&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAXNUMCLASS" displayname="Max. Number of Classes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Max. Number of Classes&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 10&lt;/p&gt;&lt;p&gt;Maximum number of classes in entire grid.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Pattern Analysis</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2004 by Victor Olaya</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

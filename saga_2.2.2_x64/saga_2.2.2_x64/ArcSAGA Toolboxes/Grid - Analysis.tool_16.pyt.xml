@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_16" displayname="Accumulation Functions">
+    <parameters>
+      <param name="SURFACE" displayname="Surface" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Surface&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Surface used to derive the LDD network, e.g. a DTM.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INPUT" displayname="Input" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Input&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Grid with the input values to accumulate.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STATE_IN" displayname="State t" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;State t&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Grid describing the state of each cell at timestep t.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONTROL" displayname="Operation Control" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Operation Control&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Depending on mode of operation either transport capacity, transport fraction, threshold value or trigger value.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CTRL_LINEAR" displayname="Linear Flow Control Grid" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Linear Flow Control Grid&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;The values of this grid are checked against the linear flow threshold to decide on the flow-routing algorithm.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FLUX" displayname="Flux" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Flux&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Flux out of each cell, i.e. everything accumulated so far.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STATE_OUT" displayname="State t + 1" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;State t + 1&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Grid describing the state of each cell at timestep t + 1.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OPERATION" displayname="Operation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Operation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] accuflux&lt;/p&gt;&lt;p&gt;[1] accucapacityflux / state&lt;/p&gt;&lt;p&gt;[2] accufractionflux / state&lt;/p&gt;&lt;p&gt;[3] accuthresholdflux / state&lt;/p&gt;&lt;p&gt;[4] accutriggerflux / state&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Select a mode of operation&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LINEAR" displayname="Switch to Linear Flow" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Switch to Linear Flow&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Switch from MFD8 to D8 if linear flow threshold is crossed.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRES_LINEAR" displayname="Threshold Linear Flow" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Threshold Linear Flow&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Threshold for linear flow, if exceeded D8 is used.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Accumulation Functions</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2009 by Volker Wichmann</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_10" displayname="Random Forest Presence Prediction (ViGrA)">
+    <parameters>
+      <param name="FEATURES" displayname="Features" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Features&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PREDICTION" displayname="Presence Prediction" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Presence Prediction&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PROBABILITY" displayname="Presence Probability" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Presence Probability&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PRESENCE" displayname="Presence Data" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Presence Data&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BACKGROUND" displayname="Background Sample Density [Percent]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Background Sample Density [Percent]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DO_MRMR" displayname="Minimum Redundancy Feature Selection" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Redundancy Feature Selection&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Use only features selected by the minimum Redundancy Maximum Relevance (mRMR) algorithm&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="mRMR_NFEATURES" displayname="Number of Features" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Features&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 50&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="mRMR_DISCRETIZE" displayname="Discretization" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Discretization&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;uncheck this means no discretizaton (i.e. data is already integer)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="mRMR_THRESHOLD" displayname="Discretization Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Discretization Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;a double number of the discretization threshold; set to 0 to make binarization&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="mRMR_METHOD" displayname="Selection Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Selection Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Mutual Information Difference (MID)&lt;/p&gt;&lt;p&gt;[1] Mutual Information Quotient (MIQ)&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_IMPORT" displayname="Import from File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Import from File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_EXPORT" displayname="Export to File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Export to File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_TREE_COUNT" displayname="Tree Count" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Tree Count&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 32&lt;/p&gt;&lt;p&gt;How many trees to create?&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_TREE_SAMPLES" displayname="Samples per Tree" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Samples per Tree&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Specifies the fraction of the total number of samples used per tree for learning.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_REPLACE" displayname="Sample with Replacement" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sample with Replacement&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Sample from training population with or without replacement?&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_SPLIT_MIN_SIZE" displayname="Minimum Node Split Size" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Node Split Size&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Number of examples required for a node to be split. Choose 1 for complete growing.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_NODE_FEATURES" displayname="Features per Node" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Features per Node&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] logarithmic&lt;/p&gt;&lt;p&gt;[1] square root&lt;/p&gt;&lt;p&gt;[2] all&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_STRATIFICATION" displayname="Stratification" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Stratification&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] none&lt;/p&gt;&lt;p&gt;[1] equal&lt;/p&gt;&lt;p&gt;[2] proportional&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Specifies stratification strategy. Either none, equal amount of class samples, or proportional to fraction of class samples.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Random Forest Presence Prediction (ViGrA)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_12" displayname="Soil Texture Classification">
+    <parameters>
+      <param name="SAND" displayname="Sand" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Sand&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;sand content given as percentage&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SILT" displayname="Silt" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Silt&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;silt content given as percentage&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLAY" displayname="Clay" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Clay&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;clay content given as percentage&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TEXTURE" displayname="Soil Texture" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Soil Texture&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;soil texture&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SUM" displayname="Sum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sum&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Sum of percentages&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Soil Texture Classification</resTitle>
+    </idCitation>
+    <idCredit>Gianluca Massei (c) 2007 (g_massa@libero.it)</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Overland Flow Distance to Channel Network">
+    <parameters>
+      <param name="ELEVATION" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;A grid that contains elevation data.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CHANNELS" displayname="Channel Network" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Channel Network&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;A grid providing information about the channel network. It is assumed that no-data cells are not part of the channel network. Vice versa all others cells are recognised as channel network members.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ROUTE" displayname="Preferred Routing" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Preferred Routing&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Downhill flow is bound to preferred routing cells, where these are not no-data. Helps to model e.g. small ditches, that are not well represented in the elevation data.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DISTANCE" displayname="Overland Flow Distance" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Overland Flow Distance&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;The overland flow distance in map units. It is assumed that the (vertical) elevation data use the same units as the (horizontal) grid coordinates.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DISTVERT" displayname="Vertical Overland Flow Distance" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Vertical Overland Flow Distance&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;This is the vertical component of the overland flow&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DISTHORZ" displayname="Horizontal Overland Flow Distance" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Horizontal Overland Flow Distance&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;This is the horizontal component of the overland flow&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TIME" displayname="Flow Travel Time" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Travel Time&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;flow travel time to channel expressed in hours based on Manning's Equation&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SDR" displayname="Sediment Yield Delivery Ratio" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sediment Yield Delivery Ratio&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;This is the horizontal component of the overland flow&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELDS" displayname="Fields" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Fields&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;If set, output is given about the number of fields a flow path visits downhill. For D8 only.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PASSES" displayname="Fields Visited" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Fields Visited&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Number of fields a flow path visits downhill starting at a cell. For D8 only.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Flow Algorithm" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Algorithm&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] D8&lt;/p&gt;&lt;p&gt;[1] MFD&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Choose a flow routing algorithm that shall be used for the overland flow distance calculation:&lt;/p&gt;&lt;p&gt;- D8&lt;/p&gt;&lt;p&gt;- MFD&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FLOW_B" displayname="Beta" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Beta&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;catchment specific parameter for sediment delivery ratio calculation&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FLOW_K" displayname="Manning-Strickler Coefficient" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Manning-Strickler Coefficient&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Manning-Strickler coefficient for flow travel time estimation (reciprocal of Manning's Roughness Coefficient)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FLOW_K_DEFAULT" displayname="Default" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Default&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 20.000000&lt;/p&gt;&lt;p&gt;default value if no grid has been selected&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FLOW_R" displayname="Flow Depth" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Flow Depth&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;flow depth [m] for flow travel time estimation&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FLOW_R_DEFAULT" displayname="Default" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Default&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.050000&lt;/p&gt;&lt;p&gt;default value if no grid has been selected&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Overland Flow Distance to Channel Network</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2001-14</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

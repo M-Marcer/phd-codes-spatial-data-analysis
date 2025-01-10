@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_20" displayname="Polar to Cartesian Coordinates">
+    <parameters>
+      <param name="POLAR" displayname="Polar Coordinates" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Polar Coordinates&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="F_EXAGG" displayname="Exaggeration" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Exaggeration&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="D_EXAGG" displayname="Exaggeration Factor" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Exaggeration Factor&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CARTES" displayname="Cartesion Coordinates" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Cartesion Coordinates&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RADIUS" displayname="Radius" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Radius&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 6371000.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DEGREE" displayname="Degree" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Degree&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;polar coordinates given in degree&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Polar to Cartesian Coordinates</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

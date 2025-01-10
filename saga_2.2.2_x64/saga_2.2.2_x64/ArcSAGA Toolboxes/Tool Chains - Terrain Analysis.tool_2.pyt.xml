@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Topographic Wetness Index (One Step)">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TWI" displayname="Topographic Wetness Index" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Topographic Wetness Index&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FLOW_METHOD" displayname="Flow Distribution" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Distribution&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Deterministic 8&lt;/p&gt;&lt;p&gt;[1] Rho 8&lt;/p&gt;&lt;p&gt;[2] Braunschweiger Reliefmodell&lt;/p&gt;&lt;p&gt;[3] Deterministic Infinity&lt;/p&gt;&lt;p&gt;[4] Multiple Flow Direction&lt;/p&gt;&lt;p&gt;[5] Multiple Triangular Flow Direction&lt;/p&gt;&lt;p&gt;[6] Multiple Maximum Downslope Gradient Based Flow Direction&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Topographic Wetness Index (One Step)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2014</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

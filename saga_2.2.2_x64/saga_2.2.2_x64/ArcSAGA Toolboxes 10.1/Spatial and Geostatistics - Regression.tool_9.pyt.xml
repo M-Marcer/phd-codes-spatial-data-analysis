@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_9" displayname="Polynomial Trend from Grids">
+    <parameters>
+      <param name="Y_GRIDS" displayname="Dependent Variables" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Dependent Variables&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COEFF" displayname="Polynomial Coefficients" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Polynomial Coefficients&lt;/p&gt;&lt;p&gt;Grid list (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="R2" displayname="Coefficient of Determination" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Coefficient of Determination&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ORDER" displayname="Polynomial Order" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Polynomial Order&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="XSOURCE" displayname="Get Independent Variable from ..." type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Get Independent Variable from ...&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] list order&lt;/p&gt;&lt;p&gt;[1] table&lt;/p&gt;&lt;p&gt;[2] grid list&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="X_TABLE" displayname="Independent Variable (per Grid)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Independent Variable (per Grid)&lt;/p&gt;&lt;p&gt;Static table&lt;/p&gt;&lt;p&gt;1 Fields:&lt;/p&gt;&lt;p&gt;- 1. [8 byte floating point number] Value&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="X_GRIDS" displayname="Independent Variable (per Grid and Cell)" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Independent Variable (per Grid and Cell)&lt;/p&gt;&lt;p&gt;Grid list (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Polynomial Trend from Grids</resTitle>
+    </idCitation>
+    <idCredit>O. Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

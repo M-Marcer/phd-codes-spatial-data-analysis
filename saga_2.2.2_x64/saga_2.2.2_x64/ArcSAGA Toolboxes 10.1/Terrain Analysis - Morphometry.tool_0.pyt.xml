@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Slope, Aspect, Curvature">
+    <parameters>
+      <param name="ELEVATION" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SLOPE" displayname="Slope" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Slope&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ASPECT" displayname="Aspect" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Aspect&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_GENE" displayname="General Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;General Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_PROF" displayname="Profile Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Profile Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_PLAN" displayname="Plan Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Plan Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_TANG" displayname="Tangential Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Tangential Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_LONG" displayname="Longitudinal Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Longitudinal Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Zevenbergen & Thorne (1987) refer to this as profile curvature&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_CROS" displayname="Cross-Sectional Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cross-Sectional Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Zevenbergen & Thorne (1987) refer to this as plan curvature&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_MINI" displayname="Minimal Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimal Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_MAXI" displayname="Maximal Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximal Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_TOTA" displayname="Total Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Total Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_ROTO" displayname="Flow Line Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Line Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] maximum slope (Travis et al. 1975)&lt;/p&gt;&lt;p&gt;[1] maximum triangle slope (Tarboton 1997)&lt;/p&gt;&lt;p&gt;[2] least squares fitted plane (Horn 1981, Costa-Cabral & Burgess 1996)&lt;/p&gt;&lt;p&gt;[3] 6 parameter 2nd order polynom (Evans 1979)&lt;/p&gt;&lt;p&gt;[4] 6 parameter 2nd order polynom (Heerdegen & Beran 1982)&lt;/p&gt;&lt;p&gt;[5] 6 parameter 2nd order polynom (Bauer, Rohdenburg, Bork 1985)&lt;/p&gt;&lt;p&gt;[6] 9 parameter 2nd order polynom (Zevenbergen & Thorne 1987)&lt;/p&gt;&lt;p&gt;[7] 10 parameter 3rd order polynom (Haralick 1983)&lt;/p&gt;&lt;p&gt;Default: 6&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="UNIT_SLOPE" displayname="Slope Units" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Slope Units&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] radians&lt;/p&gt;&lt;p&gt;[1] degree&lt;/p&gt;&lt;p&gt;[2] percent&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="UNIT_ASPECT" displayname="Aspect Units" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Aspect Units&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] radians&lt;/p&gt;&lt;p&gt;[1] degree&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Slope, Aspect, Curvature</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2001</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

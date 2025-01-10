@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_9" displayname="Automated Cloud Cover Assessment">
+    <parameters>
+      <param name="BAND2" displayname="Landsat Band 2" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Landsat Band 2&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BAND3" displayname="Landsat Band 3" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Landsat Band 3&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BAND4" displayname="Landsat Band 4" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Landsat Band 4&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BAND5" displayname="Landsat Band 5" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Landsat Band 5&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BAND6" displayname="Landsat Band 6" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Landsat Band 6&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLOUD" displayname="Cloud Cover" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Cloud Cover&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILTER" displayname="Apply post-processing filter to remove small holes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Apply post-processing filter to remove small holes&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="B56C" displayname="B56 Composite (step 6)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;B56 Composite (step 6)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 225.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="B45R" displayname="B45 Ratio: Desert detection (step 10)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;B45 Ratio: Desert detection (step 10)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CSIG" displayname="Always use cloud signature (step 14)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Always use cloud signature (step 14)&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PASS2" displayname="Bypass second-pass processing, and merge warm (not ambiguous) and cold clouds" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Bypass second-pass processing, and merge warm (not ambiguous) and cold clouds&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHADOW" displayname="Include a category for cloud shadows" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Include a category for cloud shadows&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Automated Cloud Cover Assessment</resTitle>
+    </idCitation>
+    <idCredit>B.Bechtel, O.Conrad (c) 2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_6" displayname="Confusion Matrix (Polygons / Grid)">
+    <parameters>
+      <param name="GRID" displayname="Classification" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Classification&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRID_LUT" displayname="Look-up Table" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Look-up Table&lt;/p&gt;&lt;p&gt;Table (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRID_LUT_MIN" displayname="Value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Value&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRID_LUT_MAX" displayname="Value (Maximum)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Value (Maximum)&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRID_LUT_NAM" displayname="Name" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Name&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POLYGONS" displayname="Polygons" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Polygons&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD" displayname="Classes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Classes&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONFUSION" displayname="Confusion Matrix" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Confusion Matrix&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLASSES" displayname="Class Values" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Class Values&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SUMMARY" displayname="Summary" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Summary&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Confusion Matrix (Polygons / Grid)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

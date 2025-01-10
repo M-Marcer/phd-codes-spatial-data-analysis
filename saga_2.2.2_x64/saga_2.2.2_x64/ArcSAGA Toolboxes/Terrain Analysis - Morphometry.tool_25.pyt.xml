@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_25" displayname="Fuzzy Landform Element Classification">
+    <parameters>
+      <param name="SLOPE" displayname="Slope" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Slope&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MINCURV" displayname="Minimum Curvature" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Minimum Curvature&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAXCURV" displayname="Maximum Curvature" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Maximum Curvature&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PCURV" displayname="Profile Curvature" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Profile Curvature&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TCURV" displayname="Tangential Curvature" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Tangential Curvature&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PLAIN" displayname="Plain" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Plain&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PIT" displayname="Pit" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Pit&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PEAK" displayname="Peak" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Peak&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RIDGE" displayname="Ridge" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Ridge&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CHANNEL" displayname="Channel" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Channel&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SADDLE" displayname="Saddle" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Saddle&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BSLOPE" displayname="Back Slope" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Back Slope&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FSLOPE" displayname="Foot Slope" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Foot Slope&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SSLOPE" displayname="Shoulder Slope" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shoulder Slope&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HOLLOW" displayname="Hollow" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Hollow&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FHOLLOW" displayname="Foot Hollow" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Foot Hollow&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHOLLOW" displayname="Shoulder Hollow" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shoulder Hollow&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SPUR" displayname="Spur" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Spur&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FSPUR" displayname="Foot Spur" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Foot Spur&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SSPUR" displayname="Shoulder Spur" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shoulder Spur&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FORM" displayname="Landform" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Landform&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MEM" displayname="Maximum Membership" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Membership&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ENTROPY" displayname="Entropy" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Entropy&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CI" displayname="Confusion Index" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Confusion Index&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SLOPETODEG" displayname="Slope Grid Units" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Slope Grid Units&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] degree&lt;/p&gt;&lt;p&gt;[1] radians&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_SLOPE_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 90.000000&lt;/p&gt;&lt;p&gt;Default: 5.000000&lt;/p&gt;&lt;p&gt;lower and upper thresholds for semantic import model, planar vs. sloped areas&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_SLOPE_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 90.000000&lt;/p&gt;&lt;p&gt;Default: 15.000000&lt;/p&gt;&lt;p&gt;lower and upper thresholds for semantic import model, planar vs. sloped areas&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_CURVE_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000002&lt;/p&gt;&lt;p&gt;lower and upper thresholds for semantic import model, straight vs. curved areas&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_CURVE_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000050&lt;/p&gt;&lt;p&gt;lower and upper thresholds for semantic import model, straight vs. curved areas&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Fuzzy Landform Element Classification</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

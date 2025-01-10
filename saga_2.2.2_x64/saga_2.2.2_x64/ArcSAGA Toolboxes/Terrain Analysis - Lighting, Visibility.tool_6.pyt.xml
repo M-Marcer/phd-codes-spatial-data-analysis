@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_6" displayname="Visibility (points)">
+    <parameters>
+      <param name="ELEVATION" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VISIBILITY" displayname="Visibility" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Visibility&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POINTS" displayname="Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;&lt;p&gt;Observer points.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD_HEIGHT" displayname="Height" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Height&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;Height of the light source above ground.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Unit" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Unit&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Visibility&lt;/p&gt;&lt;p&gt;[1] Shade&lt;/p&gt;&lt;p&gt;[2] Distance&lt;/p&gt;&lt;p&gt;[3] Size&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Visibility (points)</resTitle>
+    </idCitation>
+    <idCredit>Volker Wichmann (c) 2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

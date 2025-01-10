@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_8" displayname="Top of Atmosphere Reflectance">
+    <parameters>
+      <param name="DN_MSS01" displayname="DN Band 1" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 1&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_MSS02" displayname="DN Band 2" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 2&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_MSS03" displayname="DN Band 3" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 3&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_MSS04" displayname="DN Band 4" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 4&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_MSS01" displayname="Reflectance Band 1" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 1&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_MSS02" displayname="Reflectance Band 2" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 2&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_MSS03" displayname="Reflectance Band 3" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 3&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_MSS04" displayname="Reflectance Band 4" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 4&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_ETM01" displayname="DN Band 1" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 1&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_ETM02" displayname="DN Band 2" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 2&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_ETM03" displayname="DN Band 3" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 3&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_ETM04" displayname="DN Band 4" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 4&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_ETM05" displayname="DN Band 5" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 5&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_ETM07" displayname="DN Band 7" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 7&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_ETM01" displayname="Reflectance Band 1" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 1&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_ETM02" displayname="Reflectance Band 2" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 2&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_ETM03" displayname="Reflectance Band 3" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 3&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_ETM04" displayname="Reflectance Band 4" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 4&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_ETM05" displayname="Reflectance Band 5" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 5&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_ETM07" displayname="Reflectance Band 7" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 7&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_OLI01" displayname="DN Band 1" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 1&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_OLI02" displayname="DN Band 2" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 2&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_OLI03" displayname="DN Band 3" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 3&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_OLI04" displayname="DN Band 4" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 4&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_OLI05" displayname="DN Band 5" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 5&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_OLI06" displayname="DN Band 6" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 6&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_OLI07" displayname="DN Band 7" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 7&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_OLI09" displayname="DN Band 9" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 9&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_OLI01" displayname="Reflectance Band 1" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 1&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_OLI02" displayname="Reflectance Band 2" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 2&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_OLI03" displayname="Reflectance Band 3" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 3&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_OLI04" displayname="Reflectance Band 4" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 4&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_OLI05" displayname="Reflectance Band 5" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 5&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_OLI06" displayname="Reflectance Band 6" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 6&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_OLI07" displayname="Reflectance Band 7" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 7&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_OLI09" displayname="Reflectance Band 9" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 9&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN__TM06" displayname="DN Band 6" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 6&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF__TM06" displayname="Reflectance Band 6" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 6&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_ETM61" displayname="DN Band 61" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 61&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_ETM62" displayname="DN Band 62" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 62&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_ETM61" displayname="Reflectance Band 61" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 61&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_ETM62" displayname="Reflectance Band 62" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 62&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_OLI10" displayname="DN Band 10" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 10&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_OLI11" displayname="DN Band 11" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 11&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_OLI10" displayname="Reflectance Band 10" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 10&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_OLI11" displayname="Reflectance Band 11" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 11&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DN_PAN08" displayname="DN Band 8" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DN Band 8&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_PAN08" displayname="Reflectance Band 8" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reflectance Band 8&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METAFILE" displayname="Metadata File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Metadata File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;&lt;p&gt;Name of Landsat metadata file (.met or MTL.txt)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SENSOR" displayname="Spacecraft Sensor" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Spacecraft Sensor&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Landsat-1 MSS&lt;/p&gt;&lt;p&gt;[1] Landsat-2 MSS&lt;/p&gt;&lt;p&gt;[2] Landsat-3 MSS&lt;/p&gt;&lt;p&gt;[3] Landsat-4 MSS&lt;/p&gt;&lt;p&gt;[4] Landsat-5 MSS&lt;/p&gt;&lt;p&gt;[5] Landsat-4 TM&lt;/p&gt;&lt;p&gt;[6] Landsat-5 TM&lt;/p&gt;&lt;p&gt;[7] Landsat-7 ETM+&lt;/p&gt;&lt;p&gt;[8] Landsat-8 OLI/TIRS&lt;/p&gt;&lt;p&gt;Default: 7&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DATE_ACQU" displayname="Image Acquisition Date" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Image Acquisition Date&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: 2001-01-01&lt;/p&gt;&lt;p&gt;Image acquisition date (yyyy-mm-dd)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DATE_PROD" displayname="Image Creation Date" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Image Creation Date&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: 2001-01-01&lt;/p&gt;&lt;p&gt;Image creation date (yyyy-mm-dd)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SUN_HGT" displayname="Suns's Height" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Suns's Height&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 90.000000&lt;/p&gt;&lt;p&gt;Default: 45.000000&lt;/p&gt;&lt;p&gt;Sun's height above horizon in degree&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AS_RAD" displayname="At-Sensor Radiance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;At-Sensor Radiance&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Output at-sensor radiance for all bands&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AC_METHOD" displayname="Atmospheric Correction" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Atmospheric Correction&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] uncorrected&lt;/p&gt;&lt;p&gt;[1] corrected&lt;/p&gt;&lt;p&gt;[2] dark object subtraction 1&lt;/p&gt;&lt;p&gt;[3] dark object subtraction 2&lt;/p&gt;&lt;p&gt;[4] dark object subtraction 2b&lt;/p&gt;&lt;p&gt;[5] dark object subtraction 3&lt;/p&gt;&lt;p&gt;[6] dark object subtraction 4&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AC_DO_CELLS" displayname="Minimum Number of Dark Object Cells" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Number of Dark Object Cells&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Default: 1000&lt;/p&gt;&lt;p&gt;Minimum pixels to consider digital number as dark object&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AC_RAYLEIGH" displayname="Rayleigh Scattering" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Rayleigh Scattering&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Rayleigh atmosphere (diffuse sky irradiance)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AC_SUN_RAD" displayname="Solar Radiance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Solar Radiance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Percent of solar radiance in path radiance&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ETM_GAIN_10" displayname="Band 1" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Band 1&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] low&lt;/p&gt;&lt;p&gt;[1] high&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ETM_GAIN_20" displayname="Band 2" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Band 2&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] low&lt;/p&gt;&lt;p&gt;[1] high&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ETM_GAIN_30" displayname="Band 3" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Band 3&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] low&lt;/p&gt;&lt;p&gt;[1] high&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ETM_GAIN_40" displayname="Band 4" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Band 4&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] low&lt;/p&gt;&lt;p&gt;[1] high&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ETM_GAIN_50" displayname="Band 5" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Band 5&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] low&lt;/p&gt;&lt;p&gt;[1] high&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ETM_GAIN_61" displayname="Band 61" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Band 61&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] low&lt;/p&gt;&lt;p&gt;[1] high&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ETM_GAIN_62" displayname="Band 62" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Band 62&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] low&lt;/p&gt;&lt;p&gt;[1] high&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ETM_GAIN_70" displayname="Band 7" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Band 7&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] low&lt;/p&gt;&lt;p&gt;[1] high&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ETM_GAIN_80" displayname="Band 8" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Band 8&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] low&lt;/p&gt;&lt;p&gt;[1] high&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Top of Atmosphere Reflectance</resTitle>
+    </idCitation>
+    <idCredit>B.Bechtel, O.Conrad (c) 2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

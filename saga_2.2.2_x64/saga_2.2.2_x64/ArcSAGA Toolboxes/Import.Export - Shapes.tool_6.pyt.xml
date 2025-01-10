@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_6" displayname="Import Surfer Blanking Files">
+    <parameters>
+      <param name="SHAPES" displayname="Shapes" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Shapes&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TABLE" displayname="Look up table (Points)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Look up table (Points)&lt;/p&gt;&lt;p&gt;Table (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE" displayname="File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TYPE" displayname="Shape Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shape Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] points&lt;/p&gt;&lt;p&gt;[1] lines&lt;/p&gt;&lt;p&gt;[2] polygons&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Import Surfer Blanking Files</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2006</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_15" displayname="Lake Flood">
+    <parameters>
+      <param name="ELEV" displayname="DEM" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;DEM&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;digital elevation model&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEEDS" displayname="Seeds" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Seeds&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;seed cells coded with local water depth or absolute water level, all other cells NoData&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LEVEL" displayname="Absolute Water Levels" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Absolute Water Levels&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;check this in case seed cells are coded with absolute water level&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTDEPTH" displayname="Lake" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Lake&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;extent of lake, coded with water depth&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTLEVEL" displayname="Surface" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Surface&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Flooded digital elevation model&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Lake Flood</resTitle>
+    </idCitation>
+    <idCredit>Volker Wichmann (c) 2005-2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

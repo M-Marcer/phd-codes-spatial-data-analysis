@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Get Grid from Virtual Point Cloud">
+    <parameters>
+      <param name="FILENAME" displayname="Filename" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Filename&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;&lt;p&gt;The full path and name of the .spcvf file&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRID_OUT" displayname="Grid" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid list (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;The output grid(s)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILEPATH" displayname="Optional Output Filepath" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Optional Output Filepath&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;&lt;p&gt;The full path to which the output(s) should be written. Leave empty to output the datasets as grid list.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ATTR_FIELD_GRID" displayname="Attribute Field to Grid" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Attribute Field to Grid&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 3&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;The attribute field to grid. Field numbers start with 1, so elevation is attribute field 3.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CELL_SIZE" displayname="Cellsize" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cellsize&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.001000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Cellsize of the output grid [map units]&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRID_SYSTEM_FIT" displayname="Grid System Fit" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Grid System Fit&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] nodes&lt;/p&gt;&lt;p&gt;[1] cells&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Choose how to align the ouput grid system to the AOI&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Aggregation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Aggregation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] lowest&lt;/p&gt;&lt;p&gt;[1] highest&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Choose how to aggregate the values&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONSTRAIN_QUERY" displayname="Constrain Query" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Constrain Query&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Check this parameter to constrain the query by an attribute range.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ATTR_FIELD" displayname="Attribute Field" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Attribute Field&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;The attribute field to use as constraint. Field numbers start with 1.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VALUE_RANGE_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 2.000000&lt;/p&gt;&lt;p&gt;Minimum and maximum of attribute range [].&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VALUE_RANGE_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 2.000000&lt;/p&gt;&lt;p&gt;Minimum and maximum of attribute range [].&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AOI_SHP" displayname="Shape" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Shape&lt;/p&gt;&lt;p&gt;Shapes (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Shapefile describing the AOI.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD_TILENAME" displayname="Tilename" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Tilename&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Attribute used for naming the output file(s)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AOI_GRID" displayname="Grid" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Grid describing the AOI.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AOI_XRANGE_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Minimum and maximum x-coordinate of AOI.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AOI_XRANGE_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Minimum and maximum x-coordinate of AOI.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AOI_YRANGE_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Minimum and maximum y-coordinate of AOI.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AOI_YRANGE_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Minimum and maximum y-coordinate of AOI.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AOI_ADD_OVERLAP" displayname="Add Overlap" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Add Overlap&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Add overlap to AOI&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OVERLAP" displayname="Overlap" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Overlap&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 50.000000&lt;/p&gt;&lt;p&gt;Overlap [map units]&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Get Grid from Virtual Point Cloud</resTitle>
+    </idCitation>
+    <idCredit>V. Wichmann, LASERDATA GmbH (c) 2014</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <HISTORY saga-version="2.2.2">
+    <MODULE library="shapes_polygons" id="1" name="Polygon Centroids">
+      <OPTION type="boolean" id="METHOD" name="Centroids for each part">FALSE</OPTION>
+      <INPUT type="shapes" id="POLYGONS" name="Polygons">
+        <MODULE library="shapes_polygons" id="20" name="Add Point Attributes to Polygons">
+          <OPTION type="table_fields" id="FIELDS" name="Attributes">2</OPTION>
+          <OPTION type="boolean" id="ADD_LOCATION_INFO" name="Add Location Info">FALSE</OPTION>
+          <INPUT type="shapes" id="INPUT" name="Polygons">
+            <MODULE library="shapes_polygons" id="20" name="Add Point Attributes to Polygons">
+              <OPTION type="table_fields" id="FIELDS" name="Attributes">2</OPTION>
+              <OPTION type="boolean" id="ADD_LOCATION_INFO" name="Add Location Info">FALSE</OPTION>
+              <INPUT type="shapes" id="INPUT" name="Polygons">
+                <FILE>rock_glaciers.shp</FILE>
+              </INPUT>
+              <INPUT type="shapes" id="POINTS" name="Points">
+                <FILE>destabilization_rates.shp</FILE>
+              </INPUT>
+              <OUTPUT type="shapes" id="OUTPUT" name="Result">rock_glaciers_destabilization_rates</OUTPUT>
+            </MODULE>
+          </INPUT>
+          <INPUT type="shapes" id="POINTS" name="Points">
+            <FILE>destabilization_rates.shp</FILE>
+          </INPUT>
+          <OUTPUT type="shapes" id="OUTPUT" name="Result">rock_glaciers_destabilization_rates</OUTPUT>
+        </MODULE>
+      </INPUT>
+      <OUTPUT type="shapes" id="CENTROIDS" name="Centroids">rock_glaciers</OUTPUT>
+    </MODULE>
+  </HISTORY>
+  <SOURCE>
+    <FILE>rg_centroids.shp</FILE>
+    <DATABASE></DATABASE>
+    <PROJECTION>
+      <OGC_WKT>PROJCS["Lambert_Conformal_Conic",GEOGCS["GCS_GRS 1980(IUGG, 1980)",DATUM["D_unknown",SPHEROID["GRS80",6378137,298.257222101]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["standard_parallel_1",49],PARAMETER["standard_parallel_2",44],PARAMETER["latitude_of_origin",46.5],PARAMETER["central_meridian",3],PARAMETER["false_easting",700000],PARAMETER["false_northing",6600000],UNIT["Meter",1]]</OGC_WKT>
+      <PROJ4>+proj=lcc +a=6378137.000000 +b=6356752.314140 +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +no_defs</PROJ4>
+      <EPSG>-1</EPSG>
+    </PROJECTION>
+  </SOURCE>
+  <DESCRIPTION></DESCRIPTION>
+</SAGA_METADATA>

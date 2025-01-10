@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Function">
+    <parameters>
+      <param name="RESULT" displayname="Function" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Function&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="XMIN" displayname="xmin" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;xmin&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: -5.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="XMAX" displayname="xmax" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;xmax&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 5.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YMIN" displayname="ymin" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;ymin&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: -5.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YMAX" displayname="ymax" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;ymax&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 5.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FORMUL" displayname="Formula" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Formula&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: sin(x*x + y*y)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Function</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2003 by Andre Ringeler</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

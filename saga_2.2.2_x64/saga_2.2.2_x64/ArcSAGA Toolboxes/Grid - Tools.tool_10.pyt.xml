@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_10" displayname="Grid Proximity Buffer">
+    <parameters>
+      <param name="SOURCE" displayname="Source Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Source Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Grid with features to be buffered [Category/NoData]&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DISTANCE" displayname="Distance Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Distance Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Grid with euclidian distance to nearest source cell [grid units]&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ALLOC" displayname="Allocation Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Allocation Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Grid with category of nearest source cell [Category]&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BUFFER" displayname="Buffer Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Buffer Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Reclassification of distance grid to buffer zones with a width equal to the equidistance value.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIST" displayname="Buffer distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Buffer distance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 500.000000&lt;/p&gt;&lt;p&gt;Buffer distance (grid units).&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="IVAL" displayname="Equidistance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Equidistance&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 100&lt;/p&gt;&lt;p&gt;Reclassify buffer distance to intervals of euqidistance ...&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Grid Proximity Buffer</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2006 by Volker Wichmann</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_17" displayname="IMCORR - Feature Tracking">
+    <parameters>
+      <param name="GRID_1" displayname="Grid 1" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid 1&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;The first grid to correlate&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRID_2" displayname="Grid 2" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid 2&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;The second grid to correlate&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DTM_1" displayname="DTM 1" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DTM 1&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;The first DTM used to assign height information to grid 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DTM_2" displayname="DTM 2" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;DTM 2&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;The second DTM used to assign height information to grid 2&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CORRPOINTS" displayname="Correlated Points" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Correlated Points&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;&lt;p&gt;Correlated points with displacement and correlation information&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CORRLINES" displayname="Displacement Vector" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Displacement Vector&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;&lt;p&gt;Displacement vectors between correlated points&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEARCH_CHIPSIZE" displayname="Search Chip Size (Cells)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Search Chip Size (Cells)&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] 16x16&lt;/p&gt;&lt;p&gt;[1] 32x32&lt;/p&gt;&lt;p&gt;[2] 64x64&lt;/p&gt;&lt;p&gt;[3] 128x128&lt;/p&gt;&lt;p&gt;[4] 256x256&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;&lt;p&gt;Chip size of search chip, used to find correlating reference chip&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="REF_CHIPSIZE" displayname="Reference Chip Size (Cells)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Reference Chip Size (Cells)&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] 16x16&lt;/p&gt;&lt;p&gt;[1] 32x32&lt;/p&gt;&lt;p&gt;[2] 64x64&lt;/p&gt;&lt;p&gt;[3] 128x128&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Chip size of reference chip to be found in search chip&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRID_SPACING" displayname="Grid Spacing (Map Units)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Grid Spacing (Map Units)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.100000&lt;/p&gt;&lt;p&gt;Maximum: 256.000000&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;&lt;p&gt;Grid spacing used for the construction of correlated points [map units]&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>IMCORR - Feature Tracking</resTitle>
+    </idCitation>
+    <idCredit>Magnus Bremer (c) 2012</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

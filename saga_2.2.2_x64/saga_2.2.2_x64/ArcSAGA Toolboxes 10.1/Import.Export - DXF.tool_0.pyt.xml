@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Import DXF Files">
+    <parameters>
+      <param name="SHAPES" displayname="Shapes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shapes&lt;/p&gt;&lt;p&gt;Shapes list (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TABLES" displayname="Tables" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Tables&lt;/p&gt;&lt;p&gt;Shapes list (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE" displayname="File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILTER" displayname="Import Filter" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Import Filter&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] all entities&lt;/p&gt;&lt;p&gt;[1] only entities with layer definition&lt;/p&gt;&lt;p&gt;[2] only entities without layer definition&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DCIRCLE" displayname="Circle Point Distance [Degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Circle Point Distance [Degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.010000&lt;/p&gt;&lt;p&gt;Maximum: 45.000000&lt;/p&gt;&lt;p&gt;Default: 5.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Import DXF Files</resTitle>
+    </idCitation>
+    <idCredit>(c) 2007 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_18" displayname="Soil Texture Classification for Tables">
+    <parameters>
+      <param name="TABLE" displayname="Table" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Table&lt;/p&gt;&lt;p&gt;Table (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SAND" displayname="Sand" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sand&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;sand content given as percentage&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SILT" displayname="Silt" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Silt&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;silt content given as percentage&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLAY" displayname="Clay" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Clay&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;clay content given as percentage&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TEXTURE" displayname="Texture" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Texture&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;soil texture&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Soil Texture Classification for Tables</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

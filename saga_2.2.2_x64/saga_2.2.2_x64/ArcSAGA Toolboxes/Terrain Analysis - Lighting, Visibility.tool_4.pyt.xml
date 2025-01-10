@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Topographic Correction">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ORIGINAL" displayname="Original Image" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Original Image&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CORRECTED" displayname="Corrected Image" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Corrected Image&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AZI" displayname="Azimuth" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Azimuth&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 360.000000&lt;/p&gt;&lt;p&gt;Default: 180.000000&lt;/p&gt;&lt;p&gt;direction of sun (degree, clockwise from North)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HGT" displayname="Height" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Height&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 90.000000&lt;/p&gt;&lt;p&gt;Default: 45.000000&lt;/p&gt;&lt;p&gt;height of sun above horizon (degree)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Cosine Correction (Teillet et al. 1982)&lt;/p&gt;&lt;p&gt;[1] Cosine Correction (Civco 1989)&lt;/p&gt;&lt;p&gt;[2] Minnaert Correction&lt;/p&gt;&lt;p&gt;[3] Minnaert Correction with Slope (Riano et al. 2003)&lt;/p&gt;&lt;p&gt;[4] Minnaert Correction with Slope (Law & Nichol 2004)&lt;/p&gt;&lt;p&gt;[5] C Correction&lt;/p&gt;&lt;p&gt;[6] Normalization (after Civco, modified by Law & Nichol)&lt;/p&gt;&lt;p&gt;Default: 4&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MINNAERT" displayname="Minnaert Correction" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minnaert Correction&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 0.500000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAXCELLS" displayname="Maximum Cells (C Correction Analysis)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Cells (C Correction Analysis)&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 10&lt;/p&gt;&lt;p&gt;Default: 1000&lt;/p&gt;&lt;p&gt;Maximum number of grid cells used for trend analysis as required by C correction.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAXVALUE" displayname="Value Range" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Value Range&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] 1 byte (0-255)&lt;/p&gt;&lt;p&gt;[1] 2 byte (0-65535)&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Topographic Correction</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2008 by Olaf Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

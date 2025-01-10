@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_10" displayname="Trend Analysis">
+    <parameters>
+      <param name="TABLE" displayname="Table" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Table&lt;/p&gt;&lt;p&gt;Table (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD_X" displayname="X Values" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;X Values&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD_Y" displayname="Y Values" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Y Values&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FORMULA" displayname="Formula" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Formula&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: m * x + b&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FORMULAS" displayname="Pre-defined Formulas" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Pre-defined Formulas&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Linear: a + b * x&lt;/p&gt;&lt;p&gt;[1] Quadric: a + b * x + c * x^2&lt;/p&gt;&lt;p&gt;[2] Cubic: a + b * x + c * x^2 + d * x^3&lt;/p&gt;&lt;p&gt;[3] Logarithmic: a + b * ln(x)&lt;/p&gt;&lt;p&gt;[4] Power: a + b * x^c&lt;/p&gt;&lt;p&gt;[5] a + b / x&lt;/p&gt;&lt;p&gt;[6] a + b * (1 - exp(-x / c))&lt;/p&gt;&lt;p&gt;[7] a + b * (1 - exp(-(x / c)^2))&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TREND" displayname="Table (with Trend)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Table (with Trend)&lt;/p&gt;&lt;p&gt;Table (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Trend Analysis</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2006</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

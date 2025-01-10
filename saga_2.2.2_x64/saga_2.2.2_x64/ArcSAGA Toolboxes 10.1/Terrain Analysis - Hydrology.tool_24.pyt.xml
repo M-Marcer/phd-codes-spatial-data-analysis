@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_24" displayname="LS-Factor, Field Based">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELDS" displayname="Fields" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Fields&lt;/p&gt;&lt;p&gt;Shapes (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STATISTICS" displayname="Field Statistics" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Field Statistics&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="UPSLOPE_AREA" displayname="Upslope Length Factor" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Upslope Length Factor&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="UPSLOPE_LENGTH" displayname="Effective Flow Length" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Effective Flow Length&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="UPSLOPE_SLOPE" displayname="Upslope Slope" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Upslope Slope&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LS_FACTOR" displayname="LS Factor" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;LS Factor&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BALANCE" displayname="Sediment Balance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sediment Balance&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="LS Calculation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;LS Calculation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Moore & Nieber 1989&lt;/p&gt;&lt;p&gt;[1] Desmet & Govers 1996&lt;/p&gt;&lt;p&gt;[2] Wischmeier & Smith 1978&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD_SLOPE" displayname="Type of Slope" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Type of Slope&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] local slope&lt;/p&gt;&lt;p&gt;[1] distance weighted average catchment slope&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD_AREA" displayname="Specific Catchment Area" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Specific Catchment Area&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] specific catchment area (contour length simply as cell size)&lt;/p&gt;&lt;p&gt;[1] specific catchment area (contour length dependent on aspect)&lt;/p&gt;&lt;p&gt;[2] catchment length (square root of catchment area)&lt;/p&gt;&lt;p&gt;[3] effective flow length&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STOP_AT_EDGE" displayname="Stop at Edge" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Stop at Edge&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EROSIVITY" displayname="Rill/Interrill Erosivity" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Rill/Interrill Erosivity&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STABILITY" displayname="Stability" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Stability&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] stable&lt;/p&gt;&lt;p&gt;[1] instable (thawing)&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>LS-Factor, Field Based</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

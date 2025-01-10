@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_25" displayname="Slope Limited Flow Accumulation">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WEIGHT" displayname="Weight" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Weight&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FLOW" displayname="Flow Accumulation" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Accumulation&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SLOPE_MIN" displayname="Slope Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Slope Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Assume a given minimum slope for each cell.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SLOPE_MAX" displayname="Slope Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Slope Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 90.000000&lt;/p&gt;&lt;p&gt;Default: 5.000000&lt;/p&gt;&lt;p&gt;Slope threshold, given as degree, above which flow transport is unlimited.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="B_FLOW" displayname="Use Flow Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Use Flow Threshold&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_FLOW_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Flow threshold, given as amount of cells, above which flow transport is unlimited. Ignored if range equals zero.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_FLOW_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;&lt;p&gt;Flow threshold, given as amount of cells, above which flow transport is unlimited. Ignored if range equals zero.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Slope Limited Flow Accumulation</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2014</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

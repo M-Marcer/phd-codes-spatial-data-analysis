@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Supervised Classification for Grids">
+    <parameters>
+      <param name="GRIDS" displayname="Features" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Features&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NORMALISE" displayname="Normalise" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Normalise&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLASSES" displayname="Classification" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Classification&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="QUALITY" displayname="Quality" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Quality&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Dependent on chosen method, these are distances or probabilities.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TRAINING" displayname="Training Areas" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Training Areas&lt;/p&gt;&lt;p&gt;Shapes (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TRAINING_CLASS" displayname="Class Identifier" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Class Identifier&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE_LOAD" displayname="Load Statistics from File..." type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Load Statistics from File...&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE_SAVE" displayname="Save Statistics to File..." type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Save Statistics to File...&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Binary Encoding&lt;/p&gt;&lt;p&gt;[1] Parallelepiped&lt;/p&gt;&lt;p&gt;[2] Minimum Distance&lt;/p&gt;&lt;p&gt;[3] Mahalanobis Distance&lt;/p&gt;&lt;p&gt;[4] Maximum Likelihood&lt;/p&gt;&lt;p&gt;[5] Spectral Angle Mapping&lt;/p&gt;&lt;p&gt;[6] Winner Takes All&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLD_DIST" displayname="Distance Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Distance Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Let pixel stay unclassified, if minimum euclidian or mahalanobis distance is greater than threshold.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLD_ANGLE" displayname="Spectral Angle Threshold (Degree)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Spectral Angle Threshold (Degree)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 90.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Let pixel stay unclassified, if spectral angle distance is greater than threshold.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLD_PROB" displayname="Probability Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Probability Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Let pixel stay unclassified, if maximum likelihood probability value is less than threshold.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RELATIVE_PROB" displayname="Probability Reference" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Probability Reference&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] absolute&lt;/p&gt;&lt;p&gt;[1] relative&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WTA_0" displayname="Binary Encoding" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Binary Encoding&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WTA_1" displayname="Parallelepiped" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Parallelepiped&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WTA_2" displayname="Minimum Distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Distance&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WTA_3" displayname="Mahalanobis Distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Mahalanobis Distance&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WTA_4" displayname="Maximum Likelihood" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Likelihood&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WTA_5" displayname="Spectral Angle Mapping" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Spectral Angle Mapping&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Supervised Classification for Grids</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2005</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

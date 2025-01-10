@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_1" displayname="Cluster Analysis for Grids">
+    <parameters>
+      <param name="GRIDS" displayname="Grids" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grids&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLUSTER" displayname="Clusters" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Clusters&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STATISTICS" displayname="Statistics" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Statistics&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Iterative Minimum Distance (Forgy 1965)&lt;/p&gt;&lt;p&gt;[1] Hill-Climbing (Rubin 1967)&lt;/p&gt;&lt;p&gt;[2] Combined Minimum Distance / Hillclimbing&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NCLUSTER" displayname="Clusters" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Clusters&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 2&lt;/p&gt;&lt;p&gt;Default: 10&lt;/p&gt;&lt;p&gt;Number of clusters&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAXITER" displayname="Maximum Iterations" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Iterations&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;maximum number of iterations, ignored if set to zero (default)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NORMALISE" displayname="Normalise" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Normalise&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Automatically normalise grids by standard deviation before clustering.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OLDVERSION" displayname="Old Version" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Old Version&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;slower but memory saving&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="UPDATEVIEW" displayname="Update View" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Update View&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Cluster Analysis for Grids</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2001</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

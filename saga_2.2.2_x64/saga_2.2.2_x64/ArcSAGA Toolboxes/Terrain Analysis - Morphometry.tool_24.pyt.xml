@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_24" displayname="Valley and Ridge Detection (Top Hat Approach)">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VALLEY" displayname="Valley Depth" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Valley Depth&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HILL" displayname="Hill Height" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Hill Height&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VALLEY_IDX" displayname="Valley Index" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Valley Index&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HILL_IDX" displayname="Hill Index" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Hill Index&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SLOPE_IDX" displayname="Hillslope Index" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Hillslope Index&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RADIUS_VALLEY" displayname="Valley Radius" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Valley Radius&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1000.000000&lt;/p&gt;&lt;p&gt;radius given in map units used to fill valleys&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RADIUS_HILL" displayname="Hill Radius" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Hill Radius&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1000.000000&lt;/p&gt;&lt;p&gt;radius given in map units used to cut hills&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLD" displayname="Elevation Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Elevation Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;&lt;p&gt;elevation threshold used to identify hills/valleys&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Slope Index" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Slope Index&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] default&lt;/p&gt;&lt;p&gt;[1] alternative&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Valley and Ridge Detection (Top Hat Approach)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

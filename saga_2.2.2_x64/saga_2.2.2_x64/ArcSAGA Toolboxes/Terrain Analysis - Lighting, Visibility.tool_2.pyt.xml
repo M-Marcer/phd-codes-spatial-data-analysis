@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Potential Incoming Solar Radiation">
+    <parameters>
+      <param name="GRD_DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRD_SVF" displayname="Sky View Factor" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Sky View Factor&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRD_VAPOUR" displayname="Water Vapour Pressure [mbar]" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Water Vapour Pressure [mbar]&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRD_VAPOUR_DEFAULT" displayname="Default" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Default&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;&lt;p&gt;default value if no grid has been selected&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRD_LINKE" displayname="Linke Turbidity Coefficient" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Linke Turbidity Coefficient&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRD_LINKE_DEFAULT" displayname="Default" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Default&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 3.000000&lt;/p&gt;&lt;p&gt;default value if no grid has been selected&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRD_DIRECT" displayname="Direct Insolation" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Direct Insolation&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRD_DIFFUS" displayname="Diffuse Insolation" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Diffuse Insolation&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRD_TOTAL" displayname="Total Insolation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Total Insolation&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRD_RATIO" displayname="Direct to Diffuse Ratio" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Direct to Diffuse Ratio&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRD_DURATION" displayname="Duration of Insolation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Duration of Insolation&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRD_SUNRISE" displayname="Sunrise" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sunrise&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRD_SUNSET" displayname="Sunset" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sunset&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SOLARCONST" displayname="Solar Constant [W / m²]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Solar Constant [W / m2]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1367.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LOCALSVF" displayname="Local Sky View Factor" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Local Sky View Factor&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Use sky view factor based on local slope (after Oke 1988), if no sky viev factor grid is given.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="UNITS" displayname="Units" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Units&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] kWh / m2&lt;/p&gt;&lt;p&gt;[1] kJ / m2&lt;/p&gt;&lt;p&gt;[2] J / cm2&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Units for output radiation values.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHADOW" displayname="Shadow" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shadow&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] slim&lt;/p&gt;&lt;p&gt;[1] fat&lt;/p&gt;&lt;p&gt;[2] none&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Choose 'slim' to trace grid node's shadow, 'fat' to trace the whole cell's shadow, or ignore shadowing effects. The first is slightly faster but might show some artifacts.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="UPDATE" displayname="Update" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Update&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] do not update&lt;/p&gt;&lt;p&gt;[1] fit histogram stretch for each time step&lt;/p&gt;&lt;p&gt;[2] constant histogram stretch for all time steps&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;show direct insolation for each time step.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="UPDATE_STRETCH" displayname="Constant Histogram Stretch" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Constant Histogram Stretch&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LOCATION" displayname="Location" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Location&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] constant latitude&lt;/p&gt;&lt;p&gt;[1] calculate from grid system&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LATITUDE" displayname="Latitude" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Latitude&lt;/p&gt;&lt;p&gt;Degree&lt;/p&gt;&lt;p&gt;Minimum: -90.000000&lt;/p&gt;&lt;p&gt;Maximum: 90.000000&lt;/p&gt;&lt;p&gt;Default: 53.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PERIOD" displayname="Time Period" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Time Period&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] moment&lt;/p&gt;&lt;p&gt;[1] day&lt;/p&gt;&lt;p&gt;[2] range of days&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MOMENT" displayname="Moment [h]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Moment [h]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 24.000000&lt;/p&gt;&lt;p&gt;Default: 12.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HOUR_RANGE_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 24.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Time span used for the calculation of daily radiation sums.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HOUR_RANGE_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 24.000000&lt;/p&gt;&lt;p&gt;Default: 24.000000&lt;/p&gt;&lt;p&gt;Time span used for the calculation of daily radiation sums.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HOUR_STEP" displayname="Time Resolution [h]: Day" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Time Resolution [h]: Day&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 24.000000&lt;/p&gt;&lt;p&gt;Default: 0.500000&lt;/p&gt;&lt;p&gt;Time step size for a day's calculation given in hours.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DAYS_STEP" displayname="Time Resolution [d]: Range of Days" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Time Resolution [d]: Range of Days&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 5&lt;/p&gt;&lt;p&gt;Time step size for a range of days calculation given in days.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DAY_A" displayname="Day" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Day&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Maximum: 31&lt;/p&gt;&lt;p&gt;Default: 15&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MON_A" displayname="Month" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Month&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] January&lt;/p&gt;&lt;p&gt;[1] February&lt;/p&gt;&lt;p&gt;[2] March&lt;/p&gt;&lt;p&gt;[3] April&lt;/p&gt;&lt;p&gt;[4] May&lt;/p&gt;&lt;p&gt;[5] June&lt;/p&gt;&lt;p&gt;[6] July&lt;/p&gt;&lt;p&gt;[7] August&lt;/p&gt;&lt;p&gt;[8] September&lt;/p&gt;&lt;p&gt;[9] October&lt;/p&gt;&lt;p&gt;[10] November&lt;/p&gt;&lt;p&gt;[11] December&lt;/p&gt;&lt;p&gt;Default: 9&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YEAR_A" displayname="Year" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Year&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 2015&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DAY_B" displayname="Day" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Day&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Maximum: 31&lt;/p&gt;&lt;p&gt;Default: 15&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MON_B" displayname="Month" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Month&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] January&lt;/p&gt;&lt;p&gt;[1] February&lt;/p&gt;&lt;p&gt;[2] March&lt;/p&gt;&lt;p&gt;[3] April&lt;/p&gt;&lt;p&gt;[4] May&lt;/p&gt;&lt;p&gt;[5] June&lt;/p&gt;&lt;p&gt;[6] July&lt;/p&gt;&lt;p&gt;[7] August&lt;/p&gt;&lt;p&gt;[8] September&lt;/p&gt;&lt;p&gt;[9] October&lt;/p&gt;&lt;p&gt;[10] November&lt;/p&gt;&lt;p&gt;[11] December&lt;/p&gt;&lt;p&gt;Default: 9&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YEAR_B" displayname="Year" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Year&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 2015&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Atmospheric Effects" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Atmospheric Effects&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Height of Atmosphere and Vapour Pressure&lt;/p&gt;&lt;p&gt;[1] Air Pressure, Water and Dust Content&lt;/p&gt;&lt;p&gt;[2] Lumped Atmospheric Transmittance&lt;/p&gt;&lt;p&gt;[3] Hofierka and Suri&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ATMOSPHERE" displayname="Height of Atmosphere [m]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Height of Atmosphere [m]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 12000.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PRESSURE" displayname="Barometric Pressure [mbar]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Barometric Pressure [mbar]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1013.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WATER" displayname="Water Content [cm]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Water Content [cm]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.680000&lt;/p&gt;&lt;p&gt;Water content of a vertical slice of atmosphere in cm: 1.5 to 1.7, average=1.68&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DUST" displayname="Dust [ppm]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Dust [ppm]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;&lt;p&gt;Dust factor: 100 ppm (standard)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LUMPED" displayname="Lumped Atmospheric Transmittance [Percent]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Lumped Atmospheric Transmittance [Percent]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 70.000000&lt;/p&gt;&lt;p&gt;The transmittance of the atmosphere, usually between 60 and 80 percent.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Potential Incoming Solar Radiation</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Constant Grid">
+    <parameters>
+      <param name="NAME" displayname="Name" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Name&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: Constant Grid&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONST" displayname="Constant Value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Constant Value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TYPE" displayname="Data Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Data Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] bit&lt;/p&gt;&lt;p&gt;[1] unsigned 1 byte integer&lt;/p&gt;&lt;p&gt;[2] signed 1 byte integer&lt;/p&gt;&lt;p&gt;[3] unsigned 2 byte integer&lt;/p&gt;&lt;p&gt;[4] signed 2 byte integer&lt;/p&gt;&lt;p&gt;[5] unsigned 8 byte integer&lt;/p&gt;&lt;p&gt;[6] signed 8 byte integer&lt;/p&gt;&lt;p&gt;[7] 4 byte floating point number&lt;/p&gt;&lt;p&gt;[8] 8 byte floating point number&lt;/p&gt;&lt;p&gt;Default: 7&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DEFINITION" displayname="Target Grid System" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Target Grid System&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] user defined&lt;/p&gt;&lt;p&gt;[1] grid or grid system&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="USER_XMIN" displayname="Left" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Left&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="USER_XMAX" displayname="Right" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Right&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="USER_YMIN" displayname="Bottom" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Bottom&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="USER_YMAX" displayname="Top" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Top&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="USER_SIZE" displayname="Cellsize" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cellsize&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="USER_COLS" displayname="Columns" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Columns&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="USER_ROWS" displayname="Rows" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Rows&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="USER_FITS" displayname="Fit" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Fit&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] nodes&lt;/p&gt;&lt;p&gt;[1] cells&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TEMPLATE" displayname="Target System" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Target System&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;use this grid's system for output grids&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUT_GRID" displayname="Target Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Target Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Constant Grid</resTitle>
+    </idCitation>
+    <idCredit>Victor Olaya (c) 2004</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

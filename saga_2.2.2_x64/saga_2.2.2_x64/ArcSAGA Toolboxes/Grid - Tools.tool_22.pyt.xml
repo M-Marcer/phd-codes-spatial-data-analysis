@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_22" displayname="Grids from classified grid and table">
+    <parameters>
+      <param name="TABLE" displayname="Table" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Table&lt;/p&gt;&lt;p&gt;Table (input)&lt;/p&gt;&lt;p&gt;The table with the (numeric) data values for each class. The module creates a grid for each table column (besides the ID).&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ID_FIELD" displayname="Attribute" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Attribute&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;The attribute with the class IDs, used to link the table and the grid.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLASSES" displayname="Classes" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Classes&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;The grid coded with the class IDs.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRIDS" displayname="Grids" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Grids&lt;/p&gt;&lt;p&gt;Grid list (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;The output grids, one grid for each table column.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Grids from classified grid and table</resTitle>
+    </idCitation>
+    <idCredit>Victor Olaya (c) 2004</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

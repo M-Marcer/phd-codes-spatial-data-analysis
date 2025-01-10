@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_21" displayname="LS Factor">
+    <parameters>
+      <param name="SLOPE" displayname="Slope" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Slope&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AREA" displayname="Catchment Area" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Catchment Area&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LS" displayname="LS Factor" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;LS Factor&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONV" displayname="Area to Length Conversion" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Area to Length Conversion&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] no conversion (areas already given as specific catchment area)&lt;/p&gt;&lt;p&gt;[1] 1 / cell size (specific catchment area)&lt;/p&gt;&lt;p&gt;[2] square root (catchment length)&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Derivation of slope lengths from catchment areas. These are rough approximations! Applies not to Desmet & Govers' method.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method (LS)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method (LS)&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Moore et al. 1991&lt;/p&gt;&lt;p&gt;[1] Desmet & Govers 1996&lt;/p&gt;&lt;p&gt;[2] Boehner & Selige 2006&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EROSIVITY" displayname="Rill/Interrill Erosivity" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Rill/Interrill Erosivity&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STABILITY" displayname="Stability" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Stability&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] stable&lt;/p&gt;&lt;p&gt;[1] instable (thawing)&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>LS Factor</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2003</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

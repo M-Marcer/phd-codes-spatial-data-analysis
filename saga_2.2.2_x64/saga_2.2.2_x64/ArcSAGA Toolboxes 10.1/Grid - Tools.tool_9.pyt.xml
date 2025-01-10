@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_9" displayname="Threshold Buffer">
+    <parameters>
+      <param name="FEATURES" displayname="Features Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Features Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VALUE" displayname="Value Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Value Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLDGRID" displayname="Threshold Grid" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Threshold Grid&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BUFFER" displayname="Buffer Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Buffer Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLD" displayname="Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Threshold (Grid Units)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLDTYPE" displayname="Threshold Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Threshold Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Absolute&lt;/p&gt;&lt;p&gt;[1] Relative from cell value&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Threshold Buffer</resTitle>
+    </idCitation>
+    <idCredit></idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

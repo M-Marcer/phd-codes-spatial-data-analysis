@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <HISTORY saga-version="2.2.2">
+    <MODULE library="shapes_polygons" id="11" name="Polygon Clipping">
+      <OPTION type="boolean" id="DISSOLVE" name="Dissolve Clip Features">TRUE</OPTION>
+      <OPTION type="boolean" id="MULTIPLE" name="Multiple Input Features">TRUE</OPTION>
+      <INPUT type="shapes" id="CLIP" name="Clip Features">
+        <FILE>inv_actives_subset.shp</FILE>
+      </INPUT>
+      <INPUT_LIST type="shapes_list" id="M_INPUT" name="Input Features">
+        <INPUT type="shapes_list" id="M_INPUT" name="Input Features">
+          <FILE>unstable_areas.shp</FILE>
+        </INPUT>
+      </INPUT_LIST>
+      <OUTPUT type="shapes_list" id="M_OUTPUT" name="Output Features">unstable_areas [clipped]</OUTPUT>
+    </MODULE>
+  </HISTORY>
+  <SOURCE>
+    <FILE>unstable_areas.shp</FILE>
+    <DATABASE></DATABASE>
+    <PROJECTION>
+      <OGC_WKT>PROJCS["Lambert_Conformal_Conic",GEOGCS["GCS_GRS 1980(IUGG, 1980)",DATUM["D_unknown",SPHEROID["GRS80",6378137,298.257222101]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["standard_parallel_1",49],PARAMETER["standard_parallel_2",44],PARAMETER["latitude_of_origin",46.5],PARAMETER["central_meridian",3],PARAMETER["false_easting",700000],PARAMETER["false_northing",6600000],UNIT["Meter",1]]</OGC_WKT>
+      <PROJ4>+proj=lcc +a=6378137.000000 +b=6356752.314140 +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +no_defs</PROJ4>
+      <EPSG>-1</EPSG>
+    </PROJECTION>
+  </SOURCE>
+  <DESCRIPTION></DESCRIPTION>
+</SAGA_METADATA>

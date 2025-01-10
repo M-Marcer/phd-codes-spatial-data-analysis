@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_9" displayname="Separate points by direction">
+    <parameters>
+      <param name="OUTPUT" displayname="Ouput" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Ouput&lt;/p&gt;&lt;p&gt;Shapes list (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POINTS" displayname="Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIRECTIONS" displayname="Number of Directions" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Directions&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 2.000000&lt;/p&gt;&lt;p&gt;Default: 4.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TOLERANCE" displayname="Tolerance (Degree)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Tolerance (Degree)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 5.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Separate points by direction</resTitle>
+    </idCitation>
+    <idCredit>O. Conrad (c) 2008</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

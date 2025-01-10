@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Daily Insolation over Latitude">
+    <parameters>
+      <param name="SOLARRAD" displayname="Solar Radiation" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Solar Radiation&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="START" displayname="Start [ka]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Start [ka]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: -200.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STOP" displayname="Stop [ka]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Stop [ka]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 2.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STEP" displayname="Step [ka]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Step [ka]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.001000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DLAT" displayname="Latitude Increment [Degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Latitude Increment [Degree]&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Maximum: 90&lt;/p&gt;&lt;p&gt;Default: 5&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DAY" displayname="Day of Year" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Day of Year&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Maximum: 366&lt;/p&gt;&lt;p&gt;Default: 181&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Daily Insolation over Latitude</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2012</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_5" displayname="Contour Lines from Grid">
+    <parameters>
+      <param name="GRID" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONTOUR" displayname="Contour" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Contour&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POLYGONS" displayname="Polygons" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Polygons&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VERTEX" displayname="Vertex Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Vertex Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] x, y&lt;/p&gt;&lt;p&gt;[1] x, y, z&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;choose vertex type for resulting contours&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SCALE" displayname="Interpolation Scale" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Interpolation Scale&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;set greater one for line smoothing&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LINE_PARTS" displayname="Split Parts" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Split Parts&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POLY_PARTS" displayname="Split Polygon Parts" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Split Polygon Parts&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ZMIN" displayname="Minimum Contour Value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Contour Value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ZMAX" displayname="Maximum Contour Value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Contour Value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 10000.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ZSTEP" displayname="Equidistance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Equidistance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Contour Lines from Grid</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2001</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

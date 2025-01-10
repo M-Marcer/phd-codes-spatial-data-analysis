@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_9" displayname="Transform Shapes">
+    <parameters>
+      <param name="IN" displayname="Shapes" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Shapes&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUT" displayname="Output" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Output&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DX" displayname="dX" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;dX&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;dX (Map Units)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DY" displayname="dY" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;dY&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;dY (Map Units)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DZ" displayname="dZ" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;dZ&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;dZ (Map Units)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ANGLE" displayname="Angle" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Angle&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Angle in degrees, counting clockwise from north&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ROTATEX" displayname="Rotation X" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Rotation X&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Angle in degrees, clockwise around x axis&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ROTATEY" displayname="Rotation Y" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Rotation Y&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Angle in degrees, clockwise around y axis&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SCALEX" displayname="Scale Factor X" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Scale Factor X&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Scale Factor X&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SCALEY" displayname="Scale Factor Y" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Scale Factor Y&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Scale Factor Y&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SCALEZ" displayname="Scale Factor Z" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Scale Factor Z&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Scale Factor Z&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ANCHORX" displayname="X" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;X&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;X&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ANCHORY" displayname="Y" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Y&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Y&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ANCHORZ" displayname="Z" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Z&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Z&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Transform Shapes</resTitle>
+    </idCitation>
+    <idCredit>(c) 2004 by Victor Olaya</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

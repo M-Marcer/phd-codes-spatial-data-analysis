@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_5" displayname="Convert Lines to Points">
+    <parameters>
+      <param name="LINES" displayname="Lines" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Lines&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POINTS" displayname="Points" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ADD" displayname="Insert Additional Points" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Insert Additional Points&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD_INSERT" displayname="Insertion" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Insertion&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] per line segment&lt;/p&gt;&lt;p&gt;[1] per line&lt;/p&gt;&lt;p&gt;[2] from line center&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Choose the method how to insert additional points.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIST" displayname="Insertion Distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Insertion Distance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Point insertion distance [map units].&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ADD_POINT_ORDER" displayname="Add Point Order" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Add Point Order&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Add point order as additional attribute.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Convert Lines to Points</resTitle>
+    </idCitation>
+    <idCredit>V. Olaya, V. Wichmann (c) 2004-2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

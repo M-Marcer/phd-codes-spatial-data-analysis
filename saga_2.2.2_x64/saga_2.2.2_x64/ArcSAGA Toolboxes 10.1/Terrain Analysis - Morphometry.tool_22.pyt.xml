@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_22" displayname="Terrain Surface Classification (Iwahashi and Pike)">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SLOPE" displayname="Slope" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Slope&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONVEXITY" displayname="Convexity" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Convexity&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONV_RECALC" displayname="Recalculate" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Recalculate&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TEXTURE" displayname="Texture" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Texture&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TEXT_RECALC" displayname="Recalculate" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Recalculate&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LANDFORMS" displayname="Landforms" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Landforms&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TYPE" displayname="Number of Classes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Classes&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] 8&lt;/p&gt;&lt;p&gt;[1] 12&lt;/p&gt;&lt;p&gt;[2] 16&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONV_SCALE" displayname="Scale (Cells)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Scale (Cells)&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 10&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONV_KERNEL" displayname="Laplacian Filter Kernel" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Laplacian Filter Kernel&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] four-neighbourhood&lt;/p&gt;&lt;p&gt;[1] eight-neihbourhood&lt;/p&gt;&lt;p&gt;[2] eight-neihbourhood (distance based weighting)&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONV_TYPE" displayname="Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] convexity&lt;/p&gt;&lt;p&gt;[1] concavity&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONV_EPSILON" displayname="Flat Area Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flat Area Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TEXT_SCALE" displayname="Scale (Cells)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Scale (Cells)&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 10&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TEXT_EPSILON" displayname="Flat Area Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flat Area Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;maximum difference between original and median filtered elevation (3x3 moving window) that still is recognized flat&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Terrain Surface Classification (Iwahashi and Pike)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2012</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

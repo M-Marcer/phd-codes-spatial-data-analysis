@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_27" displayname="Tiling">
+    <parameters>
+      <param name="GRID" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TILES" displayname="Tiles" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Tiles&lt;/p&gt;&lt;p&gt;Grid list (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OVERLAP" displayname="Overlapping Cells" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Overlapping Cells&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OVERLAP_SYM" displayname="Add Cells" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Add Cells&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] symmetric&lt;/p&gt;&lt;p&gt;[1] bottom / left&lt;/p&gt;&lt;p&gt;[2] top / right&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Tile Size Definition" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Tile Size Definition&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] number of grid cells per tile&lt;/p&gt;&lt;p&gt;[1] coordinates (offset, range, cell size, tile size)&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SAVE_TILES" displayname="Save Tiles to Disk" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Save Tiles to Disk&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Save tiles to disk individually&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TILE_BASENAME" displayname="Base Name" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Base Name&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;The base name of the tiles&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TILE_PATH" displayname="Output Directory" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Output Directory&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NX" displayname="Number of Column Cells" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Column Cells&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 100&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NY" displayname="Number of Row Cells" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Row Cells&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 100&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="XRANGE_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="XRANGE_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1000.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YRANGE_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YRANGE_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1000.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DCELL" displayname="Cell Size" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cell Size&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DX" displayname="Tile Size (X)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Tile Size (X)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DY" displayname="Tile Size (Y)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Tile Size (Y)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Tiling</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

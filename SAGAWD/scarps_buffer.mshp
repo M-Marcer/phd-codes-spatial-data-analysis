@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <HISTORY saga-version="2.2.2">
+    <MODULE library="shapes_tools" id="18" name="Shapes Buffer">
+      <OPTION type="table_field" id="DIST_FIELD" name="Buffer Distance">&lt;not set&gt;</OPTION>
+      <OPTION type="double" id="DIST_FIELD_DEFAULT" name="Default">30.000000</OPTION>
+      <OPTION type="boolean" id="DISSOLVE" name="Dissolve Buffers">TRUE</OPTION>
+      <OPTION type="integer" id="NZONES" name="Number of Buffer Zones">1</OPTION>
+      <OPTION type="double" id="DARC" name="Arc Vertex Distance [Degree]">5.000000</OPTION>
+      <INPUT type="shapes" id="SHAPES" name="Shapes">
+        <FILE>D:/Marcer_Materials/final_products/regional/shapes/surface_disturbances/scarps.shp</FILE>
+      </INPUT>
+      <OUTPUT type="shapes" id="BUFFER" name="Buffer">scarps [Buffer]</OUTPUT>
+    </MODULE>
+  </HISTORY>
+  <SOURCE>
+    <FILE>scarps_buffer.shp</FILE>
+    <DATABASE></DATABASE>
+    <PROJECTION>
+      <OGC_WKT>PROJCS["RGF93_Lambert_93",GEOGCS["GCS_RGF93",DATUM["D_RGF_1993",SPHEROID["GRS_1980",6378137,298.257222101]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["standard_parallel_1",49],PARAMETER["standard_parallel_2",44],PARAMETER["latitude_of_origin",46.5],PARAMETER["central_meridian",3],PARAMETER["false_easting",700000],PARAMETER["false_northing",6600000],UNIT["Meter",1]]</OGC_WKT>
+      <PROJ4>+proj=lcc +a=6378137.000000 +b=6356752.314140 +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +no_defs</PROJ4>
+      <EPSG>-1</EPSG>
+    </PROJECTION>
+  </SOURCE>
+  <DESCRIPTION></DESCRIPTION>
+</SAGA_METADATA>

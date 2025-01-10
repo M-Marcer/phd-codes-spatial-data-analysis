@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_20" displayname="Stream Power Index">
+    <parameters>
+      <param name="SLOPE" displayname="Slope" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Slope&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AREA" displayname="Catchment Area" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Catchment Area&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SPI" displayname="Stream Power Index" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Stream Power Index&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONV" displayname="Area Conversion" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Area Conversion&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] no conversion (areas already given as specific catchment area)&lt;/p&gt;&lt;p&gt;[1] 1 / cell size (pseudo specific catchment area)&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Stream Power Index</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2003</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

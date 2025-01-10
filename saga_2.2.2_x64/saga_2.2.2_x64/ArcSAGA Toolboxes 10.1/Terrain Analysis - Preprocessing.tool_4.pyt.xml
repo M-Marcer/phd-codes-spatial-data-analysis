@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Fill Sinks (Wang & Liu)">
+    <parameters>
+      <param name="ELEV" displayname="DEM" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;DEM&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Digital elevation model&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILLED" displayname="Filled DEM" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Filled DEM&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Depression-free digital elevation model&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FDIR" displayname="Flow Directions" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Directions&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Computed flow directions, 0=N, 1=NE, 2=E, ... 7=NW&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WSHED" displayname="Watershed Basins" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Watershed Basins&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Delineated watershed basins&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MINSLOPE" displayname="Minimum Slope [Degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Slope [Degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.100000&lt;/p&gt;&lt;p&gt;Minimum slope gradient to preserve from cell to cell; with a value of zero sinks are filled up to the spill elevation (which results in flat areas). Unit [Degree]&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Fill Sinks (Wang & Liu)</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2007 by Volker Wichmann</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

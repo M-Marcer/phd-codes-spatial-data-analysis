@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_7" displayname="Aspect-Slope Grid">
+    <parameters>
+      <param name="ASPECT" displayname="Aspect" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Aspect&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Aspect grid, in radians and 360 degree from north.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SLOPE" displayname="Slope" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Slope&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Slope grid, in radians.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ASPECT_SLOPE" displayname="Aspect-Slope" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Aspect-Slope&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Final aspect-slope grid.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LUT" displayname="Lookup Table" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Lookup Table&lt;/p&gt;&lt;p&gt;Table (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Lookup table.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Aspect-Slope Grid</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2012 by Volker Wichmann</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

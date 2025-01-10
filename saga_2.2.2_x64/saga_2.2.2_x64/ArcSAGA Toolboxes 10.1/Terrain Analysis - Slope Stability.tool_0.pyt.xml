@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="SAFETYFACTOR">
+    <parameters>
+      <param name="A" displayname="Slope grid (rad)" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Slope grid (rad)&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;A slope angle grid (in radíans)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Bmin" displayname="Min thickness grid (m) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Min thickness grid (m) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing minimum cell layer thicknesses to potential shear plane (in meters)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Bmax" displayname="Max thickness grid (m) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Max thickness grid (m) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing maximum cell layer thicknesses to potential shear plane (in meters)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Cmin" displayname="Min saturation grid (-) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Min saturation grid (-) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing minimum cell relative water saturation of layer (dimensionless)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Cmax" displayname="Max saturation grid (-) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Max saturation grid (-) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing maximum cell relative water saturation of layer (dimensionless)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Dmin" displayname="Min friction grid (degree) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Min friction grid (degree) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing minimum cell frictional shear strength of layer (in degrees)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Dmax" displayname="Max friction grid (degree) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Max friction grid (degree) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing maximum cell frictional shear strength of layer (in degrees)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Emin" displayname="Min density grid (g/cm3)" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Min density grid (g/cm3)&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing minimum cell bulk density of layer (in grams per cubiccentimeters)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Emax" displayname="Max density grid (g/cm3)" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Max density grid (g/cm3)&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing maximum cell bulk density of layer (in grams per cubiccentimeters)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Fmin" displayname="Min cohesion grid (MPa) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Min cohesion grid (MPa) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing minimum cell layer cohesion (in Megapascals)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Fmax" displayname="Max cohesion grid (MPa) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Max cohesion grid (MPa) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing maximum cell layer cohesion (in Megapascals)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fBmin" displayname="Min global thickness (m)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Min global thickness (m)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fBmax" displayname="Max global thickness (m)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Max global thickness (m)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fCmin" displayname="Min global saturation (-)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Min global saturation (-)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fCmax" displayname="Max global saturation (-)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Max global saturation (-)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fDmin" displayname="Min global friction (degree)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Min global friction (degree)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 33.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fDmax" displayname="Max global friction (degree)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Max global friction (degree)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 33.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fEmin" displayname="Min global density (g/cm3)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Min global density (g/cm3)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.600000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fEmax" displayname="Max global density (g/cm3)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Max global density (g/cm3)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.600000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fFmin" displayname="Min global cohesion (MPa)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Min global cohesion (MPa)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fFmax" displayname="Max global cohesion (MPa)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Max global cohesion (MPa)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fI" displayname="Parameter sampling runs" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Parameter sampling runs&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Number of sampling cycles&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="G" displayname="FS values" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;FS values&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Resulting factor-of-safety (-) grid&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="H" displayname="FS classes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;FS classes&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Resulting stability (0/1) grid&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>SAFETYFACTOR</resTitle>
+    </idCitation>
+    <idCredit>A. G&uuml;nther (c) 2012</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

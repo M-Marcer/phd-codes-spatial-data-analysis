@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Create 3D Image">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="IMAGE" displayname="Overlay Image" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Overlay Image&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHAPES" displayname="Shapes to project" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Shapes to project&lt;/p&gt;&lt;p&gt;Shapes list (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ZEXAGG" displayname="Exaggeration" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Exaggeration&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ZEXAGG_MIN" displayname="Minimum Exaggeration [%]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Exaggeration [%]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Z_ROTATE" displayname="Image Rotation [Degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Image Rotation [Degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="X_ROTATE" displayname="Local Rotation [Degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Local Rotation [Degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="X_ROTATE_LEVEL" displayname="Local Rotation Base Level" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Local Rotation Base Level&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Zero&lt;/p&gt;&lt;p&gt;[1] Mean Elevation&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PANBREAK" displayname="Panorama Break [%]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Panorama Break [%]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 70.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PROJECTION" displayname="Projection" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Projection&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Panorama&lt;/p&gt;&lt;p&gt;[1] Circular&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NX" displayname="3D Image Width" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;3D Image Width&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 100&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NY" displayname="3D Image Height" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;3D Image Height&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 100&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RGB" displayname="3D Image" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;3D Image&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RGB_Z" displayname="Projected Height" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Projected Height&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Create 3D Image</resTitle>
+    </idCitation>
+    <idCredit>(c) 2005 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

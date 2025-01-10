@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_10" displayname="Landsat Import with Options">
+    <parameters>
+      <param name="FILES" displayname="Files" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Files&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BANDS" displayname="Bands" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Bands&lt;/p&gt;&lt;p&gt;Grid list (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PROJECTION" displayname="Coordinate System" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Coordinate System&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] UTM North&lt;/p&gt;&lt;p&gt;[1] UTM South&lt;/p&gt;&lt;p&gt;[2] Geographic Coordinates&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INTERPOLATION" displayname="Interpolation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Interpolation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Nearest Neighbour&lt;/p&gt;&lt;p&gt;[1] Bilinear Interpolation&lt;/p&gt;&lt;p&gt;[2] Cubic Convolution&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHOW_RGB" displayname="Show a Composite" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Show a Composite&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHOW_R" displayname="Red" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Red&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] no choice available&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHOW_G" displayname="Green" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Green&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] no choice available&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHOW_B" displayname="Blue" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Blue&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] no choice available&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Landsat Import with Options</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2014</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

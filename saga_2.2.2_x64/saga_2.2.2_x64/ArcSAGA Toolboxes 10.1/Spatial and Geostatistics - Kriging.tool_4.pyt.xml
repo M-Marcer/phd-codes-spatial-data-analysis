@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Variogram (Dialog)">
+    <parameters>
+      <param name="POINTS" displayname="Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ATTRIBUTE" displayname="Attribute" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Attribute&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VARIOGRAM" displayname="Variogram" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Variogram&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LOG" displayname="Logarithmic Transformation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Logarithmic Transformation&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VAR_MAXDIST" displayname="Maximum Distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Distance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: -1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VAR_NCLASSES" displayname="Lag Distance Classes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Lag Distance Classes&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 100&lt;/p&gt;&lt;p&gt;initial number of lag distance classes&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VAR_NSKIP" displayname="Skip" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Skip&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VAR_MODEL" displayname="Model" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Model&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: a + b * x&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Variogram (Dialog)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2009</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

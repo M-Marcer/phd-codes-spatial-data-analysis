@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_22" displayname="Convert Vertex Type (2D/3D)">
+    <parameters>
+      <param name="INPUT" displayname="Input" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Input&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;&lt;p&gt;The shapefile to convert.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD_Z" displayname="Z" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Z&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Field with z-coordinate information.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD_M" displayname="M" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;M&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Field with measure information.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Output" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Output&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;&lt;p&gt;The converted shapefile.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Convert Vertex Type (2D/3D)</resTitle>
+    </idCitation>
+    <idCredit>Volker Wichmann (c) 2013, LASERDATA GmbH</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_16" displayname="Tissot's Indicatrix">
+    <parameters>
+      <param name="CRS_METHOD" displayname="Get CRS Definition from..." type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Get CRS Definition from...&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Proj4 Parameters&lt;/p&gt;&lt;p&gt;[1] EPSG Code&lt;/p&gt;&lt;p&gt;[2] Well Known Text File&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CRS_PROJ4" displayname="Proj4 Parameters" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Proj4 Parameters&lt;/p&gt;&lt;p&gt;Long text&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CRS_FILE" displayname="Well Known Text File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Well Known Text File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CRS_EPSG" displayname="EPSG Code" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;EPSG Code&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: -1&lt;/p&gt;&lt;p&gt;Default: -1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PRECISE" displayname="Precise Datum Conversion" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Precise Datum Conversion&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;avoids precision problems when source and target crs use different geodedtic datums.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TARGET" displayname="Indicatrix" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Indicatrix&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NY" displayname="Number in Latitudinal Direction" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number in Latitudinal Direction&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 5&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NX" displayname="Number in Meridional Direction" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number in Meridional Direction&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 11&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SCALE" displayname="Size" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Size&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 25.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Tissot's Indicatrix</resTitle>
+    </idCitation>
+    <idCredit>O. Conrad (c) 2014</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

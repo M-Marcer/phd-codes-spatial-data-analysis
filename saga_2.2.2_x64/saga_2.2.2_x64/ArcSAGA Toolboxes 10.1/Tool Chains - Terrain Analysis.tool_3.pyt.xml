@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_3" displayname="Upslope Height, Slope, Aspect">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HEIGHT" displayname="Upslope Height" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Upslope Height&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SLOPE" displayname="Slope" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Slope&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ASPECT" displayname="Aspect" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Aspect&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FLOW_METHOD" displayname="Flow Distribution" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Distribution&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Deterministic 8&lt;/p&gt;&lt;p&gt;[1] Rho 8&lt;/p&gt;&lt;p&gt;[2] Braunschweiger Reliefmodell&lt;/p&gt;&lt;p&gt;[3] Deterministic Infinity&lt;/p&gt;&lt;p&gt;[4] Multiple Flow Direction&lt;/p&gt;&lt;p&gt;[5] Multiple Triangular Flow Direction&lt;/p&gt;&lt;p&gt;[6] Multiple Maximum Downslope Gradient Based Flow Direction&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Upslope Height, Slope, Aspect</resTitle>
+    </idCitation>
+    <idCredit>unknown</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

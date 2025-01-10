@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_16" displayname="Wombling (Edge Detection)">
+    <parameters>
+      <param name="TMAGNITUDE" displayname="Minimum Magnitude" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Magnitude&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 90.000000&lt;/p&gt;&lt;p&gt;Minimum magnitude as percentile.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TDIRECTION" displayname="Maximum Angle" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Angle&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 180.000000&lt;/p&gt;&lt;p&gt;Default: 30.000000&lt;/p&gt;&lt;p&gt;Maximum angular difference as degree between adjacent segment points.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TNEIGHBOUR" displayname="Minimum Neighbours" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Neighbours&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Minimum number of neighbouring potential edge cells with similar direction.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ALIGNMENT" displayname="Alignment" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Alignment&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] between cells&lt;/p&gt;&lt;p&gt;[1] on cell&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NEIGHBOUR" displayname="Edge Connectivity" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Edge Connectivity&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Rooke's case&lt;/p&gt;&lt;p&gt;[1] Queen's case&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FEATURE" displayname="Feature" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Feature&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EDGE_POINTS" displayname="Edge Points" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Edge Points&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EDGE_LINES" displayname="Edge Segments" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Edge Segments&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRADIENTS_OUT" displayname="Output of Gradients" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Output of Gradients&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRADIENTS" displayname="Gradients" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Gradients&lt;/p&gt;&lt;p&gt;Grid list (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Wombling (Edge Detection)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

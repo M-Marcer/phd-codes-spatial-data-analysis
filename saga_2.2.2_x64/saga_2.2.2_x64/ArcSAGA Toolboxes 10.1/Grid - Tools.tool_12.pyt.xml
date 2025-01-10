@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_12" displayname="Change Grid Values">
+    <parameters>
+      <param name="GRID_IN" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRID_OUT" displayname="Changed Grid" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Changed Grid&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Replace Condition" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Replace Condition&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Grid value equals low value&lt;/p&gt;&lt;p&gt;[1] Low value &lt; grid value &lt; high value&lt;/p&gt;&lt;p&gt;[2] Low value &lt;= grid value &lt; high value&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LOOKUP" displayname="Lookup Table" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Lookup Table&lt;/p&gt;&lt;p&gt;Static table&lt;/p&gt;&lt;p&gt;3 Fields:&lt;/p&gt;&lt;p&gt;- 1. [8 byte floating point number] Low Value&lt;/p&gt;&lt;p&gt;- 2. [8 byte floating point number] High Value&lt;/p&gt;&lt;p&gt;- 3. [8 byte floating point number] Replace with&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Change Grid Values</resTitle>
+    </idCitation>
+    <idCredit>(c) 2001 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

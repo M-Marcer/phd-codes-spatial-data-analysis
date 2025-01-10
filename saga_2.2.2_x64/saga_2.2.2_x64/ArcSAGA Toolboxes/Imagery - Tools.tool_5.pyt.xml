@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_5" displayname="Colour Normalized Brovey Sharpening">
+    <parameters>
+      <param name="R" displayname="Red" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Red&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="G" displayname="Green" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Green&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="B" displayname="Blue" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Blue&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PAN" displayname="Panchromatic Channel" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Panchromatic Channel&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="R_SHARP" displayname="Red" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Red&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="G_SHARP" displayname="Green" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Green&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="B_SHARP" displayname="Blue" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Blue&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHARPEN" displayname="Sharpened Channels" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Sharpened Channels&lt;/p&gt;&lt;p&gt;Grid list (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESAMPLING" displayname="Resampling" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Resampling&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] nearest neighbour&lt;/p&gt;&lt;p&gt;[1] bilinear&lt;/p&gt;&lt;p&gt;[2] cubic convolution&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Colour Normalized Brovey Sharpening</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

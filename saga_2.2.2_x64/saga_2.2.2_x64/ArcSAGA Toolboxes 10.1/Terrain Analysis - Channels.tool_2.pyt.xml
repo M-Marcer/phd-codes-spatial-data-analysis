@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Watershed Basins (Extended)">
+    <parameters>
+      <param name="DEM" displayname="DEM" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;DEM&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CHANNELS" displayname="Drainage Network" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Drainage Network&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BASINS" displayname="Basins" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Basins&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SUBBASINS" displayname="Subbasins" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Subbasins&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="V_BASINS" displayname="Basins" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Basins&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="V_SUBBASINS" displayname="Subbasins" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Subbasins&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HEADS" displayname="River Heads" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;River Heads&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MOUTHS" displayname="River Mouths" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;River Mouths&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DISTANCE" displayname="Flow Distances" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flow Distances&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Watershed Basins (Extended)</resTitle>
+    </idCitation>
+    <idCredit>V.Olaya (c) 2004, O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

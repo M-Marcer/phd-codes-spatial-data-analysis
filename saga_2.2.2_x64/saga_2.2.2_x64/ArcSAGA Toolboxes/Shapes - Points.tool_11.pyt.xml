@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_11" displayname="Points Filter">
+    <parameters>
+      <param name="POINTS" displayname="Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD" displayname="Attribute" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Attribute&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILTER" displayname="Filtered Points" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Filtered Points&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RADIUS" displayname="Radius" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Radius&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MINNUM" displayname="Minimum Number of Points" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Number of Points&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;only points with given minimum number of points in search radius will be processed&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAXNUM" displayname="Maximum Number of Points" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Number of Points&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Number of nearest points, which will be evaluated for filtering. Set to zero to investigate all points in search radius.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="QUADRANTS" displayname="Quadrants" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Quadrants&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Filter Criterion" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Filter Criterion&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] keep maxima (with tolerance)&lt;/p&gt;&lt;p&gt;[1] keep minima (with tolerance)&lt;/p&gt;&lt;p&gt;[2] remove maxima (with tolerance)&lt;/p&gt;&lt;p&gt;[3] remove minima (with tolerance)&lt;/p&gt;&lt;p&gt;[4] remove below percentile&lt;/p&gt;&lt;p&gt;[5] remove above percentile&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TOLERANCE" displayname="Tolerance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Tolerance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PERCENT" displayname="Percentile" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Percentile&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 50.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Points Filter</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

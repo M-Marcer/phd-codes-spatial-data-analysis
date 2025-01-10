@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_1" displayname="Vegetation Index (Slope Based)">
+    <parameters>
+      <param name="RED" displayname="Red Reflectance" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Red Reflectance&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NIR" displayname="Near Infrared Reflectance" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Near Infrared Reflectance&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DVI" displayname="Difference Vegetation Index" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Difference Vegetation Index&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NDVI" displayname="Normalized Difference Vegetation Index" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Normalized Difference Vegetation Index&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RVI" displayname="Ratio Vegetation Index" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Ratio Vegetation Index&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NRVI" displayname="Normalized Ratio Vegetation Index" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Normalized Ratio Vegetation Index&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TVI" displayname="Transformed Vegetation Index" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Transformed Vegetation Index&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CTVI" displayname="Corrected Transformed Vegetation Index" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Corrected Transformed Vegetation Index&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TTVI" displayname="Thiam's Transformed Vegetation Index" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Thiam's Transformed Vegetation Index&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SAVI" displayname="Soil Adjusted Vegetation Index" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Soil Adjusted Vegetation Index&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SOIL" displayname="Soil Adjustment Factor" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Soil Adjustment Factor&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 0.500000&lt;/p&gt;&lt;p&gt;Soil adjustment factor for SAVI calculation. Suggested values are 1.0 in case of very low vegetation, 0.5 for intermediate 0.5, and 0.25 for high densities (Silleos et al. 2006).&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Vegetation Index (Slope Based)</resTitle>
+    </idCitation>
+    <idCredit>V.Olaya (c) 2004, O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="GPX to shapefile">
+    <parameters>
+      <param name="BASEPATH" displayname="Gpx2shp path" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Gpx2shp path&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;&lt;p&gt;Gpx2shp path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE" displayname="GPX file" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;GPX file&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TRACKPOINTS" displayname="Convert track points" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Convert track points&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Convert track points&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WAYPOINTS" displayname="Convert way points" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Convert way points&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Convert way points&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ROUTES" displayname="Convert routes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Convert routes&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Convert routes&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ADD" displayname="Load shapefile" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Load shapefile&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Load shapefile after conversion&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>GPX to shapefile</resTitle>
+    </idCitation>
+    <idCredit></idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

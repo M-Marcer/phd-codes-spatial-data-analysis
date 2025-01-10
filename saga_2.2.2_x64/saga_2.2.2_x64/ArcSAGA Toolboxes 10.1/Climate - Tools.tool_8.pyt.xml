@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_8" displayname="PET (after Hargreaves, Grid)">
+    <parameters>
+      <param name="T" displayname="Mean Temperature" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Mean Temperature&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_MIN" displayname="Minimum Temperature" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Minimum Temperature&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_MAX" displayname="Maximum Temperature" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Maximum Temperature&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PET" displayname="Potential Evapotranspiration" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Potential Evapotranspiration&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LAT" displayname="Latitude [Degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Latitude [Degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: -90.000000&lt;/p&gt;&lt;p&gt;Maximum: 90.000000&lt;/p&gt;&lt;p&gt;Default: 53.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TIME" displayname="Time" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Time&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] day&lt;/p&gt;&lt;p&gt;[1] month&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MONTH" displayname="Month" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Month&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] January&lt;/p&gt;&lt;p&gt;[1] February&lt;/p&gt;&lt;p&gt;[2] March&lt;/p&gt;&lt;p&gt;[3] April&lt;/p&gt;&lt;p&gt;[4] May&lt;/p&gt;&lt;p&gt;[5] June&lt;/p&gt;&lt;p&gt;[6] July&lt;/p&gt;&lt;p&gt;[7] August&lt;/p&gt;&lt;p&gt;[8] September&lt;/p&gt;&lt;p&gt;[9] October&lt;/p&gt;&lt;p&gt;[10] November&lt;/p&gt;&lt;p&gt;[11] December&lt;/p&gt;&lt;p&gt;Default: 9&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DAY" displayname="Day of Month" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Day of Month&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Maximum: 31&lt;/p&gt;&lt;p&gt;Default: 15&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>PET (after Hargreaves, Grid)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

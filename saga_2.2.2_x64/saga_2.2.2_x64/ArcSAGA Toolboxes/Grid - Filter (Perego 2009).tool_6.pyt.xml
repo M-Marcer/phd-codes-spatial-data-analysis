@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_6" displayname="Destriping with Mask">
+    <parameters>
+      <param name="INPUT" displayname="Input" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Input&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;This must be your input data of type grid.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MASK" displayname="Mask Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Mask Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;This grid is used to select cells.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT3" displayname="Destriped Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Destriped Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;New grid filtered with the destriping2 module&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT1" displayname="Low-pass 1" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Low-pass 1&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Step 1: low-pass of stripe&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT2" displayname="Low-pass 2" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Low-pass 2&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Step 2: low-pass between stripe and its surruondings&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ANG" displayname="Angle (in degrees)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Angle (in degrees)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;0 is horizontal, 90 is vertical.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="R" displayname="Radius" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Radius&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 20.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="D" displayname="Stripes distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Stripes distance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 2.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MIN" displayname="Min" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Min&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: -10.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAX" displayname="Max" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Max&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MMIN" displayname="Mask Min" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Mask Min&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: -10000.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MMAX" displayname="Mask Max" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Mask Max&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 10000.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Destriping with Mask</resTitle>
+    </idCitation>
+    <idCredit>Alessandro Perego</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

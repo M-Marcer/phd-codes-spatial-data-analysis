@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_7" displayname="Line Smoothing">
+    <parameters>
+      <param name="LINES_IN" displayname="Lines" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Lines&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;&lt;p&gt;The input line shapefile to smooth.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LINES_OUT" displayname="Smoothed Lines" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Smoothed Lines&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;&lt;p&gt;The smoothed output line shapefile.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] basic SIA model&lt;/p&gt;&lt;p&gt;[1] improved SIA model&lt;/p&gt;&lt;p&gt;[2] Gaussian Filtering&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;&lt;p&gt;Choose the method to apply.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SENSITIVITY" displayname="Sensitivity" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sensitivity&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 3&lt;/p&gt;&lt;p&gt;Half the size of the moving window [vertex count], controls smoothing sensitivity.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ITERATIONS" displayname="Iterations" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Iterations&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 10&lt;/p&gt;&lt;p&gt;The number of smoothing iterations [-].&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PRESERVATION" displayname="Preservation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Preservation&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;&lt;p&gt;The smoothing preservation factor [-].&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIGMA" displayname="Sigma" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sigma&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.500000&lt;/p&gt;&lt;p&gt;Default: 2.000000&lt;/p&gt;&lt;p&gt;Standard deviation of the Gaussian filter [-].&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Line Smoothing</resTitle>
+    </idCitation>
+    <idCredit>V. Wichmann, J. Engels (c) 2014</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

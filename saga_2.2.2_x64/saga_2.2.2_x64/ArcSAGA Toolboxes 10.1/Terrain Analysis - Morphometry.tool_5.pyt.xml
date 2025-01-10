@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_5" displayname="Hypsometry">
+    <parameters>
+      <param name="ELEVATION" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TABLE" displayname="Hypsometry" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Hypsometry&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COUNT" displayname="Number of Classes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Classes&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 100&lt;/p&gt;&lt;p&gt;Number of discrete intervals (bins) used for sampling&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SORTING" displayname="Sort" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sort&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] up&lt;/p&gt;&lt;p&gt;[1] down&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Choose how to sort the elevation dataset before sampling&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Classification Constant" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Classification Constant&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] height&lt;/p&gt;&lt;p&gt;[1] area&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Choose the classification constant to use&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BZRANGE" displayname="Use Z-Range" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Use Z-Range&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Use a user-specified elevation range instead of min/max of the input dataset&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ZRANGE_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;User specified elevation range&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ZRANGE_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1000.000000&lt;/p&gt;&lt;p&gt;User specified elevation range&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Hypsometry</resTitle>
+    </idCitation>
+    <idCredit>(c) 2001 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

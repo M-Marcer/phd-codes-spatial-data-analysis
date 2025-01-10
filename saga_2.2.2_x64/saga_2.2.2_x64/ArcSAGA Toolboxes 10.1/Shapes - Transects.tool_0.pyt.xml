@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Transect through polygon shapefile">
+    <parameters>
+      <param name="TRANSECT" displayname="Line Transect(s)" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Line Transect(s)&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THEME" displayname="Theme" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Theme&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THEME_FIELD" displayname="Theme Field" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Theme Field&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TRANSECT_RESULT" displayname="Result table" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Result table&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Transect through polygon shapefile</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2009 Johan Van de Wauw</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

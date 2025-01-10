@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Resampling">
+    <parameters>
+      <param name="INPUT" displayname="Grids" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grids&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Output" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Output&lt;/p&gt;&lt;p&gt;Grid list (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="KEEP_TYPE" displayname="Preserve Data Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Preserve Data Type&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SCALE_UP" displayname="Upscaling Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Upscaling Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Nearest Neighbor&lt;/p&gt;&lt;p&gt;[1] Bilinear Interpolation&lt;/p&gt;&lt;p&gt;[2] Inverse Distance Interpolation&lt;/p&gt;&lt;p&gt;[3] Bicubic Spline Interpolation&lt;/p&gt;&lt;p&gt;[4] B-Spline Interpolation&lt;/p&gt;&lt;p&gt;[5] Mean Value&lt;/p&gt;&lt;p&gt;[6] Mean Value (cell area weighted)&lt;/p&gt;&lt;p&gt;[7] Minimum Value&lt;/p&gt;&lt;p&gt;[8] Maximum Value&lt;/p&gt;&lt;p&gt;[9] Majority&lt;/p&gt;&lt;p&gt;Default: 6&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SCALE_DOWN" displayname="Downscaling Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Downscaling Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Nearest Neighbor&lt;/p&gt;&lt;p&gt;[1] Bilinear Interpolation&lt;/p&gt;&lt;p&gt;[2] Inverse Distance Interpolation&lt;/p&gt;&lt;p&gt;[3] Bicubic Spline Interpolation&lt;/p&gt;&lt;p&gt;[4] B-Spline Interpolation&lt;/p&gt;&lt;p&gt;Default: 4&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TARGET_USER_SIZE" displayname="Cellsize" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cellsize&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Resampling</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2003</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

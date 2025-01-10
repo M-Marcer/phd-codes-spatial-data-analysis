@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Lapse Rate Based Temperature Downscaling">
+    <parameters>
+      <param name="LORES_DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LORES_T" displayname="Temperature" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Temperature&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LAPSE_RATES" displayname="Lapse Rate" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Lapse Rate&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;lapse rate in degree of temperature per 100 meter&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LORES_SLT" displayname="Temperature at Sea Level" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Temperature at Sea Level&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HIRES_DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HIRES_T" displayname="Temperature" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Temperature&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LAPSE_RATE" displayname="Lapse Rate" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Lapse Rate&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.600000&lt;/p&gt;&lt;p&gt;lapse rate in degree of temperature per 100 meter&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Lapse Rate Based Temperature Downscaling</resTitle>
+    </idCitation>
+    <idCredit>Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

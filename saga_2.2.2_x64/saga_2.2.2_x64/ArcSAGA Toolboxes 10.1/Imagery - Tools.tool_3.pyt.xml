@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_3" displayname="Tasseled Cap Transformation">
+    <parameters>
+      <param name="BLUE" displayname="Blue (TM 1)" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Blue (TM 1)&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RED" displayname="Red (TM 2)" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Red (TM 2)&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GREEN" displayname="Green (TM 3)" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Green (TM 3)&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NIR" displayname="Near Infrared (TM 4)" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Near Infrared (TM 4)&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MIR1" displayname="Mid Infrared (TM 5)" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Mid Infrared (TM 5)&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MIR2" displayname="Mid Infrared (TM 7)" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Mid Infrared (TM 7)&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BRIGHTNESS" displayname="Brightness" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Brightness&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GREENNESS" displayname="Greenness" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Greenness&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WETNESS" displayname="Wetness" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Wetness&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Tasseled Cap Transformation</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

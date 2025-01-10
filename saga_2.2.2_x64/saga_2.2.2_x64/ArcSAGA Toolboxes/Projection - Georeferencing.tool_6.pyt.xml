@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_6" displayname="World File from Flight and Camera Settings">
+    <parameters>
+      <param name="EXTENT" displayname="Extent" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Extent&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE" displayname="World File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;World File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NX" displayname="Number of Columns" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Columns&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 100&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NY" displayname="Number of Columns" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Columns&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 100&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="X" displayname="X" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;X&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Y" displayname="Y" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Y&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="Z" displayname="Flying Height" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Flying Height&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1000.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ORIENTATION" displayname="Orientation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Orientation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] BLUH&lt;/p&gt;&lt;p&gt;[1] PATB&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OMEGA" displayname="Omega [degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Omega [degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;rotation around the X axis (roll)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PHI" displayname="Phi [degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Phi [degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;rotation around the Y axis (pitch)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="KAPPA" displayname="Kappa [degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Kappa [degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;rotation around the Z axis (heading)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="KAPPA_OFF" displayname="Kappa Offset [degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Kappa Offset [degree]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 90.000000&lt;/p&gt;&lt;p&gt;origin adjustment for Z axis (heading)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CFL" displayname="Focal Length [mm]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Focal Length [mm]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 80.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PXSIZE" displayname="CCD Physical Pixel Size [micron]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;CCD Physical Pixel Size [micron]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 5.200000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>World File from Flight and Camera Settings</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2014</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

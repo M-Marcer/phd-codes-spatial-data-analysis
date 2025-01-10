@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_1" displayname="Connect to PostgreSQL">
+    <parameters>
+      <param name="PG_HOST" displayname="Host" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Host&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: localhost&lt;/p&gt;&lt;p&gt;Password&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PG_PORT" displayname="Port" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Port&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Default: 5432&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PG_NAME" displayname="Database" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Database&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: geo_test&lt;/p&gt;&lt;p&gt;Database Name&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PG_USER" displayname="User" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;User&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: postgres&lt;/p&gt;&lt;p&gt;User Name&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PG_PWD" displayname="Password" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Password&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: postgres&lt;/p&gt;&lt;p&gt;Password&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Connect to PostgreSQL</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

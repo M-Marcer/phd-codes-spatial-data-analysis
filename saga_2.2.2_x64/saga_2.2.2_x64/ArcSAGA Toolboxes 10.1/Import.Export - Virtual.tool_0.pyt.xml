@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Create Virtual Point Cloud Dataset">
+    <parameters>
+      <param name="FILES" displayname="Input Files" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Input Files&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;&lt;p&gt;The input point cloud files to use&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INPUT_FILE_LIST" displayname="Input File List" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Input File List&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;&lt;p&gt;A text file with the full path to an input point cloud on each line&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILENAME" displayname="Filename" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Filename&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;&lt;p&gt;The full path and name of the .spcvf file&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD_PATHS" displayname="File Paths" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;File Paths&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] absolute&lt;/p&gt;&lt;p&gt;[1] relative&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Choose how to handle file paths. With relative paths, you can package the *.spcvf and your point cloud tiles easily.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Create Virtual Point Cloud Dataset</resTitle>
+    </idCitation>
+    <idCredit>V. Wichmann, LASERDATA GmbH (c) 2014</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_18" displayname="Add Point Attributes to Polygons">
+    <parameters>
+      <param name="INPUT" displayname="Polygons" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Polygons&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;&lt;p&gt;Input polygon shapefile&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POINTS" displayname="Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;&lt;p&gt;Input point shapefile&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELDS" displayname="Attributes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Attributes&lt;/p&gt;&lt;p&gt;Table fields&lt;/p&gt;&lt;p&gt;Attributes to add. Select none to add all&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Result" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Result&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Optional output polygon shapefile&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ADD_LOCATION_INFO" displayname="Add Location Info" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Add Location Info&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Add location information from points (x,y,(z,m))&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Add Point Attributes to Polygons</resTitle>
+    </idCitation>
+    <idCredit>V. Wichmann (c) 2014</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_9" displayname="Export WASP terrain map file">
+    <parameters>
+      <param name="SHAPES" displayname="Contour Lines" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Contour Lines&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ELEVATION" displayname="Map File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Map File&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE" displayname="File Name" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;File Name&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Export WASP terrain map file</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2006</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

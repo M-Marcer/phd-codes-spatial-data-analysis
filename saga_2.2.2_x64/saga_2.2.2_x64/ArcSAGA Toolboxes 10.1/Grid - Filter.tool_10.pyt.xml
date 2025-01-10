@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_10" displayname="Mesh Denoise">
+    <parameters>
+      <param name="INPUT" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Denoised Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Denoised Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIGMA" displayname="Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 0.900000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ITER" displayname="Number of Iterations for Normal Updating" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Iterations for Normal Updating&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 5&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VITER" displayname="Number of Iterations for Vertex Updating" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Iterations for Vertex Updating&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 50&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NB_CV" displayname="Common Edge Type of Face Neighbourhood" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Common Edge Type of Face Neighbourhood&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Common Vertex&lt;/p&gt;&lt;p&gt;[1] Common Edge&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ZONLY" displayname="Only Z-Direction Position is Updated" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Only Z-Direction Position is Updated&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Mesh Denoise</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2012</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

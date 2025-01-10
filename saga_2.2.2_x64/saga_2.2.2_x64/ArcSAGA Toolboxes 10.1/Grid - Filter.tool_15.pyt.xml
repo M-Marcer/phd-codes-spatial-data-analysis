@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_15" displayname="Sieving Classes">
+    <parameters>
+      <param name="INPUT" displayname="Classes" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Classes&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Sieved Classes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Sieved Classes&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MODE" displayname="Neighbourhood" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Neighbourhood&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Neumann&lt;/p&gt;&lt;p&gt;[1] Moore&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Neumann: the four horizontally and vertically neighboured cells; Moore: all eight adjacent cells&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLD" displayname="Minimum Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Threshold&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 2&lt;/p&gt;&lt;p&gt;Default: 4&lt;/p&gt;&lt;p&gt;Minimum number of cells in a group of adjacent cells.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ALL" displayname="Class Selection" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Class Selection&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] single class&lt;/p&gt;&lt;p&gt;[1] all classes&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLASS" displayname="Class Identifier" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Class Identifier&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Sieving Classes</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2014</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

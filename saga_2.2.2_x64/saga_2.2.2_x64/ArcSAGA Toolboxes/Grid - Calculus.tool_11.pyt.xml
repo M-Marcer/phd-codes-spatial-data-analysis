@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_11" displayname="Fuzzify">
+    <parameters>
+      <param name="INPUT" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Fuzzified Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Fuzzified Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="A" displayname="A" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;A&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;&lt;p&gt;Values lower than A will be set to 0.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="B" displayname="B" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;B&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;&lt;p&gt;Values between A and B increase from 0 to 1, values between B and C will be set to 1.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C" displayname="C" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;C&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;&lt;p&gt;Values between B and C will be set to 1, values between C and D decrease from 1 to 0.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="D" displayname="D" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;D&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;&lt;p&gt;Values greater than D will be set to 0.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TYPE" displayname="Membership Function Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Membership Function Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] linear&lt;/p&gt;&lt;p&gt;[1] sigmoidal&lt;/p&gt;&lt;p&gt;[2] j-shaped&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AUTOFIT" displayname="Adjust to Grid" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Adjust to Grid&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Automatically adjust control points to grid's data range&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Fuzzify</resTitle>
+    </idCitation>
+    <idCredit>Victor Olaya (c) 2004</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

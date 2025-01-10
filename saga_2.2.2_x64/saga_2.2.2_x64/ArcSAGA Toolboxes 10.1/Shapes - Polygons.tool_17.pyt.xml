@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_17" displayname="Identity">
+    <parameters>
+      <param name="A" displayname="Layer A" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Layer A&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="B" displayname="Layer B" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Layer B&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="Identity" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Identity&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SPLIT" displayname="Split Parts" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Split Parts&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Set true if you want multipart polygons to become separate polygons.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Identity</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2003-13</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Change Vector Analysis">
+    <parameters>
+      <param name="A" displayname="Initial State" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Initial State&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="B" displayname="Final State" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Final State&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIST" displayname="Distance" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Distance&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIR" displayname="Direction" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Direction&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ANGLE" displayname="Angle Calculation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Angle Calculation&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;angle calculation is only available when exact two features are compared&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_OUT" displayname="Output of Change Vector" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Output of Change Vector&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C" displayname="Change Vector" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Change Vector&lt;/p&gt;&lt;p&gt;Grid list (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Change Vector Analysis</resTitle>
+    </idCitation>
+    <idCredit>V.Olaya (c) 2004, O.Conrad (c) 2012</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

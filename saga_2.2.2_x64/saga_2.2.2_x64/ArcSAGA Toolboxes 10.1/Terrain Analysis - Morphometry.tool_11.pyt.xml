@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_11" displayname="Effective Air Flow Heights">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIR" displayname="Wind Direction" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Wind Direction&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Direction into which the wind blows, starting with 0 for North and increasing clockwise.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIR_UNITS" displayname="Wind Direction Units" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Wind Direction Units&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] radians&lt;/p&gt;&lt;p&gt;[1] degree&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LEN" displayname="Wind Speed" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Wind Speed&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LEN_SCALE" displayname="Scaling" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Scaling&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AFH" displayname="Effective Air Flow Heights" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Effective Air Flow Heights&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAXDIST" displayname="Search Distance [km]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Search Distance [km]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 300.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIR_CONST" displayname="Constant Wind Direction" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Constant Wind Direction&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 135.000000&lt;/p&gt;&lt;p&gt;constant direction into the wind blows, given as degree&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OLDVER" displayname="Old Version" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Old Version&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;use old version for constant wind direction (no acceleration and averaging option)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ACCEL" displayname="Acceleration" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Acceleration&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 1.500000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PYRAMIDS" displayname="Elevation Averaging" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Elevation Averaging&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;use more averaged elevations when looking at increasing distances&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LEE" displayname="Windward Factor" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Windward Factor&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.500000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LUV" displayname="Luv Factor" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Luv Factor&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Effective Air Flow Heights</resTitle>
+    </idCitation>
+    <idCredit>J.Boehner, O.Conrad (c) 2008</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

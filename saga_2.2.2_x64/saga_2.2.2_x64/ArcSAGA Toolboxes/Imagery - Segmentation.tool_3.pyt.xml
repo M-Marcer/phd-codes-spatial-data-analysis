@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_3" displayname="Seeded Region Growing">
+    <parameters>
+      <param name="SEEDS" displayname="Seeds" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Seeds&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FEATURES" displayname="Features" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Features&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEGMENTS" displayname="Segments" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Segments&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIMILARITY" displayname="Similarity" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Similarity&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TABLE" displayname="Seeds" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Seeds&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NORMALIZE" displayname="Normalize" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Normalize&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NEIGHBOUR" displayname="Neighbourhood" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Neighbourhood&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] 4 (von Neumann)&lt;/p&gt;&lt;p&gt;[1] 8 (Moore)&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] feature space and position&lt;/p&gt;&lt;p&gt;[1] feature space&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIG_1" displayname="Variance in Feature Space" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Variance in Feature Space&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIG_2" displayname="Variance in Position Space" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Variance in Position Space&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLD" displayname="Similarity Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Similarity Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="REFRESH" displayname="Refresh" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Refresh&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LEAFSIZE" displayname="Leaf Size (for Speed Optimisation)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Leaf Size (for Speed Optimisation)&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 2&lt;/p&gt;&lt;p&gt;Default: 256&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Seeded Region Growing</resTitle>
+    </idCitation>
+    <idCredit>B. Bechtel, O. Conrad (c) 2008</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

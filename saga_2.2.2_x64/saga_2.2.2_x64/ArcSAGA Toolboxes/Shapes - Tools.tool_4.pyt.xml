@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Select by Location...">
+    <parameters>
+      <param name="SHAPES" displayname="Shapes to Select From" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Shapes to Select From&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LOCATIONS" displayname="Locations" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Locations&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONDITION" displayname="Condition" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Condition&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] intersect&lt;/p&gt;&lt;p&gt;[1] are completely within&lt;/p&gt;&lt;p&gt;[2] completely contain&lt;/p&gt;&lt;p&gt;[3] have their centroid in&lt;/p&gt;&lt;p&gt;[4] contain the centeroid of&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Select shapes that fulfil this condition&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] new selection&lt;/p&gt;&lt;p&gt;[1] add to current selection&lt;/p&gt;&lt;p&gt;[2] select from current selection&lt;/p&gt;&lt;p&gt;[3] remove from current selection&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Select by Location...</resTitle>
+    </idCitation>
+    <idCredit>V.Olaya (c) 2004, O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

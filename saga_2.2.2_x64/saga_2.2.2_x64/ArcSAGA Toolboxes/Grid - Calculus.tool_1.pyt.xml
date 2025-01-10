@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_1" displayname="Grid Calculator">
+    <parameters>
+      <param name="GRIDS" displayname="Grids" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Grids&lt;/p&gt;&lt;p&gt;Grid list (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;in the formula these grids are addressed in order of the list as 'g1, g2, g3, ...'&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="XGRIDS" displayname="Grids from different Systems" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Grids from different Systems&lt;/p&gt;&lt;p&gt;Grid list (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;in the formula these grids are addressed in order of the list as 'h1, h2, h3, ...'&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INTERPOLATION" displayname="Interpolation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Interpolation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Nearest Neighbor&lt;/p&gt;&lt;p&gt;[1] Bilinear Interpolation&lt;/p&gt;&lt;p&gt;[2] Inverse Distance Interpolation&lt;/p&gt;&lt;p&gt;[3] Bicubic Spline Interpolation&lt;/p&gt;&lt;p&gt;[4] B-Spline Interpolation&lt;/p&gt;&lt;p&gt;Default: 4&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="Result" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Result&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FORMULA" displayname="Formula" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Formula&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: (g1 - g2) / (g1 + g2)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NAME" displayname="Name" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Name&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: Calculation&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FNAME" displayname="Take Formula" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Take Formula&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="USE_NODATA" displayname="Use NoData" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Use NoData&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Check this in order to include NoData cells in the calculation.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TYPE" displayname="Data Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Data Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] bit&lt;/p&gt;&lt;p&gt;[1] unsigned 1 byte integer&lt;/p&gt;&lt;p&gt;[2] signed 1 byte integer&lt;/p&gt;&lt;p&gt;[3] unsigned 2 byte integer&lt;/p&gt;&lt;p&gt;[4] signed 2 byte integer&lt;/p&gt;&lt;p&gt;[5] unsigned 4 byte integer&lt;/p&gt;&lt;p&gt;[6] signed 4 byte integer&lt;/p&gt;&lt;p&gt;[7] 4 byte floating point number&lt;/p&gt;&lt;p&gt;[8] 8 byte floating point number&lt;/p&gt;&lt;p&gt;Default: 7&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Grid Calculator</resTitle>
+    </idCitation>
+    <idCredit>A.Ringeler (c) 2003</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

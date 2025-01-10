@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_3" displayname="Regression Kriging">
+    <parameters>
+      <param name="POINTS" displayname="Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD" displayname="Attribute" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Attribute&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PREDICTORS" displayname="Predictors" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Predictors&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="REGRESSION" displayname="Regression" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Regression&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;regression model applied to predictor grids&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PREDICTION" displayname="Prediction" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Prediction&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESIDUALS" displayname="Residuals" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Residuals&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VARIANCE" displayname="Quality Measure" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Quality Measure&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TQUALITY" displayname="Type of Quality Measure" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Type of Quality Measure&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] standard deviation&lt;/p&gt;&lt;p&gt;[1] variance&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LOG" displayname="Logarithmic Transformation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Logarithmic Transformation&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BLOCK" displayname="Block Kriging" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Block Kriging&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DBLOCK" displayname="Block Size" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Block Size&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VAR_MAXDIST" displayname="Maximum Distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Distance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: -1.000000&lt;/p&gt;&lt;p&gt;maximum distance for variogram estimation&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VAR_NCLASSES" displayname="Lag Distance Classes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Lag Distance Classes&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 100&lt;/p&gt;&lt;p&gt;initial number of lag distance classes for variogram estimation&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VAR_NSKIP" displayname="Skip" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Skip&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VAR_MODEL" displayname="Variogram Model" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Variogram Model&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: a + b * x&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INFO_COEFF" displayname="Regression: Coefficients" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Regression: Coefficients&lt;/p&gt;&lt;p&gt;Table (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INFO_MODEL" displayname="Regression: Model" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Regression: Model&lt;/p&gt;&lt;p&gt;Table (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INFO_STEPS" displayname="Regression: Steps" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Regression: Steps&lt;/p&gt;&lt;p&gt;Table (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COORD_X" displayname="Include X Coordinate" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Include X Coordinate&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COORD_Y" displayname="Include Y Coordinate" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Include Y Coordinate&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INTERCEPT" displayname="Intercept" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Intercept&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] include all&lt;/p&gt;&lt;p&gt;[1] forward&lt;/p&gt;&lt;p&gt;[2] backward&lt;/p&gt;&lt;p&gt;[3] stepwise&lt;/p&gt;&lt;p&gt;Default: 3&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="P_VALUE" displayname="Significance Level" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Significance Level&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 5.000000&lt;/p&gt;&lt;p&gt;Significance level (aka p-value) as threshold for automated predictor selection, given as percentage&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INTERPOL" displayname="Grid Interpolation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Grid Interpolation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Nearest Neighbor&lt;/p&gt;&lt;p&gt;[1] Bilinear Interpolation&lt;/p&gt;&lt;p&gt;[2] Inverse Distance Interpolation&lt;/p&gt;&lt;p&gt;[3] Bicubic Spline Interpolation&lt;/p&gt;&lt;p&gt;[4] B-Spline Interpolation&lt;/p&gt;&lt;p&gt;Default: 4&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEARCH_RANGE" displayname="Search Range" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Search Range&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] local&lt;/p&gt;&lt;p&gt;[1] global&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEARCH_RADIUS" displayname="Maximum Search Distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Search Distance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1000.000000&lt;/p&gt;&lt;p&gt;local maximum search distance given in map units&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEARCH_POINTS_ALL" displayname="Number of Points" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Points&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] maximum number of nearest points&lt;/p&gt;&lt;p&gt;[1] all points within search distance&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEARCH_POINTS_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 16&lt;/p&gt;&lt;p&gt;minimum number of points to use&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEARCH_POINTS_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 20&lt;/p&gt;&lt;p&gt;maximum number of nearest points&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEARCH_DIRECTION" displayname="Direction" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Direction&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] all directions&lt;/p&gt;&lt;p&gt;[1] quadrants&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Regression Kriging</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

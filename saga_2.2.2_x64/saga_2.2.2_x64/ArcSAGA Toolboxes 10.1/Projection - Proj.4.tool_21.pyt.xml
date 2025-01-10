@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_21" displayname="Geographic Distances (Pair of Coordinates)">
+    <parameters>
+      <param name="CRS_METHOD" displayname="Get CRS Definition from..." type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Get CRS Definition from...&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Proj4 Parameters&lt;/p&gt;&lt;p&gt;[1] EPSG Code&lt;/p&gt;&lt;p&gt;[2] Well Known Text File&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CRS_PROJ4" displayname="Proj4 Parameters" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Proj4 Parameters&lt;/p&gt;&lt;p&gt;Long text&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CRS_FILE" displayname="Well Known Text File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Well Known Text File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CRS_EPSG" displayname="EPSG Code" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;EPSG Code&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: -1&lt;/p&gt;&lt;p&gt;Default: -1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PRECISE" displayname="Precise Datum Conversion" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Precise Datum Conversion&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;avoids precision problems when source and target crs use different geodedtic datums.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DISTANCES" displayname="Geographic Distances" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Geographic Distances&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COORD_X1" displayname="X" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;X&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COORD_Y1" displayname="Y" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Y&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 53.500000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COORD_X2" displayname="X" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;X&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 116.500000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COORD_Y2" displayname="Y" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Y&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 6.400000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EPSILON" displayname="Epsilon" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Epsilon&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;&lt;p&gt;defines the maximum resolution [km] for the re-projected distance segments&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Geographic Distances (Pair of Coordinates)</resTitle>
+    </idCitation>
+    <idCredit>O. Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

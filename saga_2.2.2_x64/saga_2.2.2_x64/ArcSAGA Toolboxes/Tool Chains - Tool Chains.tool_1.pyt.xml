@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_1" displayname="Local Climate Zone Classification">
+    <parameters>
+      <param name="FILE_TRAINING" displayname="Training Areas" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Training Areas&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RF_TREE_COUNT" displayname="Random Forest Tree Count" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Random Forest Tree Count&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 32&lt;/p&gt;&lt;p&gt;How many trees to create?&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILTER_RADIUS" displayname="Majority Filter Radius" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Majority Filter Radius&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE_CLASS_DEF" displayname="Class Definition File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Class Definition File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE_LCZC" displayname="Save LCZC as..." type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Save LCZC as...&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE_LCZC_FILTERED" displayname="Save LCZC (Filtered) as..." type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Save LCZC (Filtered) as...&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FEATURES" displayname="Features" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Features&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LCZC" displayname="LCZC" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;LCZC&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LCZC_FILTERED" displayname="LCZC (Filtered)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;LCZC (Filtered)&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Local Climate Zone Classification</resTitle>
+    </idCitation>
+    <idCredit>B. Bechtel, O. Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

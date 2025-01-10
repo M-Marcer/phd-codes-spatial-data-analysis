@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_1" displayname="GPSBabel">
+    <parameters>
+      <param name="BASEPATH" displayname="GPSBabel path" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;GPSBabel path&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;&lt;p&gt;GPSBabel path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INPUT" displayname="Input file" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Input file&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FORMATIN" displayname="Input format" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Input format&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Geocaching.com .loc&lt;/p&gt;&lt;p&gt;[1] GPSman&lt;/p&gt;&lt;p&gt;[2] GPX XML&lt;/p&gt;&lt;p&gt;[3] Magellan protocol&lt;/p&gt;&lt;p&gt;[4] Magellan Mapsend&lt;/p&gt;&lt;p&gt;[5] Garmin PCX5&lt;/p&gt;&lt;p&gt;[6] Garmin Mapsource&lt;/p&gt;&lt;p&gt;[7] gpsutil&lt;/p&gt;&lt;p&gt;[8] U.S. Census Bureau Tiger Mapping Service&lt;/p&gt;&lt;p&gt;[9] Comma separated values&lt;/p&gt;&lt;p&gt;[10] Delorme Topo USA4/XMap Conduit&lt;/p&gt;&lt;p&gt;[11] Navitrak DNA marker format&lt;/p&gt;&lt;p&gt;[12] MS PocketStreets 2002 Pushpin&lt;/p&gt;&lt;p&gt;[13] Cetus for Palm/OS&lt;/p&gt;&lt;p&gt;[14] GPSPilot Tracker for Palm/OS&lt;/p&gt;&lt;p&gt;[15] Magellan NAV Companion for PalmOS&lt;/p&gt;&lt;p&gt;[16] Garmin serial protocol&lt;/p&gt;&lt;p&gt;[17] MapTech Exchange Format&lt;/p&gt;&lt;p&gt;[18] Holux (gm-100) .wpo Format&lt;/p&gt;&lt;p&gt;[19] OziExplorer Waypoint&lt;/p&gt;&lt;p&gt;[20] National Geographic Topo .tpg&lt;/p&gt;&lt;p&gt;[21] TopoMapPro Places File&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Output file" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Output file&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FORMATOUT" displayname="Output format" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Output format&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Geocaching.com .loc&lt;/p&gt;&lt;p&gt;[1] GPSman&lt;/p&gt;&lt;p&gt;[2] GPX XML&lt;/p&gt;&lt;p&gt;[3] Magellan protocol&lt;/p&gt;&lt;p&gt;[4] Magellan Mapsend&lt;/p&gt;&lt;p&gt;[5] Garmin PCX5&lt;/p&gt;&lt;p&gt;[6] Garmin Mapsource&lt;/p&gt;&lt;p&gt;[7] gpsutil&lt;/p&gt;&lt;p&gt;[8] U.S. Census Bureau Tiger Mapping Service&lt;/p&gt;&lt;p&gt;[9] Comma separated values&lt;/p&gt;&lt;p&gt;[10] Delorme Topo USA4/XMap Conduit&lt;/p&gt;&lt;p&gt;[11] Navitrak DNA marker format&lt;/p&gt;&lt;p&gt;[12] MS PocketStreets 2002 Pushpin&lt;/p&gt;&lt;p&gt;[13] Cetus for Palm/OS&lt;/p&gt;&lt;p&gt;[14] GPSPilot Tracker for Palm/OS&lt;/p&gt;&lt;p&gt;[15] Magellan NAV Companion for PalmOS&lt;/p&gt;&lt;p&gt;[16] Garmin serial protocol&lt;/p&gt;&lt;p&gt;[17] MapTech Exchange Format&lt;/p&gt;&lt;p&gt;[18] Holux (gm-100) .wpo Format&lt;/p&gt;&lt;p&gt;[19] OziExplorer Waypoint&lt;/p&gt;&lt;p&gt;[20] National Geographic Topo .tpg&lt;/p&gt;&lt;p&gt;[21] TopoMapPro Places File&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>GPSBabel</resTitle>
+    </idCitation>
+    <idCredit></idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

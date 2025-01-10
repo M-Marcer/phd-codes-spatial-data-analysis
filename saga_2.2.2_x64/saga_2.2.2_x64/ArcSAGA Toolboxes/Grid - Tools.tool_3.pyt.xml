@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_3" displayname="Mosaicking">
+    <parameters>
+      <param name="GRIDS" displayname="Input Grids" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Input Grids&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TYPE" displayname="Preferred data storage type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Preferred data storage type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] 1 bit&lt;/p&gt;&lt;p&gt;[1] 1 byte unsigned integer&lt;/p&gt;&lt;p&gt;[2] 1 byte signed integer&lt;/p&gt;&lt;p&gt;[3] 2 byte unsigned integer&lt;/p&gt;&lt;p&gt;[4] 2 byte signed integer&lt;/p&gt;&lt;p&gt;[5] 4 byte unsigned integer&lt;/p&gt;&lt;p&gt;[6] 4 byte signed integer&lt;/p&gt;&lt;p&gt;[7] 4 byte floating point&lt;/p&gt;&lt;p&gt;[8] 8 byte floating point&lt;/p&gt;&lt;p&gt;Default: 7&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INTERPOL" displayname="Interpolation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Interpolation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Nearest Neighbor&lt;/p&gt;&lt;p&gt;[1] Bilinear Interpolation&lt;/p&gt;&lt;p&gt;[2] Inverse Distance Interpolation&lt;/p&gt;&lt;p&gt;[3] Bicubic Spline Interpolation&lt;/p&gt;&lt;p&gt;[4] B-Spline Interpolation&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OVERLAP" displayname="Overlapping Areas" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Overlapping Areas&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] first&lt;/p&gt;&lt;p&gt;[1] last&lt;/p&gt;&lt;p&gt;[2] minimum&lt;/p&gt;&lt;p&gt;[3] maximum&lt;/p&gt;&lt;p&gt;[4] mean&lt;/p&gt;&lt;p&gt;[5] blend boundary&lt;/p&gt;&lt;p&gt;[6] feathering&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BLEND_DIST" displayname="Blending Distance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Blending Distance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 10.000000&lt;/p&gt;&lt;p&gt;blending distance given in map units&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MATCH" displayname="Match" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Match&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] none&lt;/p&gt;&lt;p&gt;[1] regression&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TARGET_USER_SIZE" displayname="Cellsize" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cellsize&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TARGET_OUT_GRID" displayname="Target Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Target Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Mosaicking</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2003-12</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

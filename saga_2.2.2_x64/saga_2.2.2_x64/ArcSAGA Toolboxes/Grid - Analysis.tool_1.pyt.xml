@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_1" displayname="Accumulated Cost (Anisotropic)">
+    <parameters>
+      <param name="COST" displayname="Cost Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Cost Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIRECTION" displayname="Direction of max cost" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Direction of max cost&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Direction of max cost for each cell. In degrees&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POINTS" displayname="Destination Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Destination Points&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ACCCOST" displayname="Accumulated Cost" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Accumulated Cost&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="K" displayname="k factor" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;k factor&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 2.000000&lt;/p&gt;&lt;p&gt;Efective friction = stated friction ^f , where f = cos(DifAngle)^k.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLD" displayname="Threshold for different route" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Threshold for different route&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Accumulated Cost (Anisotropic)</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2004 by Victor Olaya</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

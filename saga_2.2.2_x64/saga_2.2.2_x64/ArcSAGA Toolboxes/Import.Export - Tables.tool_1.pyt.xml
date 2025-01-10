@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_1" displayname="Import Text Table">
+    <parameters>
+      <param name="TABLE" displayname="Table" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Table&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HEADLINE" displayname="File contains headline" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;File contains headline&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEPARATOR" displayname="Separator" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Separator&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] tabulator&lt;/p&gt;&lt;p&gt;[1] ;&lt;/p&gt;&lt;p&gt;[2] ,&lt;/p&gt;&lt;p&gt;[3] space&lt;/p&gt;&lt;p&gt;[4] other&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEP_OTHER" displayname="Separator (other)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Separator (other)&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: *&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILENAME" displayname="File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Import Text Table</resTitle>
+    </idCitation>
+    <idCredit>O. Conrad (c) 2008</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

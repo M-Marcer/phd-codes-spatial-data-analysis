@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_1" displayname="TOBIA">
+    <parameters>
+      <param name="A" displayname="Slope grid (rad)" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Slope grid (rad)&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;A slope angle grid (in radíans)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="B" displayname="Aspect grid (rad)" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Aspect grid (rad)&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;A aspect angle grid (in radíans)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C" displayname="Dip grid (degrees) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Dip grid (degrees) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing the dip of the structure plane (in degrees)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="D" displayname="Dip direction grid (degrees) " type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Dip direction grid (degrees) &lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;A grid representing the dip direction of the structure plane (in degrees)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fB" displayname="Global structure dip (degrees)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global structure dip (degrees)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 45.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="fC" displayname="Global structure dip direction (degrees)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Global structure dip direction (degrees)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 90.000000&lt;/p&gt;&lt;p&gt;Constant value if no raster set&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="E" displayname="TOBIA classes" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;TOBIA classes&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Resulting TOBIA classses (1-7) grid&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="F" displayname="TOBIA index" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;TOBIA index&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Resulting TOBIA index (-) grid&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>TOBIA</resTitle>
+    </idCitation>
+    <idCredit>A. G&uuml;nther (c) 2012</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

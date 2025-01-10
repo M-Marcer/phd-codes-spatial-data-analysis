@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_15" displayname="Gradient Vector from Cartesian to Polar Coordinates">
+    <parameters>
+      <param name="DX" displayname="X Component" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;X Component&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DY" displayname="Y Component" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Y Component&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DIR" displayname="Direction" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Direction&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LEN" displayname="Length" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Length&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="UNITS" displayname="Polar Angle Units" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Polar Angle Units&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] radians&lt;/p&gt;&lt;p&gt;[1] degree&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SYSTEM" displayname="Polar Coordinate System" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Polar Coordinate System&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] mathematical&lt;/p&gt;&lt;p&gt;[1] geographical&lt;/p&gt;&lt;p&gt;[2] user defined&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SYSTEM_ZERO" displayname="User defined Zero Direction" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;User defined Zero Direction&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 360.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;given in degree clockwise from North direction&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SYSTEM_ORIENT" displayname="User defined Orientation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;User defined Orientation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] clockwise&lt;/p&gt;&lt;p&gt;[1] counterclockwise&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Gradient Vector from Cartesian to Polar Coordinates</resTitle>
+    </idCitation>
+    <idCredit>Victor Olaya & Volker Wichmann (c) 2004-2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

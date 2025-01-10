@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Vegetation Index (Distance Based)">
+    <parameters>
+      <param name="RED" displayname="Red Reflectance" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Red Reflectance&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NIR" displayname="Near Infrared Reflectance" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Near Infrared Reflectance&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PVI0" displayname="Perpendicular Vegetation Index (Richardson and Wiegand, 1977)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Perpendicular Vegetation Index (Richardson and Wiegand, 1977)&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PVI1" displayname="Perpendicular Vegetation Index (Perry and Lautenschlager, 1984)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Perpendicular Vegetation Index (Perry and Lautenschlager, 1984)&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PVI2" displayname="Perpendicular Vegetation Index (Walther and Shabaani)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Perpendicular Vegetation Index (Walther and Shabaani)&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PVI3" displayname="Perpendicular Vegetation Index (Qi, et al., 1994)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Perpendicular Vegetation Index (Qi, et al., 1994)&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TSAVI" displayname="Transformed Soil Adjusted Vegetation Index (Baret et al. 1989)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Transformed Soil Adjusted Vegetation Index (Baret et al. 1989)&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ATSAVI" displayname="Transformed Soil Adjusted Vegetation Index (Baret and Guyot, 1991)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Transformed Soil Adjusted Vegetation Index (Baret and Guyot, 1991)&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INTERCEPT" displayname="Intercept of Soil Line" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Intercept of Soil Line&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SLOPE" displayname="Slope of Soil Line" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Slope of Soil Line&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.500000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Vegetation Index (Distance Based)</resTitle>
+    </idCitation>
+    <idCredit>V.Olaya (c) 2004, O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

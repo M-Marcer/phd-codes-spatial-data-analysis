@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Confusion Matrix (Two Grids)">
+    <parameters>
+      <param name="ONE" displayname="Classification 1" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Classification 1&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ONE_LUT" displayname="Look-up Table" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Look-up Table&lt;/p&gt;&lt;p&gt;Table (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ONE_LUT_MIN" displayname="Value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Value&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ONE_LUT_MAX" displayname="Value (Maximum)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Value (Maximum)&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ONE_LUT_NAM" displayname="Name" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Name&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TWO" displayname="Classification 2" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Classification 2&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TWO_LUT" displayname="Look-up Table" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Look-up Table&lt;/p&gt;&lt;p&gt;Table (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TWO_LUT_MIN" displayname="Value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Value&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TWO_LUT_MAX" displayname="Value (Maximum)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Value (Maximum)&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TWO_LUT_NAM" displayname="Name" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Name&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COMBINED" displayname="Combined Classes" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Combined Classes&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NOCHANGE" displayname="Report Unchanged Classes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Report Unchanged Classes&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONFUSION" displayname="Confusion Matrix" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Confusion Matrix&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Output as..." type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Output as...&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] cells&lt;/p&gt;&lt;p&gt;[1] percent&lt;/p&gt;&lt;p&gt;[2] area&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLASSES" displayname="Class Values" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Class Values&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SUMMARY" displayname="Summary" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Summary&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Confusion Matrix (Two Grids)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

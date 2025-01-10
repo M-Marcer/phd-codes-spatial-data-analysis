@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_6" displayname="Execute SQL">
+    <parameters>
+      <param name="PG_HOST" displayname="Host" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Host&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Password&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PG_PORT" displayname="Port" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Port&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Default: 5432&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PG_NAME" displayname="Database" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Database&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Database Name&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PG_USER" displayname="User" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;User&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;User Name&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PG_PWD" displayname="Password" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Password&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Password&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SQL" displayname="SQL Statment" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;SQL Statment&lt;/p&gt;&lt;p&gt;Long text&lt;/p&gt;&lt;p&gt;Default: CREATE TABLE myTable1 (Col1 VARCHAR(255) PRIMARY KEY, Col2 INTEGER);&lt;/p&gt;&lt;p&gt;INSERT INTO myTable1 (Col1, Col2) VALUES('First Value', 1);&lt;/p&gt;&lt;p&gt;DROP TABLE myTable1;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Show Results" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Show Results&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STOP" displayname="Stop on Error" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Stop on Error&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Execute SQL</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

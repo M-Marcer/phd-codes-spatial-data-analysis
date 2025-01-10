@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_14" displayname="Export WRF Geogrid Binary Format">
+    <parameters>
+      <param name="GRIDS" displayname="Grids" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grids&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE" displayname="Directory" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Directory&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DATATYPE" displayname="Data Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Data Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] 1 byte unsigned&lt;/p&gt;&lt;p&gt;[1] 1 byte signed&lt;/p&gt;&lt;p&gt;[2] 2 byte unsigned&lt;/p&gt;&lt;p&gt;[3] 2 byte signed&lt;/p&gt;&lt;p&gt;[4] 4 byte unsigned&lt;/p&gt;&lt;p&gt;[5] 4 byte signed&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TYPE" displayname="Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] categorical&lt;/p&gt;&lt;p&gt;[1] continuous&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MISSING" displayname="Missing Value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Missing Value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: -99999.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SCALE" displayname="Scale Factor" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Scale Factor&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="UNITS" displayname="Units" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Units&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DESCRIPTION" displayname="Description" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Description&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MMINLU" displayname="Look Up Section" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Look Up Section&lt;/p&gt;&lt;p&gt;Text&lt;/p&gt;&lt;p&gt;Default: USGS&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TILE_BDR" displayname="Halo Width" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Halo Width&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 0&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PROJECTION" displayname="Projection" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Projection&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] lambert&lt;/p&gt;&lt;p&gt;[1] polar&lt;/p&gt;&lt;p&gt;[2] mercator&lt;/p&gt;&lt;p&gt;[3] regular_ll&lt;/p&gt;&lt;p&gt;[4] albers_nad83&lt;/p&gt;&lt;p&gt;[5] polar_wgs84&lt;/p&gt;&lt;p&gt;Default: 3&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SDTLON" displayname="Standard Longitude" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Standard Longitude&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TRUELAT1" displayname="True Latitude 1" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;True Latitude 1&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 45.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TRUELAT2" displayname="True Latitude 2" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;True Latitude 2&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 35.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ISWATER" displayname="Water" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Water&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 16&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ISLAKE" displayname="Lake" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Lake&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: -1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ISICE" displayname="Ice" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Ice&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 24&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ISURBAN" displayname="Urban" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Urban&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ISOILWATER" displayname="Soil Water" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Soil Water&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 14&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Export WRF Geogrid Binary Format</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

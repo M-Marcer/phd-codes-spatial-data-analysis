@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_23" displayname="Morphometric Features">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FEATURES" displayname="Morphometric Features" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Morphometric Features&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ELEVATION" displayname="Generalized Surface" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Generalized Surface&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SLOPE" displayname="Slope" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Slope&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ASPECT" displayname="Aspect" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Aspect&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PROFC" displayname="Profile Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Profile Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PLANC" displayname="Plan Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Plan Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LONGC" displayname="Longitudinal Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Longitudinal Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CROSC" displayname="Cross-Sectional Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cross-Sectional Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAXIC" displayname="Maximum Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MINIC" displayname="Minimum Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Curvature&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIZE" displayname="Scale Radius (Cells)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Scale Radius (Cells)&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 5&lt;/p&gt;&lt;p&gt;Size of processing window (= 1 + 2 * radius) given as number of cells&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TOL_SLOPE" displayname="Slope Tolerance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Slope Tolerance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Slope tolerance that defines a 'flat' surface (degrees)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TOL_CURVE" displayname="Curvature Tolerance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Curvature Tolerance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000100&lt;/p&gt;&lt;p&gt;Curvature tolerance that defines 'planar' surface&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EXPONENT" displayname="Distance Weighting Exponent" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Distance Weighting Exponent&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 4.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Exponent for distance weighting (0.0-4.0)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ZSCALE" displayname="Vertical Scaling" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Vertical Scaling&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Vertical scaling factor&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONSTRAIN" displayname="Constrain" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Constrain&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Constrain model through central window cell&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Morphometric Features</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

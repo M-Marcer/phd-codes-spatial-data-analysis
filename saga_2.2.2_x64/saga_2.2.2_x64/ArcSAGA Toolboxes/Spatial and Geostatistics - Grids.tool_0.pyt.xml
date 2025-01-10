@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Fast Representativeness">
+    <parameters>
+      <param name="INPUT" displayname="Input" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Input&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Input for module calculations.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="Output" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Output&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Output of module calculations.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT_LOD" displayname="Output Lod" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Output Lod&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Output of module calculations.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SEEDS" displayname="Output Seeds" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Output Seeds&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Output of module calculations.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LOD" displayname="Level of Generalisation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Level of Generalisation&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 16.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Fast Representativeness</resTitle>
+    </idCitation>
+    <idCredit>A.Ringeler (c) 2009</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

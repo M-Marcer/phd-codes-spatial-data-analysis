@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_7" displayname="Directional Average">
+    <parameters>
+      <param name="INPUT" displayname="Input" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Input&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;This must be your input data of type grid.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="Output Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Output Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;New grid filtered with the directional1 module&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ANG" displayname="Angle (in degrees)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Angle (in degrees)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;0 is horizontal, 90 is vertical.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="R1" displayname="Main Radius" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Main Radius&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="R2" displayname="Transversal radius" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Transversal radius&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.500000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Directional Average</resTitle>
+    </idCitation>
+    <idCredit>Alessandro Perego</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

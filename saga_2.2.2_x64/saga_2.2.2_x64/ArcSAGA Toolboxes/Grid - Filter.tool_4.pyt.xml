@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="User Defined Filter">
+    <parameters>
+      <param name="INPUT" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="Filtered Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Filtered Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILTER" displayname="Filter Matrix" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Filter Matrix&lt;/p&gt;&lt;p&gt;Table (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ABSOLUTE" displayname="Absolute Weighting" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Absolute Weighting&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILTER_3X3" displayname="Default Filter Matrix (3x3)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Default Filter Matrix (3x3)&lt;/p&gt;&lt;p&gt;Static table&lt;/p&gt;&lt;p&gt;3 Fields:&lt;/p&gt;&lt;p&gt;- 1. [8 byte floating point number] 1&lt;/p&gt;&lt;p&gt;- 2. [8 byte floating point number] 2&lt;/p&gt;&lt;p&gt;- 3. [8 byte floating point number] 3&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>User Defined Filter</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2001</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

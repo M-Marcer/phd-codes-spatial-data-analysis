@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Export ESRI Arc/Info Grid">
+    <parameters>
+      <param name="GRID" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE" displayname="File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FORMAT" displayname="Format" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Format&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] binary&lt;/p&gt;&lt;p&gt;[1] ASCII&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GEOREF" displayname="Geo-Reference" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Geo-Reference&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] corner&lt;/p&gt;&lt;p&gt;[1] center&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;The grids geo-reference must be related either to the center or the corner of its lower left grid cell.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PREC" displayname="ASCII Precision" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;ASCII Precision&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: -1&lt;/p&gt;&lt;p&gt;Default: 4&lt;/p&gt;&lt;p&gt;Number of decimals when writing floating point values in ASCII format.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DECSEP" displayname="ASCII Decimal Separator" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;ASCII Decimal Separator&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] point (.)&lt;/p&gt;&lt;p&gt;[1] comma (,)&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Applies also to the binary format header file.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Export ESRI Arc/Info Grid</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2007</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

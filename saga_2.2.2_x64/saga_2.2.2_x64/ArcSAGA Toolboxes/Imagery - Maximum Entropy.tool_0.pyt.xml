@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Maximum Entropy Classifcation">
+    <parameters>
+      <param name="TRAINING" displayname="Training Areas" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Training Areas&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD" displayname="Class Name" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Class Name&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FEATURES_NUM" displayname="Numerical Features" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Numerical Features&lt;/p&gt;&lt;p&gt;Grid list (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FEATURES_CAT" displayname="Categorical Features" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Categorical Features&lt;/p&gt;&lt;p&gt;Grid list (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLASSES" displayname="Classes" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Classes&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PROB" displayname="Probability" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Probability&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PROBS" displayname="Probabilities" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Probabilities&lt;/p&gt;&lt;p&gt;Grid list (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PROBS_CREATE" displayname="Create Propabilities" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Create Propabilities&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Yoshimasa Tsuruoka&lt;/p&gt;&lt;p&gt;[1] Dekang Lin&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YT_FILE_LOAD" displayname="Load from File..." type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Load from File...&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YT_FILE_SAVE" displayname="Save to File..." type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Save to File...&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YT_REGUL" displayname="Regularization" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Regularization&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] none&lt;/p&gt;&lt;p&gt;[1] L1&lt;/p&gt;&lt;p&gt;[2] L2&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YT_REGUL_VAL" displayname="Regularization Factor" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Regularization Factor&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YT_NUMASREAL" displayname="Real-valued Numerical Features" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Real-valued Numerical Features&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DL_ALPHA" displayname="Alpha" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Alpha&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.100000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DL_THRESHOLD" displayname="Threshold" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Threshold&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DL_ITERATIONS" displayname="Maximum Iterations" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Iterations&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 100&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NUM_CLASSES" displayname="Number of Numeric Value Classes" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Numeric Value Classes&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 32&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PROB_MIN" displayname="Minimum Probability" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum Probability&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Minimum probability to accept a classification result for a cell.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Maximum Entropy Classifcation</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

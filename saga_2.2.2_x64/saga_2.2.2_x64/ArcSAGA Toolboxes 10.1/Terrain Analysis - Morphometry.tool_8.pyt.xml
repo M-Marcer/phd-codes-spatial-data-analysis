@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_8" displayname="Multiresolution Index of Valley Bottom Flatness (MRVBF)">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MRVBF" displayname="MRVBF" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;MRVBF&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MRRTF" displayname="MRRTF" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;MRRTF&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_SLOPE" displayname="Initial Threshold for Slope" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Initial Threshold for Slope&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 16.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_PCTL_V" displayname="Threshold for Elevation Percentile (Lowness)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Threshold for Elevation Percentile (Lowness)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 0.400000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="T_PCTL_R" displayname="Threshold for Elevation Percentile (Upness)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Threshold for Elevation Percentile (Upness)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 0.350000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="P_SLOPE" displayname="Shape Parameter for Slope" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shape Parameter for Slope&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 4.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="P_PCTL" displayname="Shape Parameter for Elevation Percentile" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shape Parameter for Elevation Percentile&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 3.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="UPDATE" displayname="Update Views" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Update Views&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLASSIFY" displayname="Classify" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Classify&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MAX_RES" displayname="Maximum Resolution (Percentage)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum Resolution (Percentage)&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;&lt;p&gt;Maximum resolution as percentage of the diameter of the DEM.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Multiresolution Index of Valley Bottom Flatness (MRVBF)</resTitle>
+    </idCitation>
+    <idCredit>(c) 2006 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

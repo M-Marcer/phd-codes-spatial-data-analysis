@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_26" displayname="Upslope and Downslope Curvature">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_LOCAL" displayname="Local Curvature" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Local Curvature&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_UP" displayname="Upslope Curvature" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Upslope Curvature&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_UP_LOCAL" displayname="Local Upslope Curvature" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Local Upslope Curvature&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_DOWN" displayname="Downslope Curvature" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Downslope Curvature&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="C_DOWN_LOCAL" displayname="Local Downslope Curvature" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Local Downslope Curvature&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WEIGHTING" displayname="Upslope Weighting" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Upslope Weighting&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 1.000000&lt;/p&gt;&lt;p&gt;Default: 0.500000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Upslope and Downslope Curvature</resTitle>
+    </idCitation>
+    <idCredit>P.Gandelli, O.Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

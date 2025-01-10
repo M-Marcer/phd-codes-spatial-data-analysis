@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_9" displayname="Sunrise and Sunset">
+    <parameters>
+      <param name="TARGET" displayname="Target System" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Target System&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SUNRISE" displayname="Sunrise" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Sunrise&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SUNSET" displayname="Sunset" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Sunset&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LENGTH" displayname="Day Length" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Day Length&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YEAR" displayname="Year" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Year&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 2015&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MONTH" displayname="Month" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Month&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] January&lt;/p&gt;&lt;p&gt;[1] February&lt;/p&gt;&lt;p&gt;[2] March&lt;/p&gt;&lt;p&gt;[3] April&lt;/p&gt;&lt;p&gt;[4] May&lt;/p&gt;&lt;p&gt;[5] June&lt;/p&gt;&lt;p&gt;[6] July&lt;/p&gt;&lt;p&gt;[7] August&lt;/p&gt;&lt;p&gt;[8] September&lt;/p&gt;&lt;p&gt;[9] October&lt;/p&gt;&lt;p&gt;[10] November&lt;/p&gt;&lt;p&gt;[11] December&lt;/p&gt;&lt;p&gt;Default: 9&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DAY" displayname="Day of Month" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Day of Month&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Maximum: 31&lt;/p&gt;&lt;p&gt;Default: 15&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TIME" displayname="Time" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Time&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] local&lt;/p&gt;&lt;p&gt;[1] world&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Sunrise and Sunset</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2015</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

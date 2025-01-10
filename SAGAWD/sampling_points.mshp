@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <HISTORY saga-version="2.2.2">
+    <MODULE library="shapes_grid" id="0" name="Add Grid Values to Points">
+      <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+      <INPUT type="shapes" id="SHAPES" name="Points">
+        <MODULE library="shapes_points" id="10" name="Add Polygon Attributes to Points">
+          <OPTION type="table_fields" id="FIELDS" name="Attributes">5</OPTION>
+          <INPUT type="shapes" id="INPUT" name="Points">
+            <MODULE library="shapes_points" id="10" name="Add Polygon Attributes to Points">
+              <OPTION type="table_fields" id="FIELDS" name="Attributes">11</OPTION>
+              <INPUT type="shapes" id="INPUT" name="Points">
+                <MODULE library="shapes_points" id="10" name="Add Polygon Attributes to Points">
+                  <OPTION type="table_fields" id="FIELDS" name="Attributes">12</OPTION>
+                  <INPUT type="shapes" id="INPUT" name="Points">
+                    <MODULE library="shapes_points" id="10" name="Add Polygon Attributes to Points">
+                      <OPTION type="table_fields" id="FIELDS" name="Attributes">5</OPTION>
+                      <INPUT type="shapes" id="INPUT" name="Points">
+                        <MODULE library="shapes_points" id="10" name="Add Polygon Attributes to Points">
+                          <OPTION type="table_fields" id="FIELDS" name="Attributes">11</OPTION>
+                          <INPUT type="shapes" id="INPUT" name="Points">
+                            <MODULE library="shapes_points" id="10" name="Add Polygon Attributes to Points">
+                              <OPTION type="table_fields" id="FIELDS" name="Attributes">12</OPTION>
+                              <INPUT type="shapes" id="INPUT" name="Points">
+                                <MODULE library="shapes_points" id="10" name="Add Polygon Attributes to Points">
+                                  <OPTION type="table_fields" id="FIELDS" name="Attributes">0</OPTION>
+                                  <INPUT type="shapes" id="INPUT" name="Points">
+                                    <MODULE library="shapes_points" id="10" name="Add Polygon Attributes to Points">
+                                      <OPTION type="table_fields" id="FIELDS" name="Attributes">0</OPTION>
+                                      <INPUT type="shapes" id="INPUT" name="Points">
+                                        <MODULE library="shapes_grid" id="0" name="Add Grid Values to Points">
+                                          <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                                          <INPUT type="shapes" id="SHAPES" name="Points">
+                                            <MODULE library="shapes_grid" id="0" name="Add Grid Values to Points">
+                                              <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                                              <INPUT type="shapes" id="SHAPES" name="Points">
+                                                <MODULE library="shapes_grid" id="0" name="Add Grid Values to Points">
+                                                  <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                                                  <INPUT type="shapes" id="SHAPES" name="Points">
+                                                    <MODULE library="shapes_grid" id="0" name="Add Grid Values to Points">
+                                                      <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                                                      <INPUT type="shapes" id="SHAPES" name="Points">
+                                                        <MODULE library="shapes_grid" id="3" name="Grid Values to Points">
+                                                          <OPTION type="grid_system" id="PARAMETERS_GRID_SYSTEM" name="Grid system">
+                                                            <CELLSIZE>25</CELLSIZE>
+                                                            <XMIN>919825</XMIN>
+                                                            <XMAX>1082550</XMAX>
+                                                            <YMIN>6293034.2993865</YMIN>
+                                                            <YMAX>6626234.2993865</YMAX>
+                                                          </OPTION>
+                                                          <OPTION type="boolean" id="NODATA" name="Exclude NoData Cells">TRUE</OPTION>
+                                                          <OPTION type="choice" id="TYPE" name="Type" index="0">nodes</OPTION>
+                                                          <INPUT_LIST type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM">
+                                                            <INPUT type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM">
+                                                              <MODULE library="io_gdal" id="0" name="GDAL: Import Raster">
+                                                                <OPTION type="file" id="FILES" name="Files">D:/Marcer_Materials/data/grids/DEM25.tif</OPTION>
+                                                                <OPTION type="boolean" id="TRANSFORM" name="Transformation">TRUE</OPTION>
+                                                                <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                                                                <OUTPUT type="grid_list" id="GRIDS" name="Grids">DEM25</OUTPUT>
+                                                              </MODULE>
+                                                            </INPUT>
+                                                          </INPUT_LIST>
+                                                          <INPUT type="shapes" id="POLYGONS" name="Polygons">
+                                                            <FILE>inv_actives_subset.shp</FILE>
+                                                          </INPUT>
+                                                          <OUTPUT type="shapes" id="SHAPES" name="Shapes">Grid Values [Nodes]</OUTPUT>
+                                                        </MODULE>
+                                                      </INPUT>
+                                                      <INPUT_LIST type="grid_list" id="GRIDS" name="Grids">
+                                                        <INPUT type="grid_list" id="GRIDS" name="Grids">
+                                                          <MODULE library="io_gdal" id="0" name="GDAL: Import Raster">
+                                                            <OPTION type="file" id="FILES" name="Files">D:/Marcer_Materials/data/grids/slope25.tif</OPTION>
+                                                            <OPTION type="boolean" id="TRANSFORM" name="Transformation">TRUE</OPTION>
+                                                            <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                                                            <OUTPUT type="grid_list" id="GRIDS" name="Grids">slope25</OUTPUT>
+                                                          </MODULE>
+                                                        </INPUT>
+                                                      </INPUT_LIST>
+                                                      <OUTPUT type="shapes" id="RESULT" name="Result">sampling_points</OUTPUT>
+                                                    </MODULE>
+                                                  </INPUT>
+                                                  <INPUT_LIST type="grid_list" id="GRIDS" name="Grids">
+                                                    <INPUT type="grid_list" id="GRIDS" name="Grids">
+                                                      <MODULE library="io_gdal" id="0" name="GDAL: Import Raster">
+                                                        <OPTION type="file" id="FILES" name="Files">D:/Marcer_Materials/final_products/regional/grids/Marcer_etal_2019_PTP.tif</OPTION>
+                                                        <OPTION type="boolean" id="TRANSFORM" name="Transformation">TRUE</OPTION>
+                                                        <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                                                        <OUTPUT type="grid_list" id="GRIDS" name="Grids">Marcer_etal_2019_PTP</OUTPUT>
+                                                      </MODULE>
+                                                    </INPUT>
+                                                  </INPUT_LIST>
+                                                  <OUTPUT type="shapes" id="RESULT" name="Result">sampling_points</OUTPUT>
+                                                </MODULE>
+                                              </INPUT>
+                                              <INPUT_LIST type="grid_list" id="GRIDS" name="Grids">
+                                                <INPUT type="grid_list" id="GRIDS" name="Grids">
+                                                  <MODULE library="io_gdal" id="0" name="GDAL: Import Raster">
+                                                    <OPTION type="file" id="FILES" name="Files">D:/Marcer_Materials/data/grids/PISR25.tif</OPTION>
+                                                    <OPTION type="boolean" id="TRANSFORM" name="Transformation">TRUE</OPTION>
+                                                    <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                                                    <OUTPUT type="grid_list" id="GRIDS" name="Grids">PISR25</OUTPUT>
+                                                  </MODULE>
+                                                </INPUT>
+                                              </INPUT_LIST>
+                                              <OUTPUT type="shapes" id="RESULT" name="Result">sampling_points</OUTPUT>
+                                            </MODULE>
+                                          </INPUT>
+                                          <INPUT_LIST type="grid_list" id="GRIDS" name="Grids">
+                                            <INPUT type="grid_list" id="GRIDS" name="Grids">
+                                              <MODULE library="ta_morphometry" id="26" name="Upslope and Downslope Curvature">
+                                                <OPTION type="grid_system" id="PARAMETERS_GRID_SYSTEM" name="Grid system">
+                                                  <CELLSIZE>25</CELLSIZE>
+                                                  <XMIN>919825</XMIN>
+                                                  <XMAX>1082550</XMAX>
+                                                  <YMIN>6293034.2993865</YMIN>
+                                                  <YMAX>6626234.2993865</YMAX>
+                                                </OPTION>
+                                                <OPTION type="double" id="WEIGHTING" name="Upslope Weighting">0.500000</OPTION>
+                                                <INPUT type="grid" id="DEM" name="Elevation" system="PARAMETERS_GRID_SYSTEM">
+                                                  <MODULE library="io_gdal" id="0" name="GDAL: Import Raster">
+                                                    <OPTION type="file" id="FILES" name="Files">C:\Users\MMarcer\Documents\PHD_IGA\Y2_CODES\ALPHA_VERSIONS\DATABASE\GRIDS\DEM25.tif</OPTION>
+                                                    <OPTION type="boolean" id="SELECT" name="Select from Multiple Bands">TRUE</OPTION>
+                                                    <OPTION type="boolean" id="TRANSFORM" name="Transformation">TRUE</OPTION>
+                                                    <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                                                    <OUTPUT type="grid_list" id="GRIDS" name="Grids">DEM25</OUTPUT>
+                                                  </MODULE>
+                                                </INPUT>
+                                                <OUTPUT type="grid" id="C_DOWN" name="Downslope Curvature">Downslope Curvature</OUTPUT>
+                                              </MODULE>
+                                            </INPUT>
+                                          </INPUT_LIST>
+                                          <OUTPUT type="shapes" id="RESULT" name="Result">sampling_points</OUTPUT>
+                                        </MODULE>
+                                      </INPUT>
+                                      <INPUT type="shapes" id="POLYGONS" name="Polygons">
+                                        <MODULE library="shapes_polygons" id="11" name="Polygon Clipping">
+                                          <OPTION type="boolean" id="DISSOLVE" name="Dissolve Clip Features">TRUE</OPTION>
+                                          <OPTION type="boolean" id="MULTIPLE" name="Multiple Input Features">TRUE</OPTION>
+                                          <INPUT type="shapes" id="CLIP" name="Clip Features">
+                                            <FILE>inv_actives_subset.shp</FILE>
+                                          </INPUT>
+                                          <INPUT_LIST type="shapes_list" id="M_INPUT" name="Input Features">
+                                            <INPUT type="shapes_list" id="M_INPUT" name="Input Features">
+                                              <FILE>unstable_areas.shp</FILE>
+                                            </INPUT>
+                                          </INPUT_LIST>
+                                          <OUTPUT type="shapes_list" id="M_OUTPUT" name="Output Features">unstable_areas [clipped]</OUTPUT>
+                                        </MODULE>
+                                      </INPUT>
+                                      <OUTPUT type="shapes" id="OUTPUT" name="Result">sampling_points [unstable_areas]</OUTPUT>
+                                    </MODULE>
+                                  </INPUT>
+                                  <INPUT type="shapes" id="POLYGONS" name="Polygons">
+                                    <MODULE library="shapes_polygons" id="11" name="Polygon Clipping">
+                                      <OPTION type="boolean" id="DISSOLVE" name="Dissolve Clip Features">TRUE</OPTION>
+                                      <OPTION type="boolean" id="MULTIPLE" name="Multiple Input Features">TRUE</OPTION>
+                                      <INPUT type="shapes" id="CLIP" name="Clip Features">
+                                        <FILE>inv_actives_subset.shp</FILE>
+                                      </INPUT>
+                                      <INPUT_LIST type="shapes_list" id="M_INPUT" name="Input Features">
+                                        <INPUT type="shapes_list" id="M_INPUT" name="Input Features">
+                                          <MODULE library="shapes_tools" id="18" name="Shapes Buffer">
+                                            <OPTION type="table_field" id="DIST_FIELD" name="Buffer Distance">&lt;not set&gt;</OPTION>
+                                            <OPTION type="double" id="DIST_FIELD_DEFAULT" name="Default">30.000000</OPTION>
+                                            <OPTION type="boolean" id="DISSOLVE" name="Dissolve Buffers">TRUE</OPTION>
+                                            <OPTION type="integer" id="NZONES" name="Number of Buffer Zones">1</OPTION>
+                                            <OPTION type="boolean" id="POLY_INNER" name="Inner Buffer">FALSE</OPTION>
+                                            <OPTION type="double" id="DARC" name="Arc Vertex Distance [Degree]">5.000000</OPTION>
+                                            <INPUT type="shapes" id="SHAPES" name="Shapes">
+                                              <FILE>unstable_areas.shp</FILE>
+                                            </INPUT>
+                                            <OUTPUT type="shapes" id="BUFFER" name="Buffer">unstable_areas [Buffer]</OUTPUT>
+                                          </MODULE>
+                                        </INPUT>
+                                      </INPUT_LIST>
+                                      <OUTPUT type="shapes_list" id="M_OUTPUT" name="Output Features">transition_area [clipped]</OUTPUT>
+                                    </MODULE>
+                                  </INPUT>
+                                  <OUTPUT type="shapes" id="OUTPUT" name="Result">sampling_points [transition_area]</OUTPUT>
+                                </MODULE>
+                              </INPUT>
+                              <INPUT type="shapes" id="POLYGONS" name="Polygons">
+                                <MODULE library="shapes_polygons" id="20" name="Add Point Attributes to Polygons">
+                                  <OPTION type="table_fields" id="FIELDS" name="Attributes">2</OPTION>
+                                  <OPTION type="boolean" id="ADD_LOCATION_INFO" name="Add Location Info">FALSE</OPTION>
+                                  <INPUT type="shapes" id="INPUT" name="Polygons">
+                                    <FILE>inv_actives_subset.shp</FILE>
+                                  </INPUT>
+                                  <INPUT type="shapes" id="POINTS" name="Points">
+                                    <FILE>D:/Marcer_Materials/final_products/regional/shapes/rock_glacier_inventory/rock_glaciers_centroids_MM.shp</FILE>
+                                  </INPUT>
+                                  <OUTPUT type="shapes" id="OUTPUT" name="Result">inv_actives_subset_rock_glaciers_centroids_MM</OUTPUT>
+                                </MODULE>
+                              </INPUT>
+                              <OUTPUT type="shapes" id="OUTPUT" name="Result">sampling_points [inv_actives_subset_DI]</OUTPUT>
+                            </MODULE>
+                          </INPUT>
+                          <INPUT type="shapes" id="POLYGONS" name="Polygons">
+                            <FILE>inv_actives_subset.shp</FILE>
+                          </INPUT>
+                          <OUTPUT type="shapes" id="OUTPUT" name="Result">sampling_points [inv_actives_subset]</OUTPUT>
+                        </MODULE>
+                      </INPUT>
+                      <INPUT type="shapes" id="POLYGONS" name="Polygons">
+                        <FILE>inv_actives_subset.shp</FILE>
+                      </INPUT>
+                      <OUTPUT type="shapes" id="OUTPUT" name="Result">sampling_points [inv_actives_subset]</OUTPUT>
+                    </MODULE>
+                  </INPUT>
+                  <INPUT type="shapes" id="POLYGONS" name="Polygons">
+                    <MODULE library="shapes_polygons" id="20" name="Add Point Attributes to Polygons">
+                      <OPTION type="table_fields" id="FIELDS" name="Attributes">1</OPTION>
+                      <OPTION type="boolean" id="ADD_LOCATION_INFO" name="Add Location Info">FALSE</OPTION>
+                      <INPUT type="shapes" id="INPUT" name="Polygons">
+                        <MODULE library="shapes_polygons" id="20" name="Add Point Attributes to Polygons">
+                          <OPTION type="table_fields" id="FIELDS" name="Attributes">0</OPTION>
+                          <OPTION type="boolean" id="ADD_LOCATION_INFO" name="Add Location Info">FALSE</OPTION>
+                          <INPUT type="shapes" id="INPUT" name="Polygons">
+                            <MODULE library="shapes_polygons" id="20" name="Add Point Attributes to Polygons">
+                              <OPTION type="table_fields" id="FIELDS" name="Attributes">2</OPTION>
+                              <OPTION type="boolean" id="ADD_LOCATION_INFO" name="Add Location Info">FALSE</OPTION>
+                              <INPUT type="shapes" id="INPUT" name="Polygons">
+                                <FILE>inv_actives_subset.shp</FILE>
+                              </INPUT>
+                              <INPUT type="shapes" id="POINTS" name="Points">
+                                <FILE>D:/Marcer_Materials/final_products/regional/shapes/rock_glacier_inventory/rock_glaciers_centroids_MM.shp</FILE>
+                              </INPUT>
+                              <OUTPUT type="shapes" id="OUTPUT" name="Result">inv_actives_subset_rock_glaciers_centroids_MM</OUTPUT>
+                            </MODULE>
+                          </INPUT>
+                          <INPUT type="shapes" id="POINTS" name="Points">
+                            <FILE>D:/Marcer_Materials/final_products/regional/shapes/rock_glacier_inventory/rock_glaciers_centroids_MM.shp</FILE>
+                          </INPUT>
+                          <OUTPUT type="shapes" id="OUTPUT" name="Result">inv_actives_subset_DI_rock_glaciers_centroids_MM</OUTPUT>
+                        </MODULE>
+                      </INPUT>
+                      <INPUT type="shapes" id="POINTS" name="Points">
+                        <FILE>D:/Marcer_Materials/final_products/regional/shapes/rock_glacier_inventory/rock_glaciers_centroids_MM.shp</FILE>
+                      </INPUT>
+                      <OUTPUT type="shapes" id="OUTPUT" name="Result">inv_actives_subset_DI_rock_glaciers_centroids_MM</OUTPUT>
+                    </MODULE>
+                  </INPUT>
+                  <OUTPUT type="shapes" id="OUTPUT" name="Result">sampling_points [inv_actives_subset_DI]</OUTPUT>
+                </MODULE>
+              </INPUT>
+              <INPUT type="shapes" id="POLYGONS" name="Polygons">
+                <MODULE library="shapes_polygons" id="20" name="Add Point Attributes to Polygons">
+                  <OPTION type="table_fields" id="FIELDS" name="Attributes">1</OPTION>
+                  <OPTION type="boolean" id="ADD_LOCATION_INFO" name="Add Location Info">FALSE</OPTION>
+                  <INPUT type="shapes" id="INPUT" name="Polygons">
+                    <MODULE library="shapes_polygons" id="20" name="Add Point Attributes to Polygons">
+                      <OPTION type="table_fields" id="FIELDS" name="Attributes">0</OPTION>
+                      <OPTION type="boolean" id="ADD_LOCATION_INFO" name="Add Location Info">FALSE</OPTION>
+                      <INPUT type="shapes" id="INPUT" name="Polygons">
+                        <MODULE library="shapes_polygons" id="20" name="Add Point Attributes to Polygons">
+                          <OPTION type="table_fields" id="FIELDS" name="Attributes">2</OPTION>
+                          <OPTION type="boolean" id="ADD_LOCATION_INFO" name="Add Location Info">FALSE</OPTION>
+                          <INPUT type="shapes" id="INPUT" name="Polygons">
+                            <FILE>inv_actives_subset.shp</FILE>
+                          </INPUT>
+                          <INPUT type="shapes" id="POINTS" name="Points">
+                            <FILE>D:/Marcer_Materials/final_products/regional/shapes/rock_glacier_inventory/rock_glaciers_centroids_MM.shp</FILE>
+                          </INPUT>
+                          <OUTPUT type="shapes" id="OUTPUT" name="Result">inv_actives_subset_rock_glaciers_centroids_MM</OUTPUT>
+                        </MODULE>
+                      </INPUT>
+                      <INPUT type="shapes" id="POINTS" name="Points">
+                        <FILE>D:/Marcer_Materials/final_products/regional/shapes/rock_glacier_inventory/rock_glaciers_centroids_MM.shp</FILE>
+                      </INPUT>
+                      <OUTPUT type="shapes" id="OUTPUT" name="Result">inv_actives_subset_DI_rock_glaciers_centroids_MM</OUTPUT>
+                    </MODULE>
+                  </INPUT>
+                  <INPUT type="shapes" id="POINTS" name="Points">
+                    <FILE>D:/Marcer_Materials/final_products/regional/shapes/rock_glacier_inventory/rock_glaciers_centroids_MM.shp</FILE>
+                  </INPUT>
+                  <OUTPUT type="shapes" id="OUTPUT" name="Result">inv_actives_subset_DI_rock_glaciers_centroids_MM</OUTPUT>
+                </MODULE>
+              </INPUT>
+              <OUTPUT type="shapes" id="OUTPUT" name="Result">sampling_points [inv_actives_subset_DI]</OUTPUT>
+            </MODULE>
+          </INPUT>
+          <INPUT type="shapes" id="POLYGONS" name="Polygons">
+            <MODULE library="shapes_polygons" id="20" name="Add Point Attributes to Polygons">
+              <OPTION type="table_fields" id="FIELDS" name="Attributes">1</OPTION>
+              <OPTION type="boolean" id="ADD_LOCATION_INFO" name="Add Location Info">FALSE</OPTION>
+              <INPUT type="shapes" id="INPUT" name="Polygons">
+                <MODULE library="shapes_polygons" id="20" name="Add Point Attributes to Polygons">
+                  <OPTION type="table_fields" id="FIELDS" name="Attributes">0</OPTION>
+                  <OPTION type="boolean" id="ADD_LOCATION_INFO" name="Add Location Info">FALSE</OPTION>
+                  <INPUT type="shapes" id="INPUT" name="Polygons">
+                    <MODULE library="shapes_polygons" id="20" name="Add Point Attributes to Polygons">
+                      <OPTION type="table_fields" id="FIELDS" name="Attributes">2</OPTION>
+                      <OPTION type="boolean" id="ADD_LOCATION_INFO" name="Add Location Info">FALSE</OPTION>
+                      <INPUT type="shapes" id="INPUT" name="Polygons">
+                        <FILE>inv_actives_subset.shp</FILE>
+                      </INPUT>
+                      <INPUT type="shapes" id="POINTS" name="Points">
+                        <FILE>D:/Marcer_Materials/final_products/regional/shapes/rock_glacier_inventory/rock_glaciers_centroids_MM.shp</FILE>
+                      </INPUT>
+                      <OUTPUT type="shapes" id="OUTPUT" name="Result">inv_actives_subset_rock_glaciers_centroids_MM</OUTPUT>
+                    </MODULE>
+                  </INPUT>
+                  <INPUT type="shapes" id="POINTS" name="Points">
+                    <FILE>D:/Marcer_Materials/final_products/regional/shapes/rock_glacier_inventory/rock_glaciers_centroids_MM.shp</FILE>
+                  </INPUT>
+                  <OUTPUT type="shapes" id="OUTPUT" name="Result">inv_actives_subset_DI_rock_glaciers_centroids_MM</OUTPUT>
+                </MODULE>
+              </INPUT>
+              <INPUT type="shapes" id="POINTS" name="Points">
+                <FILE>D:/Marcer_Materials/final_products/regional/shapes/rock_glacier_inventory/rock_glaciers_centroids_MM.shp</FILE>
+              </INPUT>
+              <OUTPUT type="shapes" id="OUTPUT" name="Result">inv_actives_subset_DI_rock_glaciers_centroids_MM</OUTPUT>
+            </MODULE>
+          </INPUT>
+          <OUTPUT type="shapes" id="OUTPUT" name="Result">sampling_points [inv_actives_subset_DI]</OUTPUT>
+        </MODULE>
+      </INPUT>
+      <INPUT_LIST type="grid_list" id="GRIDS" name="Grids">
+        <INPUT type="grid_list" id="GRIDS" name="Grids">
+          <MODULE library="io_gdal" id="0" name="GDAL: Import Raster">
+            <OPTION type="file" id="FILES" name="Files">D:/Marcer_Materials/final_products/regional/grids/Marcer_etal_2019_Destabilization_Susceptibility_Map_Unclipped.asc</OPTION>
+            <OPTION type="boolean" id="TRANSFORM" name="Transformation">TRUE</OPTION>
+            <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+            <OUTPUT type="grid_list" id="GRIDS" name="Grids">Marcer_etal_2019_Destabilization_Susceptibility_Map_Unclipped</OUTPUT>
+          </MODULE>
+        </INPUT>
+      </INPUT_LIST>
+      <OUTPUT type="shapes" id="RESULT" name="Result">sampling_points</OUTPUT>
+    </MODULE>
+  </HISTORY>
+  <SOURCE>
+    <FILE>sampling_points.shp</FILE>
+    <DATABASE></DATABASE>
+    <PROJECTION>
+      <OGC_WKT>PROJCS["RGF_1993_Lambert_93",GEOGCS["GCS_RGF_1993",DATUM["RGF_1993",SPHEROID["GRS_1980",6378137,298.257222101]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["standard_parallel_1",44],PARAMETER["standard_parallel_2",49],PARAMETER["latitude_of_origin",46.5],PARAMETER["central_meridian",3],PARAMETER["false_easting",700000],PARAMETER["false_northing",6600000],UNIT["metre",1,AUTHORITY["EPSG","9001"]]]</OGC_WKT>
+      <PROJ4>+proj=lcc +a=6378137.000000 +b=6356752.314140 +lat_1=44 +lat_2=49 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +no_defs</PROJ4>
+      <EPSG>-1</EPSG>
+    </PROJECTION>
+  </SOURCE>
+  <DESCRIPTION></DESCRIPTION>
+</SAGA_METADATA>

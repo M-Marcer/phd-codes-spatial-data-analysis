@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_10" displayname="Polygon Clipping">
+    <parameters>
+      <param name="CLIP" displayname="Clip Features" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Clip Features&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="S_INPUT" displayname="Input Features" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Input Features&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="S_OUTPUT" displayname="Output Features" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Output Features&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="M_INPUT" displayname="Input Features" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Input Features&lt;/p&gt;&lt;p&gt;Shapes list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="M_OUTPUT" displayname="Output Features" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Output Features&lt;/p&gt;&lt;p&gt;Shapes list (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DISSOLVE" displayname="Dissolve Clip Features" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Dissolve Clip Features&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MULTIPLE" displayname="Multiple Input Features" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Multiple Input Features&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Polygon Clipping</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2012</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

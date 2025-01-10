@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_10" displayname="Mass Balance Index">
+    <parameters>
+      <param name="DEM" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HREL" displayname="Vertical Distance to Channel Network" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Vertical Distance to Channel Network&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MBI" displayname="Mass Balance Index" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Mass Balance Index&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TSLOPE" displayname="T Slope" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;T Slope&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 15.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TCURVE" displayname="T Curvature" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;T Curvature&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 0.010000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THREL" displayname="T Vertical Distance to Channel Network" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;T Vertical Distance to Channel Network&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 15.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Mass Balance Index</resTitle>
+    </idCitation>
+    <idCredit>(c) 2008 by O.Conrad</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

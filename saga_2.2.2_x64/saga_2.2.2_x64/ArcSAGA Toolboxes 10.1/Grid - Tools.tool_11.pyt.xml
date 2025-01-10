@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_11" displayname="Change Data Storage">
+    <parameters>
+      <param name="INPUT" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTPUT" displayname="Converted Grid" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Converted Grid&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TYPE" displayname="Data storage type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Data storage type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] bit&lt;/p&gt;&lt;p&gt;[1] unsigned 1 byte integer&lt;/p&gt;&lt;p&gt;[2] signed 1 byte integer&lt;/p&gt;&lt;p&gt;[3] unsigned 2 byte integer&lt;/p&gt;&lt;p&gt;[4] signed 2 byte integer&lt;/p&gt;&lt;p&gt;[5] unsigned 4 byte integer&lt;/p&gt;&lt;p&gt;[6] signed 4 byte integer&lt;/p&gt;&lt;p&gt;[7] 4 byte floating point number&lt;/p&gt;&lt;p&gt;[8] 8 byte floating point number&lt;/p&gt;&lt;p&gt;Default: 7&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OFFSET" displayname="Offset" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Offset&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SCALE" displayname="Scale" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Scale&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Change Data Storage</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2003</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

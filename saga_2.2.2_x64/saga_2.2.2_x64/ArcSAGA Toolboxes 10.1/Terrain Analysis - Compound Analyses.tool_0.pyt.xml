@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Basic Terrain Analysis">
+    <parameters>
+      <param name="ELEVATION" displayname="Elevation" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Elevation&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHADE" displayname="Analytical Hillshading" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Analytical Hillshading&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SLOPE" displayname="Slope" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Slope&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ASPECT" displayname="Aspect" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Aspect&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="HCURV" displayname="Plan Curvature" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Plan Curvature&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VCURV" displayname="Profile Curvature" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Profile Curvature&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONVERGENCE" displayname="Convergence Index" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Convergence Index&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SINKS" displayname="Closed Depressions" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Closed Depressions&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CAREA" displayname="Total Catchment Area" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Total Catchment Area&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="WETNESS" displayname="Topographic Wetness Index" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Topographic Wetness Index&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LSFACTOR" displayname="LS-Factor" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;LS-Factor&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CHANNELS" displayname="Channel Network" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Channel Network&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BASINS" displayname="Drainage Basins" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Drainage Basins&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CHNL_BASE" displayname="Channel Network Base Level" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Channel Network Base Level&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CHNL_DIST" displayname="Channel Network Distance" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Channel Network Distance&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VALL_DEPTH" displayname="Valley Depth" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Valley Depth&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RSP" displayname="Relative Slope Position" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Relative Slope Position&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="THRESHOLD" displayname="Channel Density" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Channel Density&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 5&lt;/p&gt;&lt;p&gt;Strahler order to begin a channel.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Basic Terrain Analysis</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2005</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

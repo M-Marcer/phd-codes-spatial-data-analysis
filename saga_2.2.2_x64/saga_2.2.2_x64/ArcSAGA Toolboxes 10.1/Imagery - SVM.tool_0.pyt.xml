@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="SVM Classification">
+    <parameters>
+      <param name="GRIDS" displayname="Grids" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grids&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CLASSES" displayname="Classification" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Classification&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SCALING" displayname="Scaling" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Scaling&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] none&lt;/p&gt;&lt;p&gt;[1] normalize (0-1)&lt;/p&gt;&lt;p&gt;[2] standardize&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MESSAGE" displayname="Verbose Messages" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Verbose Messages&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MODEL_SRC" displayname="Model Source" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Model Source&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] create from training areas&lt;/p&gt;&lt;p&gt;[1] restore from file&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MODEL_LOAD" displayname="Restore Model from File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Restore Model from File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ROI" displayname="Training Areas" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Training Areas&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ROI_ID" displayname="Class Identifier" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Class Identifier&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MODEL_SAVE" displayname="Store Model to File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Store Model to File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SVM_TYPE" displayname="SVM Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;SVM Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] C-SVC&lt;/p&gt;&lt;p&gt;[1] nu-SVC&lt;/p&gt;&lt;p&gt;[2] one-class SVM&lt;/p&gt;&lt;p&gt;[3] epsilon-SVR&lt;/p&gt;&lt;p&gt;[4] nu-SVR&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="KERNEL_TYPE" displayname="Kernel Type" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Kernel Type&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] linear&lt;/p&gt;&lt;p&gt;[1] polynomial&lt;/p&gt;&lt;p&gt;[2] radial basis function&lt;/p&gt;&lt;p&gt;[3] sigmoid&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;&lt;p&gt;linear: u'*v&lt;/p&gt;&lt;p&gt;polynomial: (gamma*u'*v + coef0)^degree&lt;/p&gt;&lt;p&gt;radial basis function: exp(-gamma*|u-v|^2)&lt;/p&gt;&lt;p&gt;sigmoid: tanh(gamma*u'*v + coef0)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DEGREE" displayname="Degree" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Degree&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 3&lt;/p&gt;&lt;p&gt;degree in kernel function&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GAMMA" displayname="Gamma" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Gamma&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;gamma in kernel function&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COEF0" displayname="coef0" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;coef0&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;coef0 in kernel function&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COST" displayname="C" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;C&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;parameter C (cost) of C-SVC, epsilon-SVR, and nu-SVR&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NU" displayname="nu-SVR" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;nu-SVR&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.500000&lt;/p&gt;&lt;p&gt;parameter nu of nu-SVC, one-class SVM, and nu-SVR&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EPS_SVR" displayname="SVR Epsilon" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;SVR Epsilon&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.100000&lt;/p&gt;&lt;p&gt;epsilon in loss function of epsilon-SVR&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CACHE_SIZE" displayname="Cache Size" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cache Size&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;&lt;p&gt;cache memory size in MB&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EPS" displayname="Epsilon" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Epsilon&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.001000&lt;/p&gt;&lt;p&gt;tolerance of termination criterion&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHRINKING" displayname="Shrinking" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shrinking&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;whether to use the shrinking heuristics&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PROBABILITY" displayname="Probability Estimates" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Probability Estimates&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;whether to train a SVC or SVR model for probability estimates&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CROSSVAL" displayname="Cross Validation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cross Validation&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;n-fold cross validation: n must &gt; 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>SVM Classification</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2012</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

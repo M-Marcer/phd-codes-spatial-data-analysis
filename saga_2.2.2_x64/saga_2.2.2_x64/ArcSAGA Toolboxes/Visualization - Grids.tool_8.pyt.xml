@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_8" displayname="Terrain Map View">
+    <parameters>
+      <param name="DEM" displayname="DEM" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;DEM&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Digital elevation model.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHADE" displayname="Shade" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shade&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;The shaded DTM.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OPENNESS" displayname="Openness" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Openness&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;The difference of positive and negative openness.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SLOPE" displayname="Slope" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Slope&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;The calculated terrain slope [radians].&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONTOURS" displayname="Contours" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Contours&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;The generated contour lines.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Topography&lt;/p&gt;&lt;p&gt;[1] Morphology&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Choose the map type to generate.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RADIUS" displayname="Radial Limit" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Radial Limit&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1000.000000&lt;/p&gt;&lt;p&gt;Radial search limit for openness calculation.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CONTOUR_LINES" displayname="Contour Lines" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Contour Lines&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Derive contour lines.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="EQUIDISTANCE" displayname="Equidistance" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Equidistance&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 50.000000&lt;/p&gt;&lt;p&gt;Contour lines equidistance [map units].&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Terrain Map View</resTitle>
+    </idCitation>
+    <idCredit>Copyrights (c) 2014 by Volker Wichmann</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

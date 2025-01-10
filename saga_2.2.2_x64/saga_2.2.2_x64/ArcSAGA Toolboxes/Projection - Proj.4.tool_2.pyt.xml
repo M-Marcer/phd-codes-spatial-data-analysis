@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Coordinate Transformation (Shapes)">
+    <parameters>
+      <param name="CRS_METHOD" displayname="Get CRS Definition from..." type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Get CRS Definition from...&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Proj4 Parameters&lt;/p&gt;&lt;p&gt;[1] EPSG Code&lt;/p&gt;&lt;p&gt;[2] Well Known Text File&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CRS_PROJ4" displayname="Proj4 Parameters" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Proj4 Parameters&lt;/p&gt;&lt;p&gt;Long text&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CRS_FILE" displayname="Well Known Text File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Well Known Text File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="CRS_EPSG" displayname="EPSG Code" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;EPSG Code&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: -1&lt;/p&gt;&lt;p&gt;Default: -1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PRECISE" displayname="Precise Datum Conversion" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Precise Datum Conversion&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;avoids precision problems when source and target crs use different geodedtic datums.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SOURCE" displayname="Source" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Source&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TARGET" displayname="Target" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Target&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Coordinate Transformation (Shapes)</resTitle>
+    </idCitation>
+    <idCredit>O. Conrad (c) 2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

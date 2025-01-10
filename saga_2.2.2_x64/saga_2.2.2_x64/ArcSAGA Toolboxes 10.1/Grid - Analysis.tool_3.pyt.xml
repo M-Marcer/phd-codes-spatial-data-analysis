@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_3" displayname="Least Cost Paths">
+    <parameters>
+      <param name="SOURCE" displayname="Source Point(s)" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Source Point(s)&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;&lt;p&gt;Point shapefile with source point(s)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DEM" displayname="Accumulated cost" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Accumulated cost&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Accumulated cost surface&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VALUES" displayname="Values" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Values&lt;/p&gt;&lt;p&gt;Grid list (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Allows to write cell values from additional grids to the output&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POINTS" displayname="Profile (points)" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Profile (points)&lt;/p&gt;&lt;p&gt;Shapes list (output)&lt;/p&gt;&lt;p&gt;Least cost path profile points&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LINE" displayname="Profile (lines)" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Profile (lines)&lt;/p&gt;&lt;p&gt;Shapes list (output)&lt;/p&gt;&lt;p&gt;Least cost path profile line&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Least Cost Paths</resTitle>
+    </idCitation>
+    <idCredit>O. Conrad, V. Olaya, V. Wichmann (c) 2004-2010</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

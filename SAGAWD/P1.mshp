@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <HISTORY saga-version="2.2.2">
+    <MODULE library="shapes_points" id="10" name="Add Polygon Attributes to Points">
+      <OPTION type="table_fields" id="FIELDS" name="Attributes">4</OPTION>
+      <INPUT type="shapes" id="INPUT" name="Points">
+        <MODULE library="shapes_points" id="10" name="Add Polygon Attributes to Points">
+          <OPTION type="table_fields" id="FIELDS" name="Attributes">2</OPTION>
+          <INPUT type="shapes" id="INPUT" name="Points">
+            <MODULE library="shapes_grid" id="0" name="Add Grid Values to Points">
+              <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+              <INPUT type="shapes" id="SHAPES" name="Points">
+                <MODULE library="shapes_grid" id="0" name="Add Grid Values to Points">
+                  <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                  <INPUT type="shapes" id="SHAPES" name="Points">
+                    <MODULE library="shapes_grid" id="0" name="Add Grid Values to Points">
+                      <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                      <INPUT type="shapes" id="SHAPES" name="Points">
+                        <MODULE library="shapes_grid" id="0" name="Add Grid Values to Points">
+                          <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                          <INPUT type="shapes" id="SHAPES" name="Points">
+                            <MODULE library="shapes_grid" id="0" name="Add Grid Values to Points">
+                              <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                              <INPUT type="shapes" id="SHAPES" name="Points">
+                                <MODULE library="shapes_points" id="6" name="Add Coordinates to points">
+                                  <INPUT type="shapes" id="INPUT" name="Points">
+                                    <MODULE library="shapes_polygons" id="1" name="Polygon Centroids">
+                                      <OPTION type="boolean" id="METHOD" name="Centroids for each part">FALSE</OPTION>
+                                      <INPUT type="shapes" id="POLYGONS" name="Polygons">
+                                        <FILE>temp.shp</FILE>
+                                      </INPUT>
+                                      <OUTPUT type="shapes" id="CENTROIDS" name="Centroids">temp</OUTPUT>
+                                    </MODULE>
+                                  </INPUT>
+                                  <OUTPUT type="shapes" id="OUTPUT" name="Output">P1</OUTPUT>
+                                </MODULE>
+                              </INPUT>
+                              <INPUT_LIST type="grid_list" id="GRIDS" name="Grids">
+                                <INPUT type="grid_list" id="GRIDS" name="Grids">
+                                  <FILE>D:/Marcer_Materials/data/grids/MAAT25.sgrd</FILE>
+                                </INPUT>
+                              </INPUT_LIST>
+                              <OUTPUT type="shapes" id="RESULT" name="Result">P1</OUTPUT>
+                            </MODULE>
+                          </INPUT>
+                          <INPUT_LIST type="grid_list" id="GRIDS" name="Grids">
+                            <INPUT type="grid_list" id="GRIDS" name="Grids">
+                              <MODULE library="io_gdal" id="0" name="GDAL: Import Raster">
+                                <OPTION type="file" id="FILES" name="Files">D:/Marcer_Materials/data/grids/DEM25.tif</OPTION>
+                                <OPTION type="boolean" id="TRANSFORM" name="Transformation">TRUE</OPTION>
+                                <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                                <OUTPUT type="grid_list" id="GRIDS" name="Grids">DEM25</OUTPUT>
+                              </MODULE>
+                            </INPUT>
+                          </INPUT_LIST>
+                          <OUTPUT type="shapes" id="RESULT" name="Result">P1</OUTPUT>
+                        </MODULE>
+                      </INPUT>
+                      <INPUT_LIST type="grid_list" id="GRIDS" name="Grids">
+                        <INPUT type="grid_list" id="GRIDS" name="Grids">
+                          <MODULE library="io_gdal" id="0" name="GDAL: Import Raster">
+                            <OPTION type="file" id="FILES" name="Files">D:/Marcer_Materials/data/grids/PISR25.tif</OPTION>
+                            <OPTION type="boolean" id="TRANSFORM" name="Transformation">TRUE</OPTION>
+                            <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                            <OUTPUT type="grid_list" id="GRIDS" name="Grids">PISR25</OUTPUT>
+                          </MODULE>
+                        </INPUT>
+                      </INPUT_LIST>
+                      <OUTPUT type="shapes" id="RESULT" name="Result">P1</OUTPUT>
+                    </MODULE>
+                  </INPUT>
+                  <INPUT_LIST type="grid_list" id="GRIDS" name="Grids">
+                    <INPUT type="grid_list" id="GRIDS" name="Grids">
+                      <MODULE library="io_gdal" id="0" name="GDAL: Import Raster">
+                        <OPTION type="file" id="FILES" name="Files">D:/Marcer_Materials/data/grids/MWvsTW.tif</OPTION>
+                        <OPTION type="boolean" id="TRANSFORM" name="Transformation">TRUE</OPTION>
+                        <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                        <OUTPUT type="grid_list" id="GRIDS" name="Grids">MWvsTW</OUTPUT>
+                      </MODULE>
+                    </INPUT>
+                  </INPUT_LIST>
+                  <OUTPUT type="shapes" id="RESULT" name="Result">P1</OUTPUT>
+                </MODULE>
+              </INPUT>
+              <INPUT_LIST type="grid_list" id="GRIDS" name="Grids">
+                <INPUT type="grid_list" id="GRIDS" name="Grids">
+                  <MODULE library="io_gdal" id="0" name="GDAL: Import Raster">
+                    <OPTION type="file" id="FILES" name="Files">D:/Marcer_Materials/data/grids/LWvsTW.tif</OPTION>
+                    <OPTION type="boolean" id="TRANSFORM" name="Transformation">TRUE</OPTION>
+                    <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                    <OUTPUT type="grid_list" id="GRIDS" name="Grids">LWvsTW</OUTPUT>
+                  </MODULE>
+                </INPUT>
+              </INPUT_LIST>
+              <OUTPUT type="shapes" id="RESULT" name="Result">P1</OUTPUT>
+            </MODULE>
+          </INPUT>
+          <INPUT type="shapes" id="POLYGONS" name="Polygons">
+            <FILE>D:/Marcer_Materials/data/shapes/PFI_data/Groups.shp</FILE>
+          </INPUT>
+          <OUTPUT type="shapes" id="OUTPUT" name="Result">P1 [Groups]</OUTPUT>
+        </MODULE>
+      </INPUT>
+      <INPUT type="shapes" id="POLYGONS" name="Polygons">
+        <MODULE library="shapes_polygons" id="14" name="Intersect">
+          <OPTION type="boolean" id="SPLIT" name="Split Parts">TRUE</OPTION>
+          <INPUT type="shapes" id="A" name="Layer A">
+            <FILE>C:\Users\MMarcer\Documents\PHD_IGA\Reports\Article 1 __Permafrost Model\pics\MAPSET\geology_hand_digit.shp</FILE>
+          </INPUT>
+          <INPUT type="shapes" id="B" name="Layer B">
+            <MODULE library="shapes_polygons" id="11" name="Polygon Clipping">
+              <OPTION type="boolean" id="DISSOLVE" name="Dissolve Clip Features">TRUE</OPTION>
+              <OPTION type="boolean" id="MULTIPLE" name="Multiple Input Features">TRUE</OPTION>
+              <INPUT type="shapes" id="CLIP" name="Clip Features">
+                <FILE>C:\Users\MMarcer\Documents\PHD_IGA\Reports\Article 1 __Permafrost Model\pics\MAPSET\study_area_mask.shp</FILE>
+              </INPUT>
+              <INPUT_LIST type="shapes_list" id="M_INPUT" name="Input Features">
+                <INPUT type="shapes_list" id="M_INPUT" name="Input Features">
+                  <MODULE library="shapes_grid" id="6" name="Vectorising Grid Classes">
+                    <OPTION type="grid_system" id="PARAMETERS_GRID_SYSTEM" name="Grid system">
+                      <CELLSIZE>997.7456575682</CELLSIZE>
+                      <XMIN>912898.2531815223</XMIN>
+                      <XMAX>1084510.5062832527</XMAX>
+                      <YMIN>6319802.45044107</YMIN>
+                      <YMAX>6591189.26929962</YMAX>
+                    </OPTION>
+                    <OPTION type="choice" id="CLASS_ALL" name="Class Selection" index="1">all classes</OPTION>
+                    <OPTION type="double" id="CLASS_ID" name="Class Identifier">1.000000</OPTION>
+                    <OPTION type="choice" id="SPLIT" name="Vectorised class as..." index="0">one single (multi-)polygon object</OPTION>
+                    <OPTION type="boolean" id="ALLVERTICES" name="Keep Vertices on Straight Lines">FALSE</OPTION>
+                    <INPUT type="grid" id="GRID" name="Grid" system="PARAMETERS_GRID_SYSTEM">
+                      <MODULE library="grid_calculus" id="1" name="Grid Calculator">
+                        <OPTION type="grid_system" id="PARAMETERS_GRID_SYSTEM" name="Grid system">
+                          <CELLSIZE>997.7456575682</CELLSIZE>
+                          <XMIN>912898.2531815223</XMIN>
+                          <XMAX>1084510.5062832527</XMAX>
+                          <YMIN>6319802.45044107</YMIN>
+                          <YMAX>6591189.26929962</YMAX>
+                        </OPTION>
+                        <OPTION type="text" id="FORMULA" name="Formula">g1&gt;1500</OPTION>
+                        <OPTION type="text" id="NAME" name="Name">Calculation</OPTION>
+                        <OPTION type="boolean" id="FNAME" name="Take Formula">FALSE</OPTION>
+                        <OPTION type="boolean" id="USE_NODATA" name="Use NoData">FALSE</OPTION>
+                        <OPTION type="choice" id="TYPE" name="Data Type" index="7">4 byte floating point number</OPTION>
+                        <INPUT_LIST type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM">
+                          <INPUT type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM">
+                            <MODULE library="io_gdal" id="0" name="GDAL: Import Raster">
+                              <OPTION type="file" id="FILES" name="Files">C:\Users\MMarcer\Documents\PHD_IGA\Y2_CODES\ALPHA_VERSIONS\DATABASE\GRIDS\DEM1000c.tif</OPTION>
+                              <OPTION type="boolean" id="SELECT" name="Select from Multiple Bands">TRUE</OPTION>
+                              <OPTION type="boolean" id="TRANSFORM" name="Transformation">TRUE</OPTION>
+                              <OPTION type="choice" id="INTERPOL" name="Interpolation" index="4">B-Spline Interpolation</OPTION>
+                              <OUTPUT type="grid_list" id="GRIDS" name="Grids">DEM1000c</OUTPUT>
+                            </MODULE>
+                          </INPUT>
+                        </INPUT_LIST>
+                        <OUTPUT type="grid" id="RESULT" name="Result">Calculation</OUTPUT>
+                      </MODULE>
+                    </INPUT>
+                    <OUTPUT type="shapes" id="POLYGONS" name="Polygons">Calculation</OUTPUT>
+                  </MODULE>
+                </INPUT>
+              </INPUT_LIST>
+              <OUTPUT type="shapes_list" id="M_OUTPUT" name="Output Features">Calculation [clipped]</OUTPUT>
+            </MODULE>
+          </INPUT>
+          <OUTPUT type="shapes" id="RESULT" name="Intersect">Intersect [geology_hand_digit]-[study_area_mask_alt_sup_1500_DEM1000]</OUTPUT>
+        </MODULE>
+      </INPUT>
+      <OUTPUT type="shapes" id="OUTPUT" name="Result">P1 [Lithology_BRGM_1000000]</OUTPUT>
+    </MODULE>
+  </HISTORY>
+  <SOURCE>
+    <FILE>P1.shp</FILE>
+    <DATABASE></DATABASE>
+    <PROJECTION>
+      <OGC_WKT>PROJCS["Lambert_Conformal_Conic",GEOGCS["GCS_GRS 1980(IUGG, 1980)",DATUM["D_unknown",SPHEROID["GRS80",6378137,298.257222101]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["standard_parallel_1",44],PARAMETER["standard_parallel_2",49],PARAMETER["latitude_of_origin",46.5],PARAMETER["central_meridian",3],PARAMETER["false_easting",700000],PARAMETER["false_northing",6600000],UNIT["Meter",1]]</OGC_WKT>
+      <PROJ4>+proj=lcc +a=6378137.000000 +b=6356752.314140 +lat_1=44 +lat_2=49 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +no_defs</PROJ4>
+      <EPSG>-1</EPSG>
+    </PROJECTION>
+  </SOURCE>
+  <DESCRIPTION></DESCRIPTION>
+</SAGA_METADATA>

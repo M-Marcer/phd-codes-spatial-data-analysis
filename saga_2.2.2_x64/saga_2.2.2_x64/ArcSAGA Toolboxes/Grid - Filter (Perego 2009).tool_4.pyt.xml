@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_4" displayname="Average With Mask 2">
+    <parameters>
+      <param name="INPUT" displayname="Input" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Input&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;This must be your input data of type grid.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MASK" displayname="Mask Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Mask Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;This grid indicates the cells you want calculate the average.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="AWM2 Grid" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;AWM2 Grid&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;New grid filtered with the AvWiMa2 module&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="V" displayname="Mask value" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Mask value&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;&lt;p&gt;Value of right cells in the Mask Grid&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RX" displayname="Radius X" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Radius X&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RY" displayname="Radius Y" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Radius Y&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Average With Mask 2</resTitle>
+    </idCitation>
+    <idCredit>Alessandro Perego</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

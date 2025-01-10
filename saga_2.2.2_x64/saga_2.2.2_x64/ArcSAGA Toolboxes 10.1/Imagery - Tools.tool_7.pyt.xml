@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_7" displayname="Principle Components Based Image Sharpening">
+    <parameters>
+      <param name="GRIDS" displayname="Original Channels" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Original Channels&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PAN" displayname="Panchromatic Channel" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Panchromatic Channel&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHARPEN" displayname="Sharpened Channels" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Sharpened Channels&lt;/p&gt;&lt;p&gt;Grid list (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Method" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Method&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] correlation matrix&lt;/p&gt;&lt;p&gt;[1] variance-covariance matrix&lt;/p&gt;&lt;p&gt;[2] sums-of-squares-and-cross-products matrix&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESAMPLING" displayname="Resampling" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Resampling&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] nearest neighbour&lt;/p&gt;&lt;p&gt;[1] bilinear&lt;/p&gt;&lt;p&gt;[2] cubic convolution&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="PAN_MATCH" displayname="Panchromatic Channel Matching" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Panchromatic Channel Matching&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] normalized&lt;/p&gt;&lt;p&gt;[1] standardized&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OVERWRITE" displayname="Overwrite" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Overwrite&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;overwrite previous output if adequate&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Principle Components Based Image Sharpening</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2011</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

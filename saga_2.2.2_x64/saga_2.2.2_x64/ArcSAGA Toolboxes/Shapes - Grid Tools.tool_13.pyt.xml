@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_13" displayname="Gradient Vectors from Direction and Length">
+    <parameters>
+      <param name="DIR" displayname="Direction" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Direction&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LEN" displayname="Length" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Length&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="VECTORS" displayname="Gradient Vectors" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Gradient Vectors&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STEP" displayname="Step" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Step&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIZE_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 25.000000&lt;/p&gt;&lt;p&gt;size range as percentage of step&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIZE_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;&lt;p&gt;size range as percentage of step&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="AGGR" displayname="Aggregation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Aggregation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] nearest neighbour&lt;/p&gt;&lt;p&gt;[1] mean value&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;how to request values if step size is more than one cell&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STYLE" displayname="Style" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Style&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] simple line&lt;/p&gt;&lt;p&gt;[1] arrow&lt;/p&gt;&lt;p&gt;[2] arrow (centered to cell)&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Gradient Vectors from Direction and Length</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2006</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

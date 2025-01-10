@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_1" displayname="Merge Layers">
+    <parameters>
+      <param name="INPUT" displayname="Layers" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Layers&lt;/p&gt;&lt;p&gt;Shapes list (input)&lt;/p&gt;&lt;p&gt;Output will inherit shape type and table structure from the first layer in this list.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MERGED" displayname="Merged Layer" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Merged Layer&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SRCINFO" displayname="Add Source Information" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Add Source Information&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Adds a field with the name of the original input data set.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="MATCH" displayname="Match Fields by Name" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Match Fields by Name&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Merge Layers</resTitle>
+    </idCitation>
+    <idCredit>V.Olaya (c) 2004</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

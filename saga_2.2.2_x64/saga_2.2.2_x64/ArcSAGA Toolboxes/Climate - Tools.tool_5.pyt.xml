@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_5" displayname="Monthly Global by Latitude">
+    <parameters>
+      <param name="SOLARRAD" displayname="Solar Radiation" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Solar Radiation&lt;/p&gt;&lt;p&gt;Table (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ALBEDO" displayname="Albedo" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Albedo&lt;/p&gt;&lt;p&gt;Table (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FIELD" displayname="Field" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Field&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YEAR" displayname="Year [ka]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Year [ka]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 2.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DLAT" displayname="Latitude Increment [Degree]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Latitude Increment [Degree]&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Maximum: 90&lt;/p&gt;&lt;p&gt;Default: 5&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Monthly Global by Latitude</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2012</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

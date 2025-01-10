@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_7" displayname="DTM Filter (slope-based)">
+    <parameters>
+      <param name="INPUT" displayname="Grid to filter" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid to filter&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;The grid to filter.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RADIUS" displayname="Search Radius" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Search Radius&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Minimum: 1&lt;/p&gt;&lt;p&gt;Default: 2&lt;/p&gt;&lt;p&gt;Search radius of kernel in cells.&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TERRAINSLOPE" displayname="Approx. Terrain Slope" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Approx. Terrain Slope&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 30.000000&lt;/p&gt;&lt;p&gt;Approximate Terrain Slope [%]&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STDDEV" displayname="Use Confidence Interval" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Use Confidence Interval&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Use 5 percent confidence interval&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GROUND" displayname="Bare Earth" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Bare Earth&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Filtered DTM&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="NONGROUND" displayname="Removed Objects" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Removed Objects&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;Objects removed from input grid&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>DTM Filter (slope-based)</resTitle>
+    </idCitation>
+    <idCredit>Volker Wichmann (c) 2010, LASERDATA GmbH</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

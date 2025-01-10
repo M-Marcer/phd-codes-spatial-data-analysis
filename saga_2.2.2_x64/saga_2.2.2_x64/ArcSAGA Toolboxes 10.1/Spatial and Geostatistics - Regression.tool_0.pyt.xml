@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Regression Analysis (Points and Predictor Grid)">
+    <parameters>
+      <param name="PREDICTOR" displayname="Predictor" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Predictor&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="POINTS" displayname="Points" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Points&lt;/p&gt;&lt;p&gt;Shapes (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="ATTRIBUTE" displayname="Dependent Variable" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Dependent Variable&lt;/p&gt;&lt;p&gt;Table field&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="REGRESSION" displayname="Regression" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Regression&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESIDUAL" displayname="Residuals" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Residuals&lt;/p&gt;&lt;p&gt;Shapes (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="INTERPOL" displayname="Grid Interpolation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Grid Interpolation&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Nearest Neighbor&lt;/p&gt;&lt;p&gt;[1] Bilinear Interpolation&lt;/p&gt;&lt;p&gt;[2] Inverse Distance Interpolation&lt;/p&gt;&lt;p&gt;[3] Bicubic Spline Interpolation&lt;/p&gt;&lt;p&gt;[4] B-Spline Interpolation&lt;/p&gt;&lt;p&gt;Default: 4&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="METHOD" displayname="Regression Function" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Regression Function&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] Y = a + b * X (linear)&lt;/p&gt;&lt;p&gt;[1] Y = a + b / X&lt;/p&gt;&lt;p&gt;[2] Y = a / (b - X)&lt;/p&gt;&lt;p&gt;[3] Y = a * X^b (power)&lt;/p&gt;&lt;p&gt;[4] Y = a e^(b * X) (exponential)&lt;/p&gt;&lt;p&gt;[5] Y = a + b * ln(X) (logarithmic)&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Regression Analysis (Points and Predictor Grid)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2004</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

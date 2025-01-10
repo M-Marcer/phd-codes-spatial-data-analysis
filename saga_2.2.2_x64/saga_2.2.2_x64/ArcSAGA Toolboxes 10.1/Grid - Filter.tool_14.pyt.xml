@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_14" displayname="Connectivity Analysis">
+    <parameters>
+      <param name="INPUT_GRID" displayname="Input Binary Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Input Binary Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;&lt;p&gt;Binary input image for the connectivity analysis&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILTERED_MASK" displayname="Filtered Image" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Filtered Image&lt;/p&gt;&lt;p&gt;Grid (optional output)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;&lt;p&gt;Morphologically filtered binary mask&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILTER" displayname="Apply Filter?" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Apply Filter?&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;&lt;p&gt;Apply a filter (erosion - binary reconstruction) to the input image &lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIZE" displayname="Filter Size (Radius)" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Filter Size (Radius)&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 3&lt;/p&gt;&lt;p&gt;Filter size (radius in grid cells)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SYMBOLIC_IMAGE" displayname="Symbolic Image" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Symbolic Image&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;&lt;p&gt;The final symbolic image&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="OUTLINES" displayname="Outlines" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Outlines&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;&lt;p&gt;Polygon outlines of object regions&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="BORDER_PIXEL_CENTERS" displayname="Pixel Centers?" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Pixel Centers?&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Should the output shapes contain the centers of the border pixels instead of the corners?&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="REMOVE_MARGINAL_REGIONS" displayname="Remove Border Regions?" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Remove Border Regions?&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;&lt;p&gt;Remove regions which have contact with (are adjacent to) the image borders?&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Connectivity Analysis</resTitle>
+    </idCitation>
+    <idCredit>HfT Stuttgart (c) 2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

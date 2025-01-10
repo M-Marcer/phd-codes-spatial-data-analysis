@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_20" displayname="Combine Grids">
+    <parameters>
+      <param name="GRID1" displayname="Grid 1" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid 1&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="GRID2" displayname="Grid 2" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid 2&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="RESULT" displayname="Result" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Result&lt;/p&gt;&lt;p&gt;Grid (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LOOKUP" displayname="LookUp Table" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;LookUp Table&lt;/p&gt;&lt;p&gt;Static table&lt;/p&gt;&lt;p&gt;3 Fields:&lt;/p&gt;&lt;p&gt;- 1. [8 byte floating point number] Value in Grid 1&lt;/p&gt;&lt;p&gt;- 2. [8 byte floating point number] Value in Grid 2&lt;/p&gt;&lt;p&gt;- 3. [8 byte floating point number] Resulting Value&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Combine Grids</resTitle>
+    </idCitation>
+    <idCredit></idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

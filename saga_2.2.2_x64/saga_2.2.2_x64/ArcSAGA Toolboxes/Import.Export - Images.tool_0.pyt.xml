@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_0" displayname="Export Image (bmp, jpg, pcx, png, tif)">
+    <parameters>
+      <param name="GRID" displayname="Grid" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grid&lt;/p&gt;&lt;p&gt;Grid (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHADE" displayname="Shade" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Shade&lt;/p&gt;&lt;p&gt;Grid (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE" displayname="Image File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Image File&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="FILE_KML" displayname="Create KML File" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Create KML File&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 1&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COLOURING" displayname="Colouring" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Colouring&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] stretch to grid's standard deviation&lt;/p&gt;&lt;p&gt;[1] stretch to grid's value range&lt;/p&gt;&lt;p&gt;[2] stretch to specified value range&lt;/p&gt;&lt;p&gt;[3] lookup table&lt;/p&gt;&lt;p&gt;[4] rgb coded values&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COL_PALETTE" displayname="Color Palette" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Color Palette&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] DEFAULT&lt;/p&gt;&lt;p&gt;[1] DEFAULT_BRIGHT&lt;/p&gt;&lt;p&gt;[2] BLACK_WHITE&lt;/p&gt;&lt;p&gt;[3] BLACK_RED&lt;/p&gt;&lt;p&gt;[4] BLACK_GREEN&lt;/p&gt;&lt;p&gt;[5] BLACK_BLUE&lt;/p&gt;&lt;p&gt;[6] WHITE_RED&lt;/p&gt;&lt;p&gt;[7] WHITE_GREEN&lt;/p&gt;&lt;p&gt;[8] WHITE_BLUE&lt;/p&gt;&lt;p&gt;[9] YELLOW_RED&lt;/p&gt;&lt;p&gt;[10] YELLOW_GREEN&lt;/p&gt;&lt;p&gt;[11] YELLOW_BLUE&lt;/p&gt;&lt;p&gt;[12] RED_GREEN&lt;/p&gt;&lt;p&gt;[13] RED_BLUE&lt;/p&gt;&lt;p&gt;[14] GREEN_BLUE&lt;/p&gt;&lt;p&gt;[15] RED_GREY_BLUE&lt;/p&gt;&lt;p&gt;[16] RED_GREY_GREEN&lt;/p&gt;&lt;p&gt;[17] GREEN_GREY_BLUE&lt;/p&gt;&lt;p&gt;[18] RED_GREEN_BLUE&lt;/p&gt;&lt;p&gt;[19] RED_BLUE_GREEN&lt;/p&gt;&lt;p&gt;[20] GREEN_RED_BLUE&lt;/p&gt;&lt;p&gt;[21] RAINBOW&lt;/p&gt;&lt;p&gt;[22] NEON&lt;/p&gt;&lt;p&gt;[23] TOPOGRAPHY&lt;/p&gt;&lt;p&gt;[24] ASPECT_1&lt;/p&gt;&lt;p&gt;[25] ASPECT_2&lt;/p&gt;&lt;p&gt;[26] ASPECT_3&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COL_COUNT" displayname="Number of Colors" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Number of Colors&lt;/p&gt;&lt;p&gt;Integer&lt;/p&gt;&lt;p&gt;Default: 100&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="COL_REVERT" displayname="Revert Palette" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Revert Palette&lt;/p&gt;&lt;p&gt;Boolean&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STDDEV" displayname="Standard Deviation" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Standard Deviation&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 2.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STRETCH_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="STRETCH_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="LUT" displayname="Lookup Table" type="Optional" direction="Input">
+        <dialogReference>&lt;p&gt;Lookup Table&lt;/p&gt;&lt;p&gt;Table (optional input)&lt;/p&gt;&lt;p&gt;optional&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHADE_TRANS" displayname="Shade Transparency [%]" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Shade Transparency [%]&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 40.000000&lt;/p&gt;&lt;p&gt;The transparency of the shade [%]&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHADE_BRIGHT_MIN" displayname="Minimum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Minimum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;&lt;p&gt;Allows one to scale shade brightness [%]&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SHADE_BRIGHT_MAX" displayname="Maximum" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Maximum&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Maximum: 100.000000&lt;/p&gt;&lt;p&gt;Default: 100.000000&lt;/p&gt;&lt;p&gt;Allows one to scale shade brightness [%]&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Export Image (bmp, jpg, pcx, png, tif)</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2005</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

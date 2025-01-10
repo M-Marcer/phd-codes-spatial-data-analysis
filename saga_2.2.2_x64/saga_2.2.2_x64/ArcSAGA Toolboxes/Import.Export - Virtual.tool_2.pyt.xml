@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_2" displayname="Create Tileshape from Virtual Point Cloud">
+    <parameters>
+      <param name="FILENAME" displayname="Filename" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Filename&lt;/p&gt;&lt;p&gt;File path&lt;/p&gt;&lt;p&gt;The full path and name of the .spcvf file&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="TILE_SHP" displayname="Tileshape" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Tileshape&lt;/p&gt;&lt;p&gt;Shapes (output)&lt;/p&gt;&lt;p&gt;Polygon shapefile describing the bounding boxes of spcvf tiles.&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Create Tileshape from Virtual Point Cloud</resTitle>
+    </idCitation>
+    <idCredit>V. Wichmann, LASERDATA GmbH (c) 2014</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

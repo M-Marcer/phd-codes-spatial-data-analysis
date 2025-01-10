@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150910</CreaDate>
+    <CreaTime>11550000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="tool_5" displayname="Define Georeference for Grids">
+    <parameters>
+      <param name="GRIDS" displayname="Grids" type="Required" direction="Input">
+        <dialogReference>&lt;p&gt;Grids&lt;/p&gt;&lt;p&gt;Grid list (input)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="REFERENCED" displayname="Referenced Grids" type="Required" direction="Output">
+        <dialogReference>&lt;p&gt;Referenced Grids&lt;/p&gt;&lt;p&gt;Grid list (output)&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="DEFINITION" displayname="Definition" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Definition&lt;/p&gt;&lt;p&gt;Choice&lt;/p&gt;&lt;p&gt;Available Choices:&lt;/p&gt;&lt;p&gt;[0] cellsize and lower left center coordinates&lt;/p&gt;&lt;p&gt;[1] cellsize and lower left corner coordinates&lt;/p&gt;&lt;p&gt;[2] cellsize and upper left center coordinates&lt;/p&gt;&lt;p&gt;[3] cellsize and upper left corner coordinates&lt;/p&gt;&lt;p&gt;[4] lower left and upper right center coordinates&lt;/p&gt;&lt;p&gt;[5] lower left and upper right corner coordinates&lt;/p&gt;&lt;p&gt;Default: 0&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="SIZE" displayname="Cellsize" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Cellsize&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Minimum: 0.000000&lt;/p&gt;&lt;p&gt;Default: 1.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="XMIN" displayname="Left" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Left&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YMIN" displayname="Lower" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Lower&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="XMAX" displayname="Right" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Right&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+      <param name="YMAX" displayname="Upper" type="Optional" direction="Output">
+        <dialogReference>&lt;p&gt;Upper&lt;/p&gt;&lt;p&gt;Floating point&lt;/p&gt;&lt;p&gt;Default: 0.000000&lt;/p&gt;</dialogReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Define Georeference for Grids</resTitle>
+    </idCitation>
+    <idCredit>O.Conrad (c) 2013</idCredit>
+    <searchKeys>
+      <SAGA></SAGA>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>
